@@ -6,7 +6,11 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between px-10 bg-nav">
       <div>
-        <Image src="/img/logo.png" width={80} height={80} alt="Logo" />
+        <Link href="/">
+          <a>
+            <Image src="/img/logo.png" width={80} height={80} alt="Logo" />
+          </a>
+        </Link>
       </div>
 
       <div className="flex items-center justify-center py-2 text-base font-bold text-primary">

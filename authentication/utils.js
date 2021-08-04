@@ -60,7 +60,7 @@ export function fetchToken() {
 
 export const login = async (credentials = {}) => {
   localStorage.removeItem("token");
-  if (!credentials || !credentials.username || !credentials.password) {
+  if (!credentials || !credentials.email || !credentials.password) {
     throw new Error("Some fields are missing.");
   }
   const data = await makeRequest(
@@ -75,7 +75,7 @@ export const login = async (credentials = {}) => {
       message: data.message,
     };
   } else {
-    createLocalstorageItem("username", data.username);
+    createLocalstorageItem("email", data.email);
     createLocalstorageItem(
       "token",
       JSON.stringify({
@@ -90,9 +90,9 @@ export const login = async (credentials = {}) => {
   }
 };
 
-export const profile = async (username) => {
+export const profile = async (email) => {
   const data = await getRequest(
-    serverConfig.serverURL + serverConfig.routes.profile + "/" + username
+    serverConfig.serverURL + serverConfig.routes.profile + "/" + email
   );
 
   return data;
