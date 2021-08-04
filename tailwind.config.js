@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans"],
+        poppins: ["Poppins", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        qanelas: ["Qanelas", "sans-serif"],
+        gilroy: ["Gilroy", "sans-serif"],
       },
       backgroundColor: (theme) => ({
         ...theme("colors"),

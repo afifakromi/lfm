@@ -16,27 +16,27 @@ const Navbar = () => {
       <div className="flex items-center justify-center py-2 text-base font-bold text-primary">
         <div className="px-2">
           <Link href="/">
-            <a className="hover:text-hover">Submission</a>
+            <a className="hover:text-hover">SUBMISSION</a>
           </Link>
         </div>
         <div className="px-2">
           <Link href="/">
-            <a className="hover:text-hover">Archive</a>
+            <a className="hover:text-hover">ARCHIVE</a>
           </Link>
         </div>
         <div className="px-2">
           <Link href="/">
-            <a className="hover:text-hover">About</a>
+            <a className="hover:text-hover">ABOUT</a>
           </Link>
         </div>
         <div className="px-2">
           <Link href="/login">
-            <a className="hover:text-hover">Login</a>
+            <a className="hover:text-hover">LOGIN</a>
           </Link>
         </div>
         <div className="px-2">
           <Link href="/register">
-            <a className="hover:text-hover">Register</a>
+            <a className="hover:text-hover">REGISTER</a>
           </Link>
         </div>
       </div>

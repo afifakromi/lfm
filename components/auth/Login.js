@@ -56,7 +56,7 @@ const Login = () => {
             onChange={formik.handleChange}
             value={formik.values.email}
             name="email"
-            placeholder="email"
+            placeholder="Email"
             width="100%"
           />
           <InputField
@@ -64,7 +64,7 @@ const Login = () => {
             onChange={formik.handleChange}
             value={formik.values.password}
             name="password"
-            placeholder="password"
+            placeholder="Password"
             width="100%"
           />
           {formik.errors.all ? (
@@ -73,7 +73,7 @@ const Login = () => {
           {error ? (
             <FeedBackMsg text="Username & Password Invalid" error={true} />
           ) : null}
-          <Button text="Login" width="100%" />
+          <Button text="LOGIN" width="100%" />
         </form>
       </div>
     </div>

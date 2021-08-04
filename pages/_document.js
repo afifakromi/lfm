@@ -13,8 +13,24 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
             rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Qanelas/Qanelas-Bold.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/Gilroy/Gilroy-Light.otf"
+            as="font"
+            crossOrigin=""
           />
         </Head>
         <body>

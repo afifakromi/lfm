@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p,
+  a,
+  h1,
+  h2,
+  button,
+  input,
+  ::placeholder {
+    @apply font-qanelas;
+  }
+
+  a {
+    @apply text-sm;
+  }
+
+  @font-face {
+    font-family: "Qanelas";
+    src: url("/fonts/Qanelas/Qanelas-Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy/Gilroy-Light.otf");
+  }
+}

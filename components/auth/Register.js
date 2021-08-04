@@ -119,7 +119,7 @@ const Register = () => {
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
-          <Button text="Register" width="100%" />
+          <Button text="REGISTER" width="100%" />
         </form>
       </div>
     </div>

@@ -70,11 +70,10 @@ export const login = async (credentials = {}) => {
   );
 
   if (!data.status) {
-    return {
-      status: data.status,
-      message: data.message,
-    };
+    console.log(data);
+    return data;
   } else {
+    console.log(data);
     createLocalstorageItem("email", data.email);
     createLocalstorageItem(
       "token",
@@ -83,10 +82,7 @@ export const login = async (credentials = {}) => {
         expiry: new Date().getTime() + 60 * 60 * 1000,
       })
     );
-    return {
-      status: data.status,
-      data: data,
-    };
+    return data;
   }
 };
 
