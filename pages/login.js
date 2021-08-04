@@ -1,15 +1,15 @@
 import React from "react";
-import Home from "../components/commons/Home";
+import Login from "../components/auth/Login";
 import Layout from "../components/commons/Layout";
 import Navbar from "../components/commons/Navbar";
 
-const index = () => {
+const login = () => {
   return (
-    <Layout title="Home">
+    <Layout title="Login" auth={false}>
       <Navbar />
-      <Home />
+      <Login />
     </Layout>
   );
 };
 
-export default index;
+export default login;
