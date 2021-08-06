@@ -73,7 +73,7 @@ const Login = () => {
           {error ? (
             <FeedBackMsg text="Username & Password Invalid" error={true} />
           ) : null}
-          <Button text="LOGIN" width="100%" />
+          <Button text="Login" width="100%" />
         </form>
       </div>
     </div>
