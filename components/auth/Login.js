@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { login } from "../../authentication/utils";
 import { useRouter } from "next/router";
 import { useFormik } from "formik";
@@ -7,8 +7,8 @@ import Button from "../commons/Button";
 import FeedBackMsg from "../commons/FeedBackMsg";
 
 //State imports
-import { useSetRecoilState } from "recoil";
-import { isLoggedIn } from "../../authentication/state";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { isLoggedIn, userState } from "../../authentication/state";
 
 const validate = (values) => {
   const errors = {};
@@ -25,6 +25,15 @@ const Login = () => {
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
+  const setUser = useSetRecoilState(userState);
+
+  useEffect(() => {
+    if (loggedIn) {
+      router.push("/submission");
+    }
+  }, [loggedIn]);
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -38,7 +47,10 @@ const Login = () => {
 
           if (!res.status) {
             setError(true);
-            setErrorMsg("Invalid Credentials");
+            setErrorMsg("Username & Password Invalid");
+          } else {
+            setLoggedIn(true);
+            router.push("/register");
           }
         })
         .catch((err) => {
@@ -70,9 +82,7 @@ const Login = () => {
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
-          {error ? (
-            <FeedBackMsg text="Username & Password Invalid" error={true} />
-          ) : null}
+          {error ? <FeedBackMsg text={errorMsg} error={true} /> : null}
           <Button text="Login" width="100%" />
         </form>
       </div>
