@@ -3,12 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { logout } from "../../authentication/utils";
-import { useRecoilValue, useRecoilState } from "recoil";
-import { userState, isLoggedIn } from "../../authentication/state";
+import { useRecoilState } from "recoil";
+import { isLoggedIn } from "../../authentication/state";
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
-  const user = useRecoilValue(userState);
 
   return (
     <div className="flex items-center justify-between px-10 bg-nav">
@@ -60,18 +59,35 @@ const Navbar = () => {
             </div>
           </>
         ) : (
-          <div
-            className="px-2"
-            onClick={() => {
-              logout();
-              setLoggedIn(false);
-              console.log("Logout");
-            }}
-          >
-            <Link href="/register">
-              <a className="hover:text-hover">LOGOUT</a>
-            </Link>
-          </div>
+          <>
+            <div
+              className="px-2"
+              onClick={() => {
+                logout();
+                setLoggedIn(false);
+                console.log("Logout");
+              }}
+            >
+              <Link href="/register">
+                <a className="hover:text-hover">LOGOUT</a>
+              </Link>
+            </div>
+            <div className="mr-4">
+              <p>Hi, {localStorage.getItem("nama")}</p>
+            </div>
+            <div>
+              <Link href="#">
+                <a>
+                  <Image
+                    src="/img/man.svg"
+                    width={40}
+                    height={40}
+                    alt="profile icon"
+                  />
+                </a>
+              </Link>
+            </div>
+          </>
         )}
       </div>
     </div>

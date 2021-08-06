@@ -32,6 +32,7 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
+          <link rel="icon" href="/logo.png" />
         </Head>
         <body>
           <Main />

@@ -26,7 +26,6 @@ const Login = () => {
   const [errorMsg, setErrorMsg] = useState("");
 
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
-  const setUser = useSetRecoilState(userState);
 
   useEffect(() => {
     if (loggedIn) {
@@ -49,6 +48,7 @@ const Login = () => {
             setError(true);
             setErrorMsg("Username & Password Invalid");
           } else {
+            console.log(localStorage.getItem("nama"));
             setLoggedIn(true);
             router.push("/register");
           }

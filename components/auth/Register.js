@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { register } from "../../authentication/utils";
 import { useRouter } from "next/router";
 import { useFormik } from "formik";
@@ -50,7 +50,13 @@ const Register = () => {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [setLoggedIn] = useRecoilState(isLoggedIn);
+  const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
+
+  useEffect(() => {
+    if (loggedIn) {
+      router.push("/submission");
+    }
+  }, [loggedIn]);
 
   const formik = useFormik({
     initialValues: {
