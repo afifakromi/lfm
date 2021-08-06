@@ -102,13 +102,19 @@ export const register = async (credentials = {}) => {
     "POST"
   );
 
-  createLocalstorageItem(
-    "token",
-    JSON.stringify({
-      token: data.token,
-      expiry: new Date().getTime() + 60 * 60 * 1000,
-    })
-  );
+  console.log(data);
+
+  if (!data.status) {
+    return data;
+  } else {
+    createLocalstorageItem(
+      "token",
+      JSON.stringify({
+        token: data.token,
+        expiry: new Date().getTime() + 60 * 60 * 1000,
+      })
+    );
+  }
 
   return data;
 };

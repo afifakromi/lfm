@@ -7,7 +7,7 @@ import Button from "../commons/Button";
 import FeedBackMsg from "../commons/FeedBackMsg";
 
 //State imports
-import { useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { isLoggedIn } from "../../authentication/state";
 
 const validate = (values) => {
@@ -50,6 +50,7 @@ const Register = () => {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const [setLoggedIn] = useRecoilState(isLoggedIn);
 
   const formik = useFormik({
     initialValues: {
@@ -61,10 +62,15 @@ const Register = () => {
     },
     validate,
     onSubmit: (values) => {
-      console.log("Register");
       register(values)
         .then((res) => {
-          console.log(res);
+          if (!res.status) {
+            setError(true);
+            setErrorMsg(res.message);
+          } else {
+            router.push("/submission");
+            setLoggedIn(true);
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -119,6 +125,7 @@ const Register = () => {
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
+          {error ? <FeedBackMsg text={errorMsg} error={true} /> : null}
           <Button text="REGISTER" width="100%" />
         </form>
       </div>
