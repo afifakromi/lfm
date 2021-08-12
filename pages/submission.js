@@ -8,7 +8,7 @@ const submission = () => {
     <div>
       <Layout title="Submission" auth={true}>
         <Navbar />
-        <Submission />
+        <p>Submission</p>
       </Layout>
     </div>
   );

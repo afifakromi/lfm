@@ -2,15 +2,19 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+// Untuk hide/show Login Register
+import { useOpenUpdate } from "../../context/ToggleContext";
+
 import { logout } from "../../authentication/utils";
 import { useRecoilState } from "recoil";
 import { isLoggedIn } from "../../authentication/state";
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
+  const toggleOpen = useOpenUpdate();
 
   return (
-    <div className="flex items-center justify-between px-10 bg-nav">
+    <div className="flex items-center justify-between px-10 bg-crem">
       <div>
         <Link href="/">
           <a>
@@ -19,7 +23,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="flex items-center justify-center py-2 text-base font-bold text-primary">
+      <div className="flex items-center justify-center py-2 text-base font-bold text-secondary">
         {loggedIn ? (
           <div className="px-2">
             <Link href="/submission">
@@ -47,13 +51,13 @@ const Navbar = () => {
         ) : null}
         {!loggedIn ? (
           <>
-            <div className="px-2">
-              <Link href="/login">
+            <div className="px-2" onClick={toggleOpen[0].toggleLogin}>
+              <Link href="#">
                 <a className="hover:text-hover">LOGIN</a>
               </Link>
             </div>
-            <div className="px-2">
-              <Link href="/register">
+            <div className="px-2" onClick={toggleOpen[0].toggleRegister}>
+              <Link href="#">
                 <a className="hover:text-hover">REGISTER</a>
               </Link>
             </div>
@@ -68,7 +72,7 @@ const Navbar = () => {
                 console.log("Logout");
               }}
             >
-              <Link href="/register">
+              <Link href="/">
                 <a className="hover:text-hover">LOGOUT</a>
               </Link>
             </div>

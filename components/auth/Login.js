@@ -5,10 +5,11 @@ import { useFormik } from "formik";
 import InputField from "../commons/InputFields";
 import Button from "../commons/Button";
 import FeedBackMsg from "../commons/FeedBackMsg";
+import Image from "next/image";
 
 //State imports
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { isLoggedIn, userState } from "../../authentication/state";
+import { useRecoilState } from "recoil";
+import { isLoggedIn } from "../../authentication/state";
 
 const validate = (values) => {
   const errors = {};
@@ -20,18 +21,18 @@ const validate = (values) => {
   }
 };
 
-const Login = () => {
+const Login = ({ open = false }) => {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const [hide, setHide] = useState(false);
 
-  const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
+  const [setLoggedIn] = useRecoilState(isLoggedIn);
 
-  useEffect(() => {
-    if (loggedIn) {
-      router.push("/submission");
-    }
-  }, [loggedIn]);
+  const handleHide = () => {
+    setHide(true);
+    console.log(hide);
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -50,7 +51,7 @@ const Login = () => {
           } else {
             console.log(localStorage.getItem("nama"));
             setLoggedIn(true);
-            router.push("/register");
+            router.push("/submission");
           }
         })
         .catch((err) => {
@@ -60,9 +61,27 @@ const Login = () => {
   });
 
   return (
-    <div>
+    <div
+      className={
+        (open && !hide ? "block" : "hidden") +
+        " absolute flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg top-1/2 left-1/2"
+      }
+    >
+      <div className="flex justify-end mb-2">
+        <Image
+          src="/img/close_btn.svg"
+          width={30}
+          height={30}
+          alt="Close Button"
+          className="cursor-pointer hover:opacity-50"
+          onClick={() => {
+            handleHide();
+          }}
+        />
+      </div>
+
       <div>
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} className="w-full">
           <InputField
             type="text"
             onChange={formik.handleChange}
@@ -72,7 +91,7 @@ const Login = () => {
             width="100%"
           />
           <InputField
-            type="text"
+            type="password"
             onChange={formik.handleChange}
             value={formik.values.password}
             name="password"

@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import InputField from "../commons/InputFields";
 import Button from "../commons/Button";
 import FeedBackMsg from "../commons/FeedBackMsg";
+import Image from "next/image";
 
 //State imports
 import { useRecoilState } from "recoil";
@@ -46,17 +47,18 @@ const validate = (values) => {
   }
 };
 
-const Register = () => {
+const Register = ({ open = false }) => {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
+  const [hide, setHide] = useState(false);
 
-  useEffect(() => {
-    if (loggedIn) {
-      router.push("/submission");
-    }
-  }, [loggedIn]);
+  const [setLoggedIn] = useRecoilState(isLoggedIn);
+
+  const handleHide = () => {
+    setHide(true);
+    console.log(hide);
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -85,9 +87,26 @@ const Register = () => {
   });
 
   return (
-    <div>
+    <div
+      className={
+        (open && !hide ? "block" : "hidden") +
+        " absolute flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg top-1/2 left-1/2"
+      }
+    >
+      <div className="flex justify-end mb-2">
+        <Image
+          src="/img/close_btn.svg"
+          width={30}
+          height={30}
+          alt="Close Button"
+          className="cursor-pointer hover:opacity-50"
+          onClick={() => {
+            handleHide();
+          }}
+        />
+      </div>
       <div>
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} className="w-full">
           <InputField
             type="text"
             onChange={formik.handleChange}

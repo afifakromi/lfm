@@ -76,6 +76,7 @@ export const login = async (credentials = {}) => {
     console.log(data);
     createLocalstorageItem("email", data.message.email);
     createLocalstorageItem("nama", data.message.nama);
+    createLocalstorageItem("username", data.message.username);
     createLocalstorageItem(
       "token",
       JSON.stringify({

@@ -9,55 +9,29 @@ function InputField({ type, name, placeholder, onChange, value, width }) {
   }
 
   return (
-    <div>
+    <div className="relative w-full">
       <input
         type={hide ? "text" : type}
         name={name}
         placeholder={placeholder}
         onChange={onChange}
         value={value}
+        className="relative w-full p-2 my-2 border-2 rounded-lg border-primary focus:shadow-lg focus:outline-none"
       />
       {name == "password" ? (
-        <Image
-          onClick={() => handleHide()}
-          style={{ marginTop: "1rem" }}
-          width={20}
-          height={20}
-          alt="Show"
-          src="/img/password_eye.png"
-        />
+        <div className="absolute right-2 top-5">
+          <Image
+            onClick={() => handleHide()}
+            width={20}
+            height={20}
+            alt="Show"
+            src="/img/password_eye.png"
+            className="absolute cursor-pointer hover:opacity-60"
+          />
+        </div>
       ) : null}
       <style jsx>
         {`
-          input {
-            padding: 0.8rem;
-            width: ${width};
-            border-radius: 0.5rem;
-            border: 2px solid #20639b;
-            margin-top: 1rem;
-          }
-
-          input:focus {
-            box-shadow: 0 0 4px 2px #20639b;
-            outline: none;
-          }
-
-          img {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-          }
-
-          img:hover {
-            opacity: 0.5;
-            cursor: pointer;
-          }
-
-          div {
-            width: 100%;
-            position: relative;
-          }
-
           ::-webkit-input-placeholder {
             color: black;
             opacity: 0.5;
