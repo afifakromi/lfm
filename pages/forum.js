@@ -6,7 +6,7 @@ import Layout from "../components/commons/Layout";
 const forum = () => {
   return (
     <div>
-      <Layout title="Forum" auth={true}>
+      <Layout title="Forum" auth={false}>
         <Navbar />
         <Forum />
       </Layout>
