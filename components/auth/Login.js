@@ -27,7 +27,7 @@ const Login = ({ open = false }) => {
   const [errorMsg, setErrorMsg] = useState("");
   const [hide, setHide] = useState(false);
 
-  const [setLoggedIn] = useRecoilState(isLoggedIn);
+  const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
 
   const handleHide = () => {
     setHide(true);

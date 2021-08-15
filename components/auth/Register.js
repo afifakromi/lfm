@@ -33,10 +33,14 @@ const validate = (values) => {
 
     if (values.nama.length < 6) {
       errors.all = "Nama minimum 6 character";
+
+      return errors;
     }
 
     if (values.username.length < 6) {
       errors.all = "Username minimum 6 character";
+
+      return errors;
     }
 
     if (values.password.length < 8) {
