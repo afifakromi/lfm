@@ -10,6 +10,7 @@ import { useRecoilState } from "recoil";
 import { isLoggedIn } from "../../authentication/state";
 import Button from "../navbar/Button";
 import LFMLink from "../navbar/LFMLink";
+import Profile from "../navbar/Profile";
 
 const Navbar = ({ type }) => {
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
@@ -66,7 +67,8 @@ const Navbar = ({ type }) => {
             </div>
           ) : (
             <>
-              <div
+              <Profile logout={logout} setLoggedIn={setLoggedIn} />
+              {/* <div
                 className="p-2"
                 onClick={() => {
                   logout();
@@ -92,7 +94,7 @@ const Navbar = ({ type }) => {
                     />
                   </a>
                 </Link>
-              </div>
+              </div> */}
             </>
           )}
         </div>

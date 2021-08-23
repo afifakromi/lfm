@@ -109,6 +109,10 @@ const Register = ({ open = false }) => {
           }}
         />
       </div>
+
+      <div className="flex flex-row justify-center my-8">
+        <Image src="/img/logo.png" width={230} height={70} alt="Logo" />
+      </div>
       <div>
         <form onSubmit={formik.handleSubmit} className="w-full">
           <InputField

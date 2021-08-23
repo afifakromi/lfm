@@ -15,6 +15,9 @@ module.exports = {
         hover: "#EC744F",
         primary: "#0a0028",
         crem: "#fcab63",
+        customPink: "#FF5F7F",
+        customError: "#DC3545",
+        customSuccess: "#28a745",
       }),
       textColor: (theme) => theme("colors"),
       textColor: {
@@ -29,6 +32,7 @@ module.exports = {
         DEFAULT: theme("colors.gray.300", "currentColor"),
         primary: "#20639B",
         secondary: "0F0023",
+        customGrey: "#AEA9A9",
       }),
       boxShadow: {
         lg: "0 0 4px 2px #20639b",
@@ -39,6 +43,9 @@ module.exports = {
         middle: "#FF5F7F",
         last: "#FCAB63",
       }),
+      boxShadow: {
+        white: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
+      },
     },
   },
   variants: {

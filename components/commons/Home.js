@@ -9,10 +9,7 @@ const Home = () => {
   const optionsOpen = useOpen();
 
   return (
-    <div
-      className="relative bg-primary"
-      style={{ width: "100%", height: "88vh" }}
-    >
+    <div className="relative w-full h-screen bg-primary">
       <Login open={optionsOpen[0].loginOpen} />
       <Register open={optionsOpen[0].registerOpen} />
     </div>

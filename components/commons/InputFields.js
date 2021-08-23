@@ -16,7 +16,7 @@ function InputField({ type, name, placeholder, onChange, value, width }) {
         placeholder={placeholder}
         onChange={onChange}
         value={value}
-        className="relative w-full p-2 my-2 border-2 rounded-lg border-primary focus:shadow-lg focus:outline-none"
+        className="relative w-full p-2 my-2 border-2 rounded-lg border-customGrey focus:shadow-lg focus:outline-none"
       />
       {name == "password" ? (
         <div className="absolute right-2 top-5">
@@ -25,7 +25,7 @@ function InputField({ type, name, placeholder, onChange, value, width }) {
             width={20}
             height={20}
             alt="Show"
-            src="/img/password_eye.png"
+            src="/img/eye.svg"
             className="absolute cursor-pointer hover:opacity-60"
           />
         </div>

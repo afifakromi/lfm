@@ -64,7 +64,7 @@ const Login = ({ open = false }) => {
     <div
       className={
         (open && !hide ? "block" : "hidden") +
-        " absolute flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg top-1/2 left-1/2"
+        " absolute flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl top-1/2 left-1/2"
       }
     >
       <div className="flex justify-end mb-2">
@@ -78,6 +78,9 @@ const Login = ({ open = false }) => {
             handleHide();
           }}
         />
+      </div>
+      <div className="flex flex-row justify-center my-8">
+        <Image src="/img/logo.png" width={230} height={70} alt="Logo" />
       </div>
 
       <div>
