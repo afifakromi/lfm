@@ -6,9 +6,9 @@ import { ToggleProvider } from "../context/ToggleContext";
 
 const index = () => {
   return (
-    <Layout title="Home">
+    <Layout title="Home" auth={false}>
       <ToggleProvider>
-        <Navbar />
+        <Navbar type="login" />
         <Home />
       </ToggleProvider>
     </Layout>

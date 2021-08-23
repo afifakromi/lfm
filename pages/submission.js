@@ -6,7 +6,7 @@ import Submission from "../components/Submission";
 const submission = () => {
   return (
     <div>
-      <Layout title="Submission" auth={false}>
+      <Layout title="Submission" auth={true}>
         <Navbar />
         <Submission />
       </Layout>

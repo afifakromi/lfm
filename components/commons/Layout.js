@@ -5,7 +5,7 @@ import { isLoggedIn } from "../../authentication/state";
 import { checkToken, fetchToken } from "../../authentication/utils";
 import { useRouter } from "next/router";
 
-const Layout = ({ title, auth, authFallback = "/login", children }) => {
+const Layout = ({ title, auth, authFallback = "/authorized", children }) => {
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
   const router = useRouter();
 

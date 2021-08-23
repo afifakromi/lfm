@@ -8,91 +8,94 @@ import { useOpenUpdate } from "../../context/ToggleContext";
 import { logout } from "../../authentication/utils";
 import { useRecoilState } from "recoil";
 import { isLoggedIn } from "../../authentication/state";
+import Button from "../navbar/Button";
+import LFMLink from "../navbar/LFMLink";
 
-const Navbar = () => {
+const Navbar = ({ type }) => {
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
   const toggleOpen = useOpenUpdate();
 
   return (
-    <div className="flex items-center justify-between px-10 bg-crem">
-      <div>
+    <div
+      className={
+        "flex items-center justify-between px-10 py-4 " +
+        (type == "home" ? "bg-white" : "bg-nav")
+      }
+    >
+      <div className="w-1/6">
         <Link href="/">
           <a>
-            <Image src="/img/logo.png" width={80} height={80} alt="Logo" />
+            <Image src="/img/logo.png" width={200} height={70} alt="Logo" />
           </a>
         </Link>
       </div>
 
-      <div className="flex items-center justify-center py-2 text-base font-bold text-secondary">
-        {loggedIn ? (
-          <div className="px-2">
-            <Link href="/submission">
-              <a className="hover:text-hover">SUBMISSION</a>
-            </Link>
-          </div>
-        ) : null}
-
-        <div className="px-2">
-          <Link href="/">
-            <a className="hover:text-hover">ARCHIVE</a>
-          </Link>
+      <div
+        className={
+          "flex flex-row items-center justify-end w-5/6 " +
+          (type == "home" ? "text-black" : "text-white")
+        }
+      >
+        <div className="flex flex-row justify-start">
+          <LFMLink type={type} url="/" text="HOME" />
+          <LFMLink type={type} url="/submission" text="SUBMISSION" />
+          <LFMLink type={type} url="/forum" text="ARCHIVE" />
+          <LFMLink type={type} url="/forum" text="ABOUT" />
         </div>
-        <div className="px-2">
-          <Link href="/">
-            <a className="hover:text-hover">ABOUT</a>
-          </Link>
+        <div className="flex flex-row items-center justify-end w-3/12">
+          {!loggedIn ? (
+            <div className="flex flex-row items-center justify-center w-5/6">
+              <Button
+                text="Sign Up"
+                url="#"
+                toggleOpen={toggleOpen}
+                type="register"
+              />
+              <div
+                className={
+                  "w-0 h-8 mx-4 border-l-2 " +
+                  (type === "home" ? "border-black" : "border-white")
+                }
+              ></div>
+              <Button
+                text="Log In"
+                url="#"
+                toggleOpen={toggleOpen}
+                type="login"
+              />
+            </div>
+          ) : (
+            <>
+              <div
+                className="p-2"
+                onClick={() => {
+                  logout();
+                  setLoggedIn(false);
+                  console.log("Logout");
+                }}
+              >
+                <Link href="/">
+                  <a className="hover:text-hover">LOGOUT</a>
+                </Link>
+              </div>
+              <div className="mr-4">
+                <p>Hi, {localStorage.getItem("nama")}</p>
+              </div>
+              <div>
+                <Link href="#">
+                  <a>
+                    <Image
+                      src="/img/man.svg"
+                      width={40}
+                      height={40}
+                      alt="profile icon"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
-        {loggedIn ? (
-          <div className="px-2">
-            <Link href="/forum">
-              <a className="hover:text-hover">FORUM</a>
-            </Link>
-          </div>
-        ) : null}
-        {!loggedIn ? (
-          <>
-            <div className="px-2" onClick={toggleOpen[0].toggleLogin}>
-              <Link href="#">
-                <a className="hover:text-hover">LOGIN</a>
-              </Link>
-            </div>
-            <div className="px-2" onClick={toggleOpen[0].toggleRegister}>
-              <Link href="#">
-                <a className="hover:text-hover">REGISTER</a>
-              </Link>
-            </div>
-          </>
-        ) : (
-          <>
-            <div
-              className="px-2"
-              onClick={() => {
-                logout();
-                setLoggedIn(false);
-                console.log("Logout");
-              }}
-            >
-              <Link href="/">
-                <a className="hover:text-hover">LOGOUT</a>
-              </Link>
-            </div>
-            <div className="mr-4">
-              <p>Hi, {localStorage.getItem("nama")}</p>
-            </div>
-            <div>
-              <Link href="#">
-                <a>
-                  <Image
-                    src="/img/man.svg"
-                    width={40}
-                    height={40}
-                    alt="profile icon"
-                  />
-                </a>
-              </Link>
-            </div>
-          </>
-        )}
       </div>
     </div>
   );

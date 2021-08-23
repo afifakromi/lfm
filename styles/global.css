@@ -27,3 +27,9 @@
     src: url("/fonts/Gilroy/Gilroy-Light.otf");
   }
 }
+
+@layer components {
+  .navbar-div {
+    @apply border-2 rounded-lg hover:border-red-400;
+  }
+}
