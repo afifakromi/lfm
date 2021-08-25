@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-function InputField({ type, name, placeholder, onChange, value, width }) {
+function InputField({
+  type,
+  name,
+  placeholder,
+  onChange,
+  value,
+  width,
+  variation,
+  label,
+}) {
   const [hide, setHide] = useState(false);
 
   function handleHide() {
@@ -9,14 +18,22 @@ function InputField({ type, name, placeholder, onChange, value, width }) {
   }
 
   return (
-    <div className="relative w-full">
+    <div
+      className={
+        "relative " + (variation === "submission" ? "w-5/12" : "w-full")
+      }
+    >
+      {variation === "submission" ? <label>{label}</label> : null}
       <input
         type={hide ? "text" : type}
         name={name}
-        placeholder={placeholder}
+        placeholder={variation === "submission" ? " " : placeholder}
         onChange={onChange}
         value={value}
-        className="relative w-full p-2 my-2 border-2 rounded-lg border-customGrey focus:shadow-lg focus:outline-none"
+        className={
+          "relative w-full p-2 my-2 border-2 rounded-lg border-customGrey focus:shadow-lg focus:outline-none " +
+          (variation === "submission" ? "bg-nav" : "bg-white")
+        }
       />
       {name == "password" ? (
         <div className="absolute right-2 top-5">

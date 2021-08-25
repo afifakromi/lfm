@@ -33,3 +33,10 @@
     @apply border-2 rounded-lg hover:border-red-400;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
