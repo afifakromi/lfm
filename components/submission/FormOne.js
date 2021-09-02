@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputField from "../commons/InputFields";
 import FeedBackMsg from "../commons/FeedBackMsg";
 import InputRadio from "./InputRadio";
 import BtnSlide from "./BtnSlide";
+import Header from "./Header";
 import { formOneState } from "../../authentication/state";
 import { useFormik } from "formik";
 import { useRecoilState } from "recoil";
-import Header from "./Header";
 
 const validate = (values) => {
   const errors = {};
@@ -21,7 +21,8 @@ const validate = (values) => {
     !values.durasi ||
     !values.link ||
     !values.cover ||
-    !values.sinopsis
+    !values.sinopsis ||
+    !values.suara
   ) {
     errors.all = "All fields is required";
 
@@ -44,6 +45,7 @@ const FormOne = ({ nextSlide }) => {
       link: "",
       cover: "",
       sinopsis: "",
+      suara: "",
     },
     validate,
     onSubmit: async (values) => {
@@ -132,6 +134,10 @@ const FormOne = ({ nextSlide }) => {
               label="Audio"
               optionsOne="Bersuara"
               optionsTwo="Tidak Bersuara"
+              onChange={formik.handleChange}
+              name="suara"
+              valueOne="Bersuara"
+              valueTwo="Tidak Bersuara"
             />
           </div>
           <div className="flex flex-col items-start justify-between mt-2 text-white font-poppins">
@@ -140,7 +146,7 @@ const FormOne = ({ nextSlide }) => {
               name="sinopsis"
               value={formik.values.sinopsis}
               onChange={formik.handleChange}
-              className="w-full h-24 mt-4 border-2 border-white bg-nav"
+              className="w-full h-24 px-4 py-2 mt-4 border-2 border-white bg-nav"
             ></textarea>
           </div>
           <div className="flex flex-row items-start justify-between mt-4 text-white font-poppins">
@@ -166,7 +172,7 @@ const FormOne = ({ nextSlide }) => {
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
           <div className="flex flex-row justify-end w-full mt-6">
-            <BtnSlide next={true} onClick={formik.handleSubmit} />
+            <BtnSlide type="normal" next={true} onClick={formik.handleSubmit} />
           </div>
         </form>
       </div>

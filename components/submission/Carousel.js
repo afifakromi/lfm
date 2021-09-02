@@ -15,9 +15,9 @@ const Carousel = () => {
   };
 
   const slides = [
-    // <FormOne nextSlide={nextSlide} key={0} />,
-    // <FormTwo nextSlide={nextSlide} prevSlide={prevSlide} key={1} />,
-    <FormThree nextSlide={nextSlide} prevSlide={prevSlide} key={2} />,
+    <FormOne nextSlide={nextSlide} key={0} />,
+    <FormTwo nextSlide={nextSlide} prevSlide={prevSlide} key={1} />,
+    <FormThree key={2} />,
   ];
 
   const length = slides.length;

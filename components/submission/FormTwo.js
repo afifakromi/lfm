@@ -5,8 +5,8 @@ import InputRadio from "./InputRadio";
 import BtnSlide from "./BtnSlide";
 import Header from "./Header";
 import { useFormik } from "formik";
-import { getFormOneState } from "../../authentication/state";
-import { useRecoilValue } from "recoil";
+import { formTwoState } from "../../authentication/state";
+import { useRecoilState } from "recoil";
 
 const validate = (values) => {
   const errors = {};
@@ -19,7 +19,8 @@ const validate = (values) => {
     !values.kota ||
     !values.foto ||
     !values.provinsi ||
-    !values.biografi
+    !values.biografi ||
+    !values.gender
   ) {
     errors.all = "All fields is required";
 
@@ -34,11 +35,7 @@ const validate = (values) => {
 };
 
 const FormTwo = ({ nextSlide, prevSlide }) => {
-  const getFormOneVal = useRecoilValue(getFormOneState);
-
-  useEffect(() => {
-    console.log(getFormOneVal);
-  }, [getFormOneVal]);
+  const [fromTwoValue, setFormTwoValue] = useRecoilState(formTwoState);
 
   const formik = useFormik({
     initialValues: {
@@ -50,40 +47,13 @@ const FormTwo = ({ nextSlide, prevSlide }) => {
       foto: "",
       provinsi: "",
       biografi: "",
+      gender: "",
     },
     validate,
     onSubmit: async (values) => {
       if (!formik.errors.all) {
         nextSlide();
-      }
-
-      try {
-        const response = await fetch(
-          "https://v1.nocodeapi.com/akromiafif/google_sheets/WkrOfbhsGNjJzVmB?tabId=LFM_Database",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify([
-              [
-                values.nama,
-                values.no_hp,
-                values.alamat,
-                values.email,
-                values.kota,
-                values.foto,
-                values.provinsi,
-                values.biografi,
-              ],
-            ]),
-          }
-        );
-
-        let res = await response.json();
-        console.log(res);
-      } catch (err) {
-        console.log(err);
+        setFormTwoValue(values);
       }
     },
   });
@@ -109,8 +79,12 @@ const FormTwo = ({ nextSlide, prevSlide }) => {
             />
             <InputRadio
               label="Jenis Kelamin"
-              optionsOne="Laki Laki"
+              optionsOne="Laki-Laki"
               optionsTwo="Perempuan"
+              onChange={formik.handleChange}
+              name="gender"
+              valueOne="Laki-Laki"
+              valueTwo="Perempuan"
             />
           </div>
           <div className="flex flex-row items-start justify-between mt-2 text-white font-poppins">
@@ -180,8 +154,8 @@ const FormTwo = ({ nextSlide, prevSlide }) => {
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
           <div className="flex flex-row justify-between w-full mt-6">
-            <BtnSlide next={false} onClick={prevSlide} />
-            <BtnSlide next={true} onClick={formik.handleSubmit} />
+            <BtnSlide type="normal" next={false} onClick={prevSlide} />
+            <BtnSlide type="normal" next={true} onClick={formik.handleSubmit} />
           </div>
         </form>
       </div>

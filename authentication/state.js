@@ -37,3 +37,17 @@ export const getFormTwoState = selector({
     return values;
   },
 });
+
+export const formThreeState = atom({
+  key: "formThree",
+  default: [],
+});
+
+export const getFormThreeState = selector({
+  key: "getFormThree",
+  get: ({ get }) => {
+    const values = get(formThreeState);
+
+    return values;
+  },
+});

@@ -3,7 +3,7 @@ import InputField from "../commons/InputFields";
 import FeedBackMsg from "../commons/FeedBackMsg";
 import BtnSlide from "./BtnSlide";
 import { useFormik } from "formik";
-import { getFormOneState } from "../../authentication/state";
+import { getFormOneState, getFormTwoState } from "../../authentication/state";
 import { useRecoilValue } from "recoil";
 import Header from "./Header";
 
@@ -24,12 +24,15 @@ const validate = (values) => {
   }
 };
 
-const FormThree = ({ nextSlide, prevSlide }) => {
+const FormThree = () => {
   const getFormOneVal = useRecoilValue(getFormOneState);
+  const getFormTwoVal = useRecoilValue(getFormTwoState);
+  const [success, setSuccess] = useState(true);
 
-  useEffect(() => {
-    console.log(getFormOneVal);
-  }, [getFormOneVal]);
+  // useEffect(() => {
+  //   console.log(getFormOneVal);
+  //   console.log(getFormTwoVal);
+  // }, [getFormOneVal, getFormTwoVal]);
 
   const formik = useFormik({
     initialValues: {
@@ -42,10 +45,6 @@ const FormThree = ({ nextSlide, prevSlide }) => {
     },
     validate,
     onSubmit: async (values) => {
-      if (!formik.errors.all) {
-        nextSlide();
-      }
-
       try {
         const response = await fetch(
           "https://v1.nocodeapi.com/akromiafif/google_sheets/WkrOfbhsGNjJzVmB?tabId=LFM_Database",
@@ -56,6 +55,26 @@ const FormThree = ({ nextSlide, prevSlide }) => {
             },
             body: JSON.stringify([
               [
+                getFormOneVal.bahasa,
+                getFormOneVal.cover,
+                getFormOneVal.durasi,
+                getFormOneVal.festival,
+                getFormOneVal.judul_film,
+                getFormOneVal.kota,
+                getFormOneVal.link,
+                getFormOneVal.penghargaan,
+                getFormOneVal.sinopsis,
+                getFormOneVal.tahun,
+                getFormOneVal.suara,
+                getFormTwoVal.alamat,
+                getFormTwoVal.biografi,
+                getFormTwoVal.email,
+                getFormTwoVal.foto,
+                getFormTwoVal.kota,
+                getFormTwoVal.nama,
+                getFormTwoVal.no_hp,
+                getFormTwoVal.provinsi,
+                getFormTwoVal.gender,
                 values.nama_produksi,
                 values.alamat_produksi,
                 values.no_hp_produksi,
@@ -68,7 +87,10 @@ const FormThree = ({ nextSlide, prevSlide }) => {
         );
 
         let res = await response.json();
-        console.log(res);
+
+        if (res.message === "Successfully Inserted") {
+          setSuccess(true);
+        }
       } catch (err) {
         console.log(err);
       }
@@ -150,9 +172,11 @@ const FormThree = ({ nextSlide, prevSlide }) => {
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
-          <div className="flex flex-row justify-between w-full mt-6">
-            <BtnSlide next={false} onClick={prevSlide} />
-            <BtnSlide next={true} onClick={formik.handleSubmit} />
+          {success ? (
+            <FeedBackMsg text="Thanks for Submitting" error={false} />
+          ) : null}
+          <div className="flex flex-row justify-end w-full mt-6">
+            <BtnSlide type="submit" next={true} onClick={formik.handleSubmit} />
           </div>
         </form>
       </div>
