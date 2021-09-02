@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormOne from "./FormOne";
+import FormThree from "./FormThree";
 import FormTwo from "./FormTwo";
 
 const Carousel = () => {
@@ -14,8 +15,9 @@ const Carousel = () => {
   };
 
   const slides = [
-    <FormOne nextSlide={nextSlide} prevSlide={prevSlide} key={0} />,
-    <FormTwo nextSlide={nextSlide} prevSlide={prevSlide} key={1} />,
+    // <FormOne nextSlide={nextSlide} key={0} />,
+    // <FormTwo nextSlide={nextSlide} prevSlide={prevSlide} key={1} />,
+    <FormThree nextSlide={nextSlide} prevSlide={prevSlide} key={2} />,
   ];
 
   const length = slides.length;
@@ -25,7 +27,7 @@ const Carousel = () => {
   }
 
   return (
-    <section className="flex flex-col items-center justify-center w-full py-8 bg-blue-300">
+    <section className="flex flex-col items-center justify-center w-full py-8 bg-nav">
       {slides.map((slide, index) => {
         return (
           <div
@@ -33,7 +35,7 @@ const Carousel = () => {
             key={index}
           >
             {index === current && (
-              <div className="relative flex flex-col items-center justify-center bg-red-400 item">
+              <div className="relative flex flex-col items-center justify-center w-full h-full">
                 {slide}
               </div>
             )}
@@ -42,11 +44,6 @@ const Carousel = () => {
       })}
       <style jsx>
         {`
-          .item {
-            width: 100%;
-            height: 100%;
-          }
-
           .slide {
             width: 100%;
             opacity: 0;

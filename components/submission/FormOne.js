@@ -6,7 +6,7 @@ import BtnSlide from "./BtnSlide";
 import { formOneState } from "../../authentication/state";
 import { useFormik } from "formik";
 import { useRecoilState } from "recoil";
-import Image from "next/image";
+import Header from "./Header";
 
 const validate = (values) => {
   const errors = {};
@@ -29,9 +29,8 @@ const validate = (values) => {
   }
 };
 
-const FormOne = ({ nextSlide, prevSlide }) => {
-  const [errorMsg, setErrorMsg] = useState("");
-  const [formValue, setFormValue] = useRecoilState(formOneState);
+const FormOne = ({ nextSlide }) => {
+  const [formOnevalue, setFormOneValue] = useRecoilState(formOneState);
 
   const formik = useFormik({
     initialValues: {
@@ -48,41 +47,9 @@ const FormOne = ({ nextSlide, prevSlide }) => {
     },
     validate,
     onSubmit: async (values) => {
-      try {
-        if (!formik.errors.all) {
-          nextSlide();
-          prevSlide();
-          setFormValue(values);
-        }
-
-        const response = await fetch(
-          "https://v1.nocodeapi.com/akromiafif/google_sheets/WkrOfbhsGNjJzVmB?tabId=LFM_Database",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify([
-              [
-                values.judul_film,
-                values.bahasa,
-                values.tahun,
-                values.festival,
-                values.kota,
-                values.penghargaan,
-                values.durasi,
-                values.link,
-                values.cover,
-                values.sinopsis,
-              ],
-            ]),
-          }
-        );
-
-        let res = await response.json();
-        console.log(res);
-      } catch (err) {
-        console.log(err);
+      if (!formik.errors.all) {
+        nextSlide();
+        setFormOneValue(values);
       }
     },
   });
@@ -93,19 +60,7 @@ const FormOne = ({ nextSlide, prevSlide }) => {
         <h1 className="text-4xl text-center text-white bg-gradient-to-r text-gradient from-first via-middle to-last">
           FORM SUBMISSION
         </h1>
-        <div className="flex flex-row items-center justify-between w-full mt-8 text-white">
-          <div className="flex flex-row items-center">
-            <Image
-              src="/img/film.svg"
-              width={50}
-              height={50}
-              alt="Film Data Logo"
-            />
-            <p className="ml-4 text-xl">Film Data</p>
-          </div>
-          <p>Form 1 of 3</p>
-        </div>
-        <hr className="bg-gradient-to-r from-first via-middle to-last" />
+        <Header title="Film Data" index={1} />
       </div>
       <div className="flex-shrink-0 w-6/12 mt-8">
         <form onSubmit={formik.handleSubmit} className="w-full">
@@ -115,7 +70,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.judul_film}
               name="judul_film"
-              placeholder="Judul Film"
               variation="submission"
               label="Judul Film"
             />
@@ -124,7 +78,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.bahasa}
               name="bahasa"
-              placeholder="Bahasa"
               variation="submission"
               label="Bahasa yang Digunakan dalam Film"
             />
@@ -135,7 +88,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.tahun}
               name="tahun"
-              placeholder="Tahun Produksi"
               variation="submission"
               label="Tahun Produksi"
             />
@@ -144,7 +96,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.festival}
               name="festival"
-              placeholder="Festival Film"
               variation="submission"
               label="Festival Film yang pernah Diikuti"
             />
@@ -155,7 +106,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.kota}
               name="kota"
-              placeholder="Kota Produksi"
               variation="submission"
               label="Kota Produksi"
             />
@@ -164,7 +114,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.penghargaan}
               name="penghargaan"
-              placeholder="Penghargaan"
               variation="submission"
               label="Penghargaan yang Diraih"
             />
@@ -175,7 +124,7 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.durasi}
               name="durasi"
-              placeholder="Durasi Film"
+              placeholder="Dalam detik"
               variation="submission"
               label="Durasi Film"
             />
@@ -200,7 +149,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.link}
               name="link"
-              placeholder="Link Film"
               variation="submission"
               label="Link Film"
             />
@@ -209,7 +157,6 @@ const FormOne = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.cover}
               name="cover"
-              placeholder="Link Cover Film"
               variation="submission"
               label="Link Cover Film"
             />
@@ -218,8 +165,7 @@ const FormOne = ({ nextSlide, prevSlide }) => {
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
-          <div className="flex flex-row justify-between w-full mt-6">
-            <BtnSlide next={false} onClick={formik.handleSubmit} />
+          <div className="flex flex-row justify-end w-full mt-6">
             <BtnSlide next={true} onClick={formik.handleSubmit} />
           </div>
         </form>

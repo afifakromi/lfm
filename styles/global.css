@@ -11,6 +11,7 @@
   input,
   ::placeholder {
     @apply font-qanelas;
+    @apply text-white;
   }
 
   a {

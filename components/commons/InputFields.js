@@ -27,7 +27,7 @@ function InputField({
       <input
         type={hide ? "text" : type}
         name={name}
-        placeholder={variation === "submission" ? " " : placeholder}
+        placeholder={placeholder}
         onChange={onChange}
         value={value}
         className={
@@ -50,7 +50,6 @@ function InputField({
       <style jsx>
         {`
           ::-webkit-input-placeholder {
-            color: black;
             opacity: 0.5;
             font-size: 1rem;
             vertical-align: center;
