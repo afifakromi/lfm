@@ -18,6 +18,7 @@ module.exports = {
         customPink: "#FF5F7F",
         customError: "#DC3545",
         customSuccess: "#28a745",
+        customArchive: "#EFE5E2"
       }),
       textColor: (theme) => theme("colors"),
       textColor: {
@@ -26,6 +27,8 @@ module.exports = {
         bg: "#0a0028",
         primary: "#ff5f7f",
         secondary: "#2641a1",
+        customArchive: "#374770",
+        customPink: "#FE6081"
       },
       borderColor: (theme) => ({
         ...theme("colors"),

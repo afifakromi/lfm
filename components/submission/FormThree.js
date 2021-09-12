@@ -27,7 +27,7 @@ const validate = (values) => {
 const FormThree = () => {
   const getFormOneVal = useRecoilValue(getFormOneState);
   const getFormTwoVal = useRecoilValue(getFormTwoState);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
 
   // useEffect(() => {
   //   console.log(getFormOneVal);
