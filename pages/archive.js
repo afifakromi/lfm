@@ -1,5 +1,5 @@
-import React from 'react'
-import Archive from '../components/Archive';
+import React from "react";
+import Archive from "../components/Archive";
 import Layout from "../components/commons/Layout";
 import Navbar from "../components/commons/Navbar";
 
@@ -9,7 +9,7 @@ const archive = () => {
       <Navbar />
       <Archive />
     </Layout>
-  )
-}
+  );
+};
 
-export default archive
+export default archive;

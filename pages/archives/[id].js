@@ -1,6 +1,7 @@
 import Navbar from "../../components/commons/Navbar";
 import Layout from "../../components/commons/Layout";
-import React, { useEffect } from "react";
+import React from "react";
+import "react-dropdown/style.css";
 import Image from "next/image";
 import { gff_archive } from "../../const";
 import { useRouter } from "next/router";

@@ -41,7 +41,7 @@ const Navbar = ({ type }) => {
           <LFMLink type={type} url="/" text="HOME" />
           <LFMLink type={type} url="/submission" text="SUBMISSION" />
           <LFMLink type={type} url="/archives" text="ARCHIVE" />
-          <LFMLink type={type} url="/forum" text="ABOUT" />
+          <LFMLink type={type} url="/about" text="ABOUT" />
         </div>
         <div className="flex flex-row items-center justify-end w-3/12">
           {!loggedIn ? (
