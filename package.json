@@ -25,6 +25,7 @@
     "react-dropzone": "^11.3.4",
     "react-helmet-async": "^1.0.9",
     "react-icons": "^4.2.0",
+    "react-player": "^2.9.0",
     "react-router-dom": "^5.2.0",
     "reactstrap": "^8.9.0",
     "recoil": "^0.4.0",
