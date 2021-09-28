@@ -18,9 +18,9 @@ const Home = () => {
           url="/video-landing.mp4"
           playing={true}
           loop={true}
-          light={false}
           width="100%"
           height="100%"
+          muted={true}
         />
       </div>
     </div>
