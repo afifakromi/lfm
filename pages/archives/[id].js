@@ -1,14 +1,15 @@
 import Navbar from "../../components/commons/Navbar";
 import Layout from "../../components/commons/Layout";
-import React from "react";
-import "react-dropdown/style.css";
+import Footer from "../../components/commons/Footer";
 import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import React from "react";
+
 import { Carousel } from "react-responsive-carousel";
 import { useRouter } from "next/router";
-import Footer from "../../components/commons/Footer";
-
 import { gff_archive } from "../../const";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-dropdown/style.css";
 
 const Details = () => {
   const router = useRouter();
