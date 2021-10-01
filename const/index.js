@@ -1,5 +1,6 @@
 const gff_archive = [
   {
+    id: 1,
     link: "/archives/1",
     key: "GFF 2018",
     title: "Ganffest 2018: Jendela",
@@ -16,6 +17,7 @@ const gff_archive = [
     ],
   },
   {
+    id: 2,
     link: "/archives/2",
     key: "GFF 2016",
     title: "Ganffest 2016: Jendela",
@@ -32,6 +34,7 @@ const gff_archive = [
     ],
   },
   {
+    id: 3,
     link: "/archives/3",
     key: "GFF 2014",
     title: "Ganffest 2014: Jendela",
@@ -48,6 +51,7 @@ const gff_archive = [
     ],
   },
   {
+    id: 4,
     link: "/archives/4",
     key: "GFF 2012",
     title: "Ganffest 2012: Jendela",
@@ -64,6 +68,7 @@ const gff_archive = [
     ],
   },
   {
+    id: 5,
     link: "/archives/5",
     key: "GFF 2010",
     title: "Ganffest 2010: Jendela",
@@ -80,6 +85,7 @@ const gff_archive = [
     ],
   },
   {
+    id: 6,
     link: "/archives/6",
     key: "GFF 2008",
     title: "Ganffest 2008: Jendela",

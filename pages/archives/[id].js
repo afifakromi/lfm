@@ -5,18 +5,35 @@ import Image from "next/image";
 import React from "react";
 
 import { Carousel } from "react-responsive-carousel";
-import { useRouter } from "next/router";
 import { gff_archive } from "../../const";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "react-dropdown/style.css";
 
-const Details = () => {
-  const router = useRouter();
-  const { id } = router.query;
+export const getStaticPaths = async () => {
+  const paths = gff_archive.map((item) => {
+    return {
+      params: { id: item.id.toString() },
+    };
+  });
 
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  const id = context.params.id;
+
+  return {
+    props: { archive: gff_archive[id - 1] },
+  };
+};
+
+const Details = ({ archive }) => {
   return (
-    <Layout title={gff_archive[id - 1].key}>
+    <Layout title={archive.key}>
       <Navbar />
       <div className="flex flex-col">
         <div className="flex flex-row items-center justify-center w-full bg-red-400">
@@ -29,7 +46,7 @@ const Details = () => {
               centerMode={true}
               centerSlidePercentage={100}
             >
-              {gff_archive[id - 1].fotoCarousel.map((item, index) => {
+              {archive.fotoCarousel.map((item, index) => {
                 return (
                   <div key={index}>
                     <Image src={item} width={3740} height={2700} alt="One" />
@@ -43,15 +60,10 @@ const Details = () => {
           className="flex flex-row items-start justify-center py-20 bg-primary"
           style={{ marginTop: "-3rem" }}
         >
-          <Image
-            src={gff_archive[id - 1].fotoUrl}
-            width={344}
-            height={500}
-            alt="Logo"
-          />
+          <Image src={archive.fotoUrl} width={344} height={500} alt="Logo" />
           <div className="w-3/6 ml-8">
-            <p className="mb-8 text-5xl">{gff_archive[id - 1].title}</p>
-            <p>{gff_archive[id - 1].content}</p>
+            <p className="mb-8 text-5xl">{archive.title}</p>
+            <p>{archive.content}</p>
           </div>
         </div>
       </div>
