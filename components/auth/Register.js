@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { register } from "../../authentication/utils";
 import { useRouter } from "next/router";
 import { useFormik } from "formik";
@@ -8,8 +8,12 @@ import FeedBackMsg from "../commons/FeedBackMsg";
 import Image from "next/image";
 
 //State imports
-import { useRecoilState } from "recoil";
-import { isLoggedIn } from "../../authentication/state";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  isLoggedIn,
+  getToggleRegisterState,
+  toggleRegisterState,
+} from "../../authentication/state";
 
 const validate = (values) => {
   const errors = {};
@@ -55,14 +59,12 @@ const Register = ({ open = false }) => {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [hide, setHide] = useState(false);
 
-  const [setLoggedIn] = useRecoilState(isLoggedIn);
+  const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
 
-  const handleHide = () => {
-    setHide(true);
-    console.log(hide);
-  };
+  const toggleRegister = useRecoilValue(getToggleRegisterState);
+
+  const setToggleRegister = useSetRecoilState(toggleRegisterState);
 
   const formik = useFormik({
     initialValues: {
@@ -93,8 +95,8 @@ const Register = ({ open = false }) => {
   return (
     <div
       className={
-        (open && !hide ? "block" : "hidden") +
-        " absolute flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg top-1/2 left-1/2"
+        (toggleRegister && !loggedIn ? "block" : "hidden") +
+        " absolute z-50 flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg top-1/2 left-1/2"
       }
     >
       <div className="flex justify-end mb-2">
@@ -105,7 +107,7 @@ const Register = ({ open = false }) => {
           alt="Close Button"
           className="cursor-pointer hover:opacity-50"
           onClick={() => {
-            handleHide();
+            setToggleRegister(false);
           }}
         />
       </div>

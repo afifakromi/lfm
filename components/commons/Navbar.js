@@ -2,19 +2,34 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Untuk hide/show Login Register
-import { useOpenUpdate } from "../../context/ToggleContext";
-
 import { logout } from "../../authentication/utils";
-import { useRecoilState } from "recoil";
-import { isLoggedIn } from "../../authentication/state";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import {
+  isLoggedIn,
+  toggleLoginState,
+  toggleRegisterState,
+} from "../../authentication/state";
 import Button from "../navbar/Button";
 import LFMLink from "../navbar/LFMLink";
 import Profile from "../navbar/Profile";
 
 const Navbar = ({ type }) => {
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
-  const toggleOpen = useOpenUpdate();
+
+  const setToggleLogin = useSetRecoilState(toggleLoginState);
+  const setToggleRegister = useSetRecoilState(toggleRegisterState);
+
+  const authLoginClick = () => {
+    console.log("Login Clicked");
+    setToggleLogin((prevToggle) => !prevToggle);
+    setToggleRegister(false);
+  };
+
+  const authRegisterClick = () => {
+    console.log("Register Clicked");
+    setToggleRegister((prevToggle) => !prevToggle);
+    setToggleLogin(false);
+  };
 
   return (
     <div
@@ -46,24 +61,14 @@ const Navbar = ({ type }) => {
         <div className="flex flex-row items-center justify-end w-3/12">
           {!loggedIn ? (
             <div className="flex flex-row items-center justify-center w-5/6">
-              <Button
-                text="Sign Up"
-                url="#"
-                toggleOpen={toggleOpen}
-                type="register"
-              />
+              <Button text="Sign Up" url="#" onClick={authRegisterClick} />
               <div
                 className={
                   "w-0 h-8 mx-4 border-l-2 " +
                   (type === "home" ? "border-black" : "border-white")
                 }
               ></div>
-              <Button
-                text="Log In"
-                url="#"
-                toggleOpen={toggleOpen}
-                type="login"
-              />
+              <Button text="Log In" url="#" onClick={authLoginClick} />
             </div>
           ) : (
             <>

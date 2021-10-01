@@ -1,20 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Login from "../auth/Login";
 import Register from "../auth/Register";
 import ReactPlayer from "react-player";
 
-// Untuk hide/show Login Register
-import { useOpen } from "../../context/ToggleContext";
-import Footer from "./Footer";
-
 const Home = () => {
-  const optionsOpen = useOpen();
-
   return (
     <div className="relative w-full h-screen bg-primary">
-      <Login open={optionsOpen[0].loginOpen} />
-      <Register open={optionsOpen[0].registerOpen} />
       <div className="w-full">
+        <Login />
+        <Register />
         <ReactPlayer
           url="/video-landing.mp4"
           playing={true}

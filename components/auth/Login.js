@@ -8,8 +8,12 @@ import FeedBackMsg from "../commons/FeedBackMsg";
 import Image from "next/image";
 
 //State imports
-import { useRecoilState } from "recoil";
-import { isLoggedIn } from "../../authentication/state";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  isLoggedIn,
+  getToggleLoginState,
+  toggleLoginState,
+} from "../../authentication/state";
 
 const validate = (values) => {
   const errors = {};
@@ -21,18 +25,20 @@ const validate = (values) => {
   }
 };
 
-const Login = ({ open = false }) => {
+const Login = () => {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [hide, setHide] = useState(false);
 
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
 
-  const handleHide = () => {
-    setHide(true);
-    console.log(hide);
-  };
+  const toggleLogin = useRecoilValue(getToggleLoginState);
+
+  const setToggleLogin = useSetRecoilState(toggleLoginState);
+
+  useEffect(() => {
+    console.log(toggleLogin);
+  }, [toggleLogin]);
 
   const formik = useFormik({
     initialValues: {
@@ -49,7 +55,6 @@ const Login = ({ open = false }) => {
             setError(true);
             setErrorMsg("Username & Password Invalid");
           } else {
-            console.log(localStorage.getItem("nama"));
             setLoggedIn(true);
             router.push("/submission");
           }
@@ -63,8 +68,8 @@ const Login = ({ open = false }) => {
   return (
     <div
       className={
-        (open && !hide ? "block" : "hidden") +
-        " absolute flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl top-1/2 left-1/2"
+        (toggleLogin && !loggedIn ? "block" : "hidden") +
+        " absolute z-50 flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl top-1/2 left-1/2"
       }
     >
       <div className="flex justify-end mb-2">
@@ -75,7 +80,7 @@ const Login = ({ open = false }) => {
           alt="Close Button"
           className="cursor-pointer hover:opacity-50"
           onClick={() => {
-            handleHide();
+            setToggleLogin(false);
           }}
         />
       </div>

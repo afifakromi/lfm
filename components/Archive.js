@@ -1,15 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { gff_archive } from "../const/index";
 
 const Archive = () => {
-  const gff_archive = [
-    { link: "/", title: "GFF 2018" },
-    { link: "/", title: "GFF 2016" },
-    { link: "/", title: "GFF 2014" },
-    { link: "/", title: "GFF 2018" },
-    { link: "/", title: "GFF 2016" },
-    { link: "/", title: "GFF 2014" },
-  ];
   return (
     <div className="flex flex-row items-center justify-center w-full h-screen bg-customArchive">
       <div className="flex flex-col w-5/6 mt-16 h-4/5">

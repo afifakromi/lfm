@@ -7,7 +7,7 @@ const Profile = ({ loggedIn, setLoggedIn }) => {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    setUsername(localStorage.getItem("username").charAt(0));
+    setUsername(localStorage.getItem("name"));
   }, []);
 
   const arrowClick = () => {
@@ -18,7 +18,7 @@ const Profile = ({ loggedIn, setLoggedIn }) => {
     <div className="relative flex flex-col items-center justify-center w-40">
       <div className="flex flex-row items-center justify-between">
         <div className="flex flex-col items-center justify-center mr-4 rounded-full w-14 h-14 bg-customPink">
-          <p className="text-3xl text-black">{username}</p>
+          <p className="text-3xl text-black">A</p>
         </div>
         <Image
           onClick={arrowClick}

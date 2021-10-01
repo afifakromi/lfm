@@ -51,3 +51,31 @@ export const getFormThreeState = selector({
     return values;
   },
 });
+
+export const toggleLoginState = atom({
+  key: "toggleLoginState",
+  default: false,
+});
+
+export const getToggleLoginState = selector({
+  key: "getToggleLoginState",
+  get: ({ get }) => {
+    const values = get(toggleLoginState);
+
+    return values;
+  },
+});
+
+export const toggleRegisterState = atom({
+  key: "toggleRegisterState",
+  default: false,
+});
+
+export const getToggleRegisterState = selector({
+  key: "getToggleRegisterState",
+  get: ({ get }) => {
+    const values = get(toggleRegisterState);
+
+    return values;
+  },
+});
