@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 
 const Home = () => {
   return (
-    <div className="relative w-full h-screen bg-primary">
+    <div className="relative w-full bg-primary">
       <div className="w-full">
         <Login />
         <Register />
