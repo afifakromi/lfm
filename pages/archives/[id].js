@@ -6,6 +6,7 @@ import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { useRouter } from "next/router";
+import Footer from "../../components/commons/Footer";
 
 // import { gff_archive } from "../../const";
 
@@ -151,6 +152,7 @@ const Details = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </Layout>
   );
 };

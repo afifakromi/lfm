@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 
 // Untuk hide/show Login Register
 import { useOpen } from "../../context/ToggleContext";
+import Footer from "./Footer";
 
 const Home = () => {
   const optionsOpen = useOpen();
