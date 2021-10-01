@@ -3,6 +3,8 @@ import Link from "next/link";
 import Layout from "../../components/commons/Layout";
 import Navbar from "../../components/commons/Navbar";
 import Footer from "../../components/commons/Footer";
+import Login from "../../components/auth/Login";
+import Register from "../../components/auth/Register";
 import Image from "next/image";
 import { gff_archive } from "../../const";
 
@@ -11,6 +13,8 @@ const Archive = () => {
     <Layout title="Archive">
       <Navbar />
       <div className="flex flex-row items-center justify-center w-full py-16 bg-nav">
+        <Login />
+        <Register />
         <div className="flex flex-col w-5/6 h-4/5">
           <div className="grid grid-cols-3 gap-6">
             {gff_archive.map((item, index) => {
