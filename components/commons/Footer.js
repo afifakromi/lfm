@@ -12,7 +12,7 @@ const Footer = () => {
         <div>
           <h1 className="text-xl text-secondary">Ganesha Film Festival</h1>
           <p className="text-secondary">
-            Jl. Ganesha No.10, Lb. Siliwangi, Coblong Bandung, <br /> JawaBarat
+            Jl. Ganesha No.10, Lb. Siliwangi, Coblong Bandung, <br /> Jawa Barat
             40132
           </p>
         </div>

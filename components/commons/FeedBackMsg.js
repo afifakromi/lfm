@@ -17,7 +17,7 @@ const FeedBackMsg = ({ text, error = false }) => {
     >
       <p className="text-white">{text}</p>
 
-      <div className="absolute flex flex-row items-center justify-end w-1/6 right-6">
+      {/* <div className="absolute flex flex-row items-center justify-end w-1/6 right-6">
         <Image
           onClick={() => handleHide()}
           className="cursor-pointer hover:opacity-40"
@@ -26,7 +26,7 @@ const FeedBackMsg = ({ text, error = false }) => {
           height={30}
           alt="Close Button"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -19,6 +19,7 @@ module.exports = {
         customError: "#DC3545",
         customSuccess: "#28a745",
         customArchive: "#EFE5E2",
+        customArchiveItem: "#EBEAEA",
       }),
       textColor: (theme) => theme("colors"),
       textColor: {
