@@ -20,6 +20,8 @@ module.exports = {
         customSuccess: "#28a745",
         customArchive: "#EFE5E2",
         customArchiveItem: "#EBEAEA",
+        customDropdownHead: "#f65c5c",
+        customDropdown: "#F87171",
       }),
       textColor: (theme) => theme("colors"),
       textColor: {

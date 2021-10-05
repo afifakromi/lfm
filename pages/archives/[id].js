@@ -1,6 +1,9 @@
 import Navbar from "../../components/commons/Navbar";
 import Layout from "../../components/commons/Layout";
 import Footer from "../../components/commons/Footer";
+import Program from "../../components/archive/Program";
+import Pemenang from "../../components/archive/Pemenang";
+import Juri from "../../components/archive/Juri";
 import Image from "next/image";
 import React from "react";
 
@@ -45,6 +48,7 @@ const Details = ({ archive }) => {
               dynamicHeight={false}
               centerMode={true}
               centerSlidePercentage={100}
+              showThumbs={false}
             >
               {archive.fotoCarousel.map((item, index) => {
                 return (
@@ -57,14 +61,19 @@ const Details = ({ archive }) => {
           </div>
         </div>
         <div
-          className="flex flex-row items-start justify-center py-20 bg-primary"
+          className="flex flex-col items-center justify-center py-20 bg-primary"
           style={{ marginTop: "-3rem" }}
         >
-          <Image src={archive.fotoUrl} width={344} height={500} alt="Logo" />
-          <div className="w-3/6 ml-8">
-            <p className="mb-8 text-5xl">{archive.title}</p>
-            <p>{archive.content}</p>
+          <div className="flex flex-row justify-center w-5/6">
+            <Image src={archive.fotoUrl} width={344} height={500} alt="Logo" />
+            <div className="w-3/6 ml-8">
+              <p className="mb-8 text-5xl">{archive.title}</p>
+              <p>{archive.content}</p>
+            </div>
           </div>
+          <Program />
+          <Pemenang />
+          <Juri />
         </div>
       </div>
       <Footer />
