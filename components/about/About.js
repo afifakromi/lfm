@@ -44,18 +44,17 @@ const About = () => {
             kajiannya hingga fotografi beserta eksibisinya.
           </p>
           <p className="mt-4 ">
-            Pada awalnya, Ganffest hanya memiliki program kompetisi yang mengadu
-            98 film pendek serta 4 video art. Sekarang, Ganffest telah
-            berkembang mejadi salah satu festival film pembuka, dikarenakan
-            diadakan pada awal tahun, dengan serapan submisi lebih dari 300 film
-            dengan sebaran dari berbagai kota di Indonesia.
+            Sebagai salah satu Unit Kegiatan Mahasiswa tertua di ITB, 
+            LFM ITB telah memilki peranan penting baik skala kampus dengan 
+            keterlibatannya sebagai pusat dokumentasi sosial kegiatan kampus ITB 
+            hingga skala Kota Bandung dengan adanya Bioskop Kampus yang secara 
+            konsisten dijalankan sejak pertama kali menerima hibah proyektor dari 
+            Kedutaan Belanda.
           </p>
           <p className="mt-4">
-            Sebagai pelaku ekosistem perfilman, Ganffest berupaya untuk
-            memberikan ruang eksibisi serta stimulus bagi produksi film pendek
-            di Indonesia. Adapun sebagai misi kebudayaan, Ganffest juga berharap
-            memberikan ruang hiburan alternatif bagi masyarakat umum sehingga
-            lebih mengetahui film-film pendek produksi anak bangsa.
+            Hingga saat ini, LFM ITB terus berusaha untuk memberikan dampak baik 
+            untuk anggotanya maupun lingkungan sekitar melalui program-programnya 
+            seperti Ganesha Film Festival.
           </p>
         </div>
         <div>
@@ -69,26 +68,27 @@ const About = () => {
         </div>
         <div className="w-3/4 ml-8 ">
           <h1 className="text-6xl text-customCrem">
-            Ganesha Film Festival 2021
+            Ganesha Film Festival 2022
           </h1>
           <p className="mt-4">
-            Percampuran teknologi dengan berbagai isu seperti sosial, budaya,
-            ekonomi, dan politik menjadi kian nampak apabila dipandang secara
-            seksama sepanjang dua tahun ke belakang baik dengan bentuk yang
-            individualistik atau berlingkup kecil hingga yang melibatkan massa
-            serta hajat hidup orang banyak. Kehadiran dari isu isu tersebut
-            belum mencapai kondisi tunak, ia masih dalam tahap berkembang,
-            Germinal (berkenaan dengan tingkat pemulaan perkembangan) merupakan
-            refleksi kembali atas relasi manusia dengan perkembangan zaman
-            tersebut.
+            Dalam kondisi yang mewajibkan untuk mengurangi kontak fisik, teknologi 
+            yang terus berkembang mulai dipakai secara rutin dalam keseharian. Kehadiran 
+            teknologi baru yang membantu keseharian manusia, terkadang belum diterima 
+            secara penuh tentang bagaimana cara kerjanya dan tak jarang menjadi hal 
+            yang di luar nalar.
           </p>
           <p className="mt-4 ">
-            Relasi antar bidang yang terbentuk pun menciptakan makna konotatif
-            bahwa Germinal merupakan gambaran dunia yang tidak ajeg serta terus
-            berkembang. Pembacaan ini menjadi penting lantaran ketidakterpisahan
-            antara manusia dengan perkembangan zaman serta relasi dan fenomena
-            yang telah atau mungkin terjadi yang dirasa menarik untuk
-            dibicarakan.
+            Ganesha Film Festival tahun ini mengangkat Vis Tantum sebagai perspektif 
+            baru mengenai teknologi, yang telah menjadi kawan kita sehari-hari namun 
+            tak sepenuhnya kita kenali, yang manusia cipta namun cara kerjanya tak 
+            semua bisa dicerna.
+          </p>
+          <p className="mt-4 ">
+            Sebenarnya Vis Tantum sendiri merupakan terminologi lain dari kuantum, 
+            di mana seperti teorinya yang memajukan peradaban manusia, namun masih 
+            belum bisa diterima banyak orang. Vis Tantum menjadi sesuatu yang baru, 
+            tidak jelas, bahkan tak jarang di luar nalar, namun keberadaannya mampu 
+            meningkatkan derajat hidup manusia ke tingkat yang lebih tinggi lagi.
           </p>
         </div>
       </div>
