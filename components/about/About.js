@@ -58,7 +58,7 @@ const About = () => {
           </p>
         </div>
         <div>
-          <Image src="/img/lfm-xl.png" width={500} height={230} alt="Logo" />
+          <Image src="/img/lfm-putih.png" width={500} height={230} alt="Logo" />
         </div>
       </div>
       {/* Germinal */}
