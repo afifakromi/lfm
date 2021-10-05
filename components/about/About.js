@@ -11,21 +11,21 @@ const About = () => {
         </div>
         <div className="w-3/4 ml-8 ">
           <h1 className="text-6xl text-customCrem">Ganesha Film Festival</h1>
-          <p className="mt-4 ">
+          <p className="mt-4 " align="justify">
             Ganesha Film Festival (Ganffest) adalah festival film dua tahunan
             dengan skala nasional yang dilaksanakan oleh Liga Film Mahasiswa
             ITB. Diselenggarakan di Bandung sejak tahun 2008, boleh dibilang
             Ganffest merupakan salah satu festival film mahasiswa tertua di
             Indonesia.
           </p>
-          <p className="mt-4 ">
+          <p className="mt-4 " align="justify">
             Pada awalnya, Ganffest hanya memiliki program kompetisi yang mengadu
             98 film pendek serta 4 video art. Sekarang, Ganffest telah
             berkembang mejadi salah satu festival film pembuka, dikarenakan
             diadakan pada awal tahun, dengan serapan submisi lebih dari 300 film
             dengan sebaran dari berbagai kota di Indonesia.
           </p>
-          <p className="mt-4 ">
+          <p className="mt-4 " align="justify">
             Sebagai pelaku ekosistem perfilman, Ganffest berupaya untuk
             memberikan ruang eksibisi serta stimulus bagi produksi film pendek
             di Indonesia. Adapun sebagai misi kebudayaan, Ganffest juga berharap
@@ -38,12 +38,12 @@ const About = () => {
       <div className="flex flex-row items-center w-full mt-8 ">
         <div className="w-3/4 mr-8">
           <h1 className="text-6xl text-customCrem">LFM ITB</h1>
-          <p className="mt-4 ">
+          <p className="mt-4 " align="justify">
             Berdiri pada 21 April 1960, Liga Film Mahasiswa (LFM) adalah Unit
             Kegiatan Mahasiswa yang bergerak di bidang media baik film beserta
             kajiannya hingga fotografi beserta eksibisinya.
           </p>
-          <p className="mt-4 ">
+          <p className="mt-4 " align="justify">
             Sebagai salah satu Unit Kegiatan Mahasiswa tertua di ITB, 
             LFM ITB telah memilki peranan penting baik skala kampus dengan 
             keterlibatannya sebagai pusat dokumentasi sosial kegiatan kampus ITB 
@@ -51,7 +51,7 @@ const About = () => {
             konsisten dijalankan sejak pertama kali menerima hibah proyektor dari 
             Kedutaan Belanda.
           </p>
-          <p className="mt-4">
+          <p className="mt-4" align="justify">
             Hingga saat ini, LFM ITB terus berusaha untuk memberikan dampak baik 
             untuk anggotanya maupun lingkungan sekitar melalui program-programnya 
             seperti Ganesha Film Festival.
@@ -70,20 +70,20 @@ const About = () => {
           <h1 className="text-6xl text-customCrem">
             Ganesha Film Festival 2022
           </h1>
-          <p className="mt-4">
+          <p className="mt-4" align="justify">
             Dalam kondisi yang mewajibkan untuk mengurangi kontak fisik, teknologi 
             yang terus berkembang mulai dipakai secara rutin dalam keseharian. Kehadiran 
             teknologi baru yang membantu keseharian manusia, terkadang belum diterima 
             secara penuh tentang bagaimana cara kerjanya dan tak jarang menjadi hal 
             yang di luar nalar.
           </p>
-          <p className="mt-4 ">
+          <p className="mt-4 " align="justify">
             Ganesha Film Festival tahun ini mengangkat Vis Tantum sebagai perspektif 
             baru mengenai teknologi, yang telah menjadi kawan kita sehari-hari namun 
             tak sepenuhnya kita kenali, yang manusia cipta namun cara kerjanya tak 
             semua bisa dicerna.
           </p>
-          <p className="mt-4 ">
+          <p className="mt-4 " align="justify">
             Sebenarnya Vis Tantum sendiri merupakan terminologi lain dari kuantum, 
             di mana seperti teorinya yang memajukan peradaban manusia, namun masih 
             belum bisa diterima banyak orang. Vis Tantum menjadi sesuatu yang baru, 
