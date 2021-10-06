@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Program = () => {
+const Program = ({ data }) => {
   const [hide, setHide] = useState(false);
 
   return (
@@ -22,15 +22,16 @@ const Program = () => {
 
       {hide ? (
         <div className="w-full px-16 py-8 duration-100 rounded-lg bg-customDropdown ">
-          <h1 className="text-xl font-montserrat text-customArchive">
-            Jason Iskandar (Sutradara)
-          </h1>
-          <h1 className="text-xl font-montserrat text-customArchive">
-            Makbul Mubarak (Sutradara)
-          </h1>
-          <h1 className="text-xl font-montserrat text-customArchive">
-            Yuki Aditya (Pegiat Seni)
-          </h1>
+          {data.map((item, index) => {
+            return (
+              <h1
+                key={index}
+                className="text-xl font-montserrat text-customArchive"
+              >
+                {item}
+              </h1>
+            );
+          })}
         </div>
       ) : null}
     </div>

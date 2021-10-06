@@ -16,6 +16,26 @@ const gff_archive = [
       "/img/archives/2018/5.jpg",
       "/img/archives/2018/6.jpg",
     ],
+    juri: [
+      "Jason Iskandar (Sutradara)",
+      "Makbul Mubarak (Sutradara)",
+      "Yuki Aditya (Pegiat Seni)",
+    ],
+    pemenang: [
+      {
+        winner: {
+          title: "Gajah Emas: Film Terbaik",
+          who: "Mesin Tanah (Wimar Herdanto, 2016)",
+        },
+      },
+      {
+        winner: {
+          title:
+            "Gajah Pinilih: Film Terbaik berdasarkan perwakilan komunitas Kota Bandung",
+          who: "Seorang Kambing (Tunggul Banjaransari, 2017)",
+        },
+      },
+    ],
   },
   {
     id: 2,
@@ -33,6 +53,25 @@ const gff_archive = [
       "/img/archives/2016/4.jpg",
       "/img/archives/2016/5.jpg",
     ],
+    juri: [
+      "Jason Iskandar (Sutradara)",
+      "Makbul Mubarak (Sutradara)",
+      "Yuki Aditya (Pegiat Seni)",
+    ],
+    pemenang: [
+      {
+        winner: {
+          title: "Gajah Emas: Film Terbaik",
+          who: "Neng Kene Aku Ngenteni Koe (Jeihan Angga, 2015)",
+        },
+      },
+      {
+        winner: {
+          title: "Gading yang Tak Retak: Film dengan Sinematografi Terbaik",
+          who: "Rock ‘n Roll ( Wisnu Surya Pratama, 2016)",
+        },
+      },
+    ],
   },
   {
     id: 3,
@@ -48,6 +87,25 @@ const gff_archive = [
       "/img/archives/2014/2.jpg",
       "/img/archives/2014/3.jpg",
       "/img/archives/2014/4.jpg",
+    ],
+    juri: [
+      "Jason Iskandar (Sutradara)",
+      "Makbul Mubarak (Sutradara)",
+      "Yuki Aditya (Pegiat Seni)",
+    ],
+    pemenang: [
+      {
+        winner: {
+          title: "Gajah Emas: Best Film",
+          who: "Liburan Keluarga (Tunggul Banjaransari, 2012))",
+        },
+      },
+      {
+        winner: {
+          title: "Gading yang Tak Retak: Best Technique in Cinematography",
+          who: "Liburan Keluarga (Tunggul Banjaransari, 2012)",
+        },
+      },
     ],
   },
   {
@@ -65,6 +123,46 @@ const gff_archive = [
       "/img/archives/2012/3.jpg",
       "/img/archives/2012/4.jpg",
     ],
+    juri: [
+      "Jason Iskandar (Sutradara)",
+      "Makbul Mubarak (Sutradara)",
+      "Yuki Aditya (Pegiat Seni)",
+    ],
+    pemenang: [
+      {
+        winner: {
+          title:
+            "Gajah Emas: Penghargaan untuk film terbaik dalam keseluruhan aspek-aspeknya",
+          who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
+        },
+      },
+      {
+        winner: {
+          title: "Lakon Mumpuni: Penghargaan untuk aktor/aktris terbaik",
+          who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
+        },
+      },
+      {
+        winner: {
+          title:
+            "Sasauran Pangsaena: Penghargaan untuk film dengan naskah terbaik",
+          who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
+        },
+      },
+      {
+        winner: {
+          title:
+            "Gading yang Tak Retak: Penghargaan untuk film dengan teknis terbaik",
+          who: "Saving Brother (Produksi AVIKOM Jogjakarta, 2011)",
+        },
+      },
+      {
+        winner: {
+          title: "Dalang Mumpuni: Penghargaan untuk sutradara terbaik",
+          who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
+        },
+      },
+    ],
   },
   {
     id: 5,
@@ -80,6 +178,11 @@ const gff_archive = [
       "/img/archives/2010/2.jpg",
       "/img/archives/2010/3.jpg",
       "/img/archives/2010/4.jpg",
+    ],
+    juri: [
+      "Jason Iskandar (Sutradara)",
+      "Makbul Mubarak (Sutradara)",
+      "Yuki Aditya (Pegiat Seni)",
     ],
   },
 ];

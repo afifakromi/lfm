@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Program = () => {
+const Program = ({ data }) => {
   const [hide, setHide] = useState(false);
 
   return (
@@ -22,24 +22,18 @@ const Program = () => {
 
       {hide ? (
         <div className="w-full px-16 py-8 duration-100 rounded-lg bg-customDropdown ">
-          <h1 className="text-2xl text-customArchive">
-            Gajah Emas: Film Terbaik
-          </h1>
-          <div className="w-full px-8 text-xl ">
-            <p className="text-customArchive">
-              Mesin Tanah (Wimar Herdanto, 2016)
-            </p>
-          </div>
-
-          <h1 className="text-2xl text-customArchive">
-            Gajah Pinilih: Film Terbaik berdasarkan perwakilan komunitas Kota
-            Bandung
-          </h1>
-          <div className="w-full px-8 text-xl ">
-            <p className="text-customArchive">
-              Seorang Kambing (Tunggul Banjaransari, 2017)
-            </p>
-          </div>
+          {data.map((item, index) => {
+            return (
+              <div key={index}>
+                <h1 className="text-2xl text-customArchive">
+                  {item.winner.title}
+                </h1>
+                <div className="w-full px-8 text-xl ">
+                  <p className="text-customArchive">{item.winner.who}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       ) : null}
     </div>

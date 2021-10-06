@@ -45,7 +45,7 @@ const Details = ({ archive }) => {
               autoPlay={true}
               infiniteLoop={true}
               interval={2000}
-              dynamicHeight={false}
+              dynamicHeight={true}
               centerMode={true}
               centerSlidePercentage={100}
               showThumbs={false}
@@ -60,10 +60,7 @@ const Details = ({ archive }) => {
             </Carousel>
           </div>
         </div>
-        <div
-          className="flex flex-col items-center justify-center py-20 bg-primary"
-          style={{ marginTop: "-3rem" }}
-        >
+        <div className="flex flex-col items-center justify-center py-20 bg-primary">
           <div className="flex flex-row justify-center w-5/6">
             <Image src={archive.fotoUrl} width={344} height={500} alt="Logo" />
             <div className="w-3/6 ml-8">
@@ -72,8 +69,8 @@ const Details = ({ archive }) => {
             </div>
           </div>
           <Program />
-          <Pemenang />
-          <Juri />
+          <Pemenang data={archive.pemenang} />
+          <Juri data={archive.juri} />
         </div>
       </div>
       <Footer />
