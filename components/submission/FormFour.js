@@ -14,7 +14,7 @@ import { useRecoilValue } from "recoil";
 const validate = (values) => {
   const errors = {};
 
-  if (!values.ott || !values.pameran || !values.internal || !values.kurator) {
+  if (!values.ott || !values.pameran) {
     errors.all = "All fields is required";
 
     return errors;
@@ -32,8 +32,6 @@ const FormFour = () => {
     initialValues: {
       ott: "",
       pameran: "",
-      internal: "",
-      kurator: "",
     },
     validate,
     onSubmit: async (values) => {
@@ -47,32 +45,35 @@ const FormFour = () => {
             },
             body: JSON.stringify([
               [
-                getFormOneVal.bahasa,
-                getFormOneVal.cover,
-                getFormOneVal.durasi,
-                getFormOneVal.festival,
                 getFormOneVal.judul_film,
-                getFormOneVal.kota,
-                getFormOneVal.link,
-                getFormOneVal.penghargaan,
-                getFormOneVal.sinopsis,
                 getFormOneVal.tahun,
+                getFormOneVal.kota,
+                getFormOneVal.durasi,
+                getFormOneVal.bahasa,
+                getFormOneVal.festival,
+                getFormOneVal.penghargaan,
+                getFormOneVal.link,
+                getFormOneVal.cover,
+                getFormOneVal.sinopsis,
                 getFormOneVal.suara,
-                getFormTwoVal.alamat,
-                getFormTwoVal.biografi,
-                getFormTwoVal.email,
-                getFormTwoVal.foto,
-                getFormTwoVal.kota,
+
                 getFormTwoVal.nama,
-                getFormTwoVal.no_hp,
-                getFormTwoVal.provinsi,
                 getFormTwoVal.gender,
+                getFormTwoVal.no_hp,
+                getFormTwoVal.email,
+                getFormTwoVal.alamat,
+                getFormTwoVal.kota,
+                getFormTwoVal.provinsi,
+                getFormTwoVal.biografi,
+                getFormTwoVal.foto,
+
                 getFormThreeVal.nama_produksi,
-                getFormThreeVal.alamat_produksi,
                 getFormThreeVal.no_hp_produksi,
+                getFormThreeVal.alamat_produksi,
                 getFormThreeVal.provinsi_produksi,
                 getFormThreeVal.nama_produser,
                 getFormThreeVal.no_hp_produser,
+
                 values.ott,
                 values.pameran,
                 values.internal,

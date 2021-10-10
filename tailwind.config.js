@@ -33,6 +33,7 @@ module.exports = {
         customArchive: "#374770",
         customPink: "#FE6081",
         customCrem: "#fcab63",
+        customGrey: "#EBEAEA",
       },
       borderColor: (theme) => ({
         ...theme("colors"),

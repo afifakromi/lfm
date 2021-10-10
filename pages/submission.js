@@ -8,7 +8,7 @@ import PopUp from "../components/submission/PopUp";
 const submission = () => {
   return (
     <div>
-      <Layout title="Submission" auth={true}>
+      <Layout title="Submission" auth={false}>
         <Navbar />
         <PopUp />
         <Carousel />

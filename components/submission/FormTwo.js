@@ -147,7 +147,7 @@ const FormTwo = ({ nextSlide, prevSlide }) => {
               name="biografi"
               value={formik.values.biografi}
               onChange={formik.handleChange}
-              className="w-full h-24 mt-4 border-2 border-white text-customPink bg-nav"
+              className="w-full h-24 mt-4 border-2 border-white text-customGrey bg-nav"
             ></textarea>
           </div>
           {formik.errors.all ? (
