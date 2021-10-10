@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormOne from "./FormOne";
 import FormThree from "./FormThree";
 import FormTwo from "./FormTwo";
+import FormFour from "./FormFour";
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
@@ -17,7 +18,8 @@ const Carousel = () => {
   const slides = [
     <FormOne nextSlide={nextSlide} key={0} />,
     <FormTwo nextSlide={nextSlide} prevSlide={prevSlide} key={1} />,
-    <FormThree key={2} />,
+    <FormThree nextSlide={nextSlide} prevSlide={prevSlide} key={2} />,
+    <FormFour key={3} />,
   ];
 
   const length = slides.length;

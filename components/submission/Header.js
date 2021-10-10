@@ -14,7 +14,7 @@ const Header = ({ title, index }) => {
           />
           <p className="ml-4 text-xl">{title}</p>
         </div>
-        <p>Form {index} of 3</p>
+        <p>Form {index} of 4</p>
       </div>
       <hr className="bg-gradient-to-r from-first via-middle to-last" />
     </>
