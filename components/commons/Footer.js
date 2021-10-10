@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-nav">
       <div
         className="flex flex-row items-center justify-between w-full px-16 py-8 bg-crem"
-        style={{ borderRadius: "4rem 4rem 0 0" }}
+        style={{ borderRadius: "1.5rem 1.5rem 0 0" }}
       >
         <div>
           <h1 className="text-xl text-secondary">Ganesha Film Festival</h1>

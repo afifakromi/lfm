@@ -22,6 +22,8 @@ module.exports = {
         customArchiveItem: "#EBEAEA",
         customDropdownHead: "#f65c5c",
         customDropdown: "#F87171",
+        customCrem: "#FCAB63",
+        customCremOpacity: "#fdc899",
       }),
       textColor: (theme) => theme("colors"),
       textColor: {

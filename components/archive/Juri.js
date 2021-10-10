@@ -5,7 +5,7 @@ const Program = ({ data }) => {
   const [hide, setHide] = useState(false);
 
   return (
-    <div className="flex flex-col justify-between w-4/6 mt-4 rounded-lg bg-customDropdownHead">
+    <div className="flex flex-col justify-between w-4/6 mt-4 rounded-lg bg-customCrem">
       <div className="flex flex-row justify-between px-16 py-4">
         <h1 className="text-4xl text-customArchive">Juri</h1>
         <Image
@@ -21,7 +21,7 @@ const Program = ({ data }) => {
       </div>
 
       {hide ? (
-        <div className="w-full px-16 py-8 duration-100 rounded-lg bg-customDropdown ">
+        <div className="w-full px-16 py-8 duration-100 rounded-lg bg-customCremOpacity ">
           {data.map((item, index) => {
             return (
               <h1

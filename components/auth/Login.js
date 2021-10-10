@@ -69,7 +69,7 @@ const Login = () => {
     <div
       className={
         (toggleLogin && !loggedIn ? "block" : "hidden") +
-        " absolute z-50 flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl top-1/2 left-1/2"
+        " absolute z-50 text-black flex-row w-4/12 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl top-1/2 left-1/2"
       }
     >
       <div className="flex justify-end mb-2">
