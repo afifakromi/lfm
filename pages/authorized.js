@@ -4,7 +4,9 @@ import Layout from "../components/commons/Layout";
 const authorized = () => {
   return (
     <Layout title="Not Authorized">
-      <p>Please login first to use this feature</p>
+      <div className="w-full h-screen bg-nav">
+        <p>Please login first to use this feature</p>
+      </div>
     </Layout>
   );
 };

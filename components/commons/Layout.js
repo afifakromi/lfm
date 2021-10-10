@@ -4,6 +4,7 @@ import { useRecoilState } from "recoil";
 import { isLoggedIn } from "../../authentication/state";
 import { checkToken, fetchToken } from "../../authentication/utils";
 import { useRouter } from "next/router";
+import NotAuthorized from "../NotAuthorized";
 
 const Layout = ({ title, auth, authFallback = "/authorized", children }) => {
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
@@ -33,7 +34,7 @@ const Layout = ({ title, auth, authFallback = "/authorized", children }) => {
     // </div>
     <div>
       {auth && !loggedIn ? (
-        <p className="text-black">Not Authorized</p>
+        <NotAuthorized />
       ) : (
         <>
           {children}
