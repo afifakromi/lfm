@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { logout } from "../../authentication/utils";
 import { useRecoilState, useSetRecoilState } from "recoil";
+import { useRouter } from "next/router";
 import {
   isLoggedIn,
   toggleLoginState,
@@ -14,6 +15,7 @@ import LFMLink from "../navbar/LFMLink";
 import Profile from "../navbar/Profile";
 
 const Navbar = ({ type }) => {
+  const router = useRouter();
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
 
   const setToggleLogin = useSetRecoilState(toggleLoginState);
@@ -29,6 +31,11 @@ const Navbar = ({ type }) => {
     console.log("Register Clicked");
     setToggleRegister((prevToggle) => !prevToggle);
     setToggleLogin(false);
+  };
+
+  const logoutClick = () => {
+    logout();
+    router.push("/");
   };
 
   return (
@@ -72,7 +79,12 @@ const Navbar = ({ type }) => {
             </div>
           ) : (
             <>
-              <Profile logout={logout} setLoggedIn={setLoggedIn} />
+              <Profile
+                logout={() => {
+                  logoutClick;
+                }}
+                setLoggedIn={setLoggedIn}
+              />
               {/* <div
                 className="p-2"
                 onClick={() => {

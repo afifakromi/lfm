@@ -146,7 +146,7 @@ const FormOne = ({ nextSlide }) => {
               name="sinopsis"
               value={formik.values.sinopsis}
               onChange={formik.handleChange}
-              className="w-full h-24 px-4 py-2 mt-4 border-2 border-white bg-nav"
+              className="w-full h-24 px-4 py-2 mt-4 border-2 border-white text-customPink bg-nav"
             ></textarea>
           </div>
           <div className="flex flex-row items-start justify-between mt-4 text-white font-poppins">

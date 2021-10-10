@@ -17,19 +17,31 @@ const Layout = ({ title, auth, authFallback = "/authorized", children }) => {
       setLoggedIn(false);
     }
 
-    if (auth) {
-      if (!loggedIn) {
-        router.push(authFallback);
-      }
-    }
+    // if (auth) {
+    //   if (!loggedIn) {
+    //     router.push(authFallback);
+    //   }
+    // }
   });
 
   return (
+    // <div>
+    // {children}
+    // <Head>
+    //   <title>{title}</title>
+    // </Head>
+    // </div>
     <div>
-      {children}
-      <Head>
-        <title>{title}</title>
-      </Head>
+      {auth && !loggedIn ? (
+        <p className="text-black">Not Authorized</p>
+      ) : (
+        <>
+          {children}
+          <Head>
+            <title>{title}</title>
+          </Head>
+        </>
+      )}
     </div>
   );
 };

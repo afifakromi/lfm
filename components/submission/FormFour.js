@@ -39,7 +39,7 @@ const FormFour = () => {
     onSubmit: async (values) => {
       try {
         const response = await fetch(
-          "https://v1.nocodeapi.com/akromiafif/google_sheets/WkrOfbhsGNjJzVmB?tabId=LFM_Database",
+          "https://v1.nocodeapi.com/akromiafif/google_sheets/JiMDQgusqDcqhHOk?tabId=LFM_Database",
           {
             method: "POST",
             headers: {
@@ -87,6 +87,7 @@ const FormFour = () => {
         if (res.message === "Successfully Inserted") {
           setSuccess(true);
         }
+        console.log(res);
       } catch (err) {
         console.log(err);
       }

@@ -123,5 +123,6 @@ export const register = async (credentials = {}) => {
 
 export const logout = async () => {
   localStorage.removeItem("token");
+
   return true;
 };
