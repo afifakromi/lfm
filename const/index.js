@@ -42,9 +42,9 @@ const gff_archive = [
     link: "/archives/2",
     archiveTitle: "Ganffest 2016",
     key: "GFF 2016",
-    title: "Ganffest 2016: Jendela",
+    title: "Ganffest 2016: Diri Tak Perlu Dicari",
     content:
-      "Tema Jendela diangkatan dengan harapan Ganffest 2018 dapat menjalankan fungsinya sebagai sebuah jendela. Jendela dapat digunakan sebagai media untuk melihat dari suatu tempat ke sebuah “cakrawala” lainnya. Bandung diumpamakan sebagai sebuah rumah yang di dalamnya terdapat film-film Bandung dan lingkungan luar Bandung diumpamakan sebagai lingkungan luar tersebut, dan Ganffest 2018 diumpamakan sebagai jendela dari rumah tersebut yang dapat menghubungkan orang-orang dari luar rumah (Bandung) dapat bisa melihat film-film dalam rumah tersebut, dan sebaliknya.",
+      "Diri tak dicari. Sebuah tema yang ingin kami bawa tahun ini. Setiap orang memiliki pribadi yang unik dan berbeda, namun terkadang ketidakpuasan membawa diri untuk terus mencari, hingga tanpa sadar mengikuti diri milik orang lain. Pun, dengan sineas yang memiliki ciri dalam berkarya. Dengan orisinalitas tiap sineas berbeda tiap film memiliki cara dan pesan tersendiri, yang selayaknya tidak mengikuti atau sama dengan orang lain. Maka, tahun ini Ganesha Film Festival dengan ciri sendiri ingin memberi ruang putar film-film pendek berbeda juga.",
     fotoUrl: "/img/archives/2016/poster.jpg",
     fotoCarousel: [
       "/img/archives/2016/1.jpg",
@@ -54,9 +54,9 @@ const gff_archive = [
       "/img/archives/2016/5.jpg",
     ],
     juri: [
-      "Jason Iskandar (Sutradara)",
-      "Makbul Mubarak (Sutradara)",
-      "Yuki Aditya (Pegiat Seni)",
+      "Mikhael Johani (Kritikus)",
+      "Ifa Isfansyah (Pembuat Film)",
+      "Sidi Saleh (Pembuat Film)",
     ],
     pemenang: [
       {
@@ -78,9 +78,9 @@ const gff_archive = [
     link: "/archives/3",
     archiveTitle: "Ganffest 2014",
     key: "GFF 2014",
-    title: "Ganffest 2014: Jendela",
+    title: "Ganffest 2014: Make It Seen",
     content:
-      "Tema Jendela diangkatan dengan harapan Ganffest 2018 dapat menjalankan fungsinya sebagai sebuah jendela. Jendela dapat digunakan sebagai media untuk melihat dari suatu tempat ke sebuah “cakrawala” lainnya. Bandung diumpamakan sebagai sebuah rumah yang di dalamnya terdapat film-film Bandung dan lingkungan luar Bandung diumpamakan sebagai lingkungan luar tersebut, dan Ganffest 2018 diumpamakan sebagai jendela dari rumah tersebut yang dapat menghubungkan orang-orang dari luar rumah (Bandung) dapat bisa melihat film-film dalam rumah tersebut, dan sebaliknya.",
+      "Pada tahun 2014, Ganffest kembali dengan tema, “Make It Seen” Tema ini melambangkan tujuan dan harapan Ganffest bagi sineas sineas non-professional untuk mempertemukan karya karyanya di sebuah ajang yang prestisius dan sesuai dalam bidangnya. Tema ini juga membawa harapan untuk kalangan umum untuk menjadikan event ini sebagai ajang apresiasi film pendek yang terkemuka di Bandung.",
     fotoUrl: "/img/archives/2014/poster.jpg",
     fotoCarousel: [
       "/img/archives/2014/1.jpg",
@@ -89,9 +89,9 @@ const gff_archive = [
       "/img/archives/2014/4.jpg",
     ],
     juri: [
-      "Jason Iskandar (Sutradara)",
-      "Makbul Mubarak (Sutradara)",
-      "Yuki Aditya (Pegiat Seni)",
+      "Alex Sihar (Akademisi),
+      "Adrian Jonathan (Kritikus)",
+      "Edwin (Sutradara)",
     ],
     pemenang: [
       {
@@ -113,9 +113,9 @@ const gff_archive = [
     link: "/archives/4",
     archiveTitle: "Ganffest 2012",
     key: "GFF 2012",
-    title: "Ganffest 2012: Jendela",
+    title: "Ganffest 2012: Mov(i)e On!",
     content:
-      "Tema Jendela diangkatan dengan harapan Ganffest 2018 dapat menjalankan fungsinya sebagai sebuah jendela. Jendela dapat digunakan sebagai media untuk melihat dari suatu tempat ke sebuah “cakrawala” lainnya. Bandung diumpamakan sebagai sebuah rumah yang di dalamnya terdapat film-film Bandung dan lingkungan luar Bandung diumpamakan sebagai lingkungan luar tersebut, dan Ganffest 2018 diumpamakan sebagai jendela dari rumah tersebut yang dapat menghubungkan orang-orang dari luar rumah (Bandung) dapat bisa melihat film-film dalam rumah tersebut, dan sebaliknya.",
+      "Pada tahun ketiganya ini, Ganffest mengusung tema Mov(i)e On!, yang melambangkan harapan dari Ganffest itu sendiri, yakni agar perfilman Indonesia kembali “move on”, bergerak kembali menuju perbaikan. Untuk mencapai perbaikan itu, dibutuhkan film-film yang dibuat dengan kreativitas dan inovasi.",
     fotoUrl: "/img/archives/2012/poster.jpg",
     fotoCarousel: [
       "/img/archives/2012/1.jpg",
@@ -124,9 +124,10 @@ const gff_archive = [
       "/img/archives/2012/4.jpg",
     ],
     juri: [
-      "Jason Iskandar (Sutradara)",
-      "Makbul Mubarak (Sutradara)",
-      "Yuki Aditya (Pegiat Seni)",
+      "Seno Gumira Ajidarma (Sastrawan)",
+      "Ronny P. Tjandra (Direktur Jive Collection)",
+      "Tobing Jr (Koordinator Komunitas Layar Kita)",
+      "Sony Budi Sasono (Creative Head Sembilan Matahari)",
     ],
     pemenang: [
       {
@@ -136,16 +137,10 @@ const gff_archive = [
           who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
         },
       },
+      
       {
         winner: {
-          title: "Lakon Mumpuni: Penghargaan untuk aktor/aktris terbaik",
-          who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
-        },
-      },
-      {
-        winner: {
-          title:
-            "Sasauran Pangsaena: Penghargaan untuk film dengan naskah terbaik",
+          title: "Sasauran Pangsaena: Penghargaan untuk film dengan naskah terbaik",
           who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
         },
       },
@@ -158,7 +153,14 @@ const gff_archive = [
       },
       {
         winner: {
-          title: "Dalang Mumpuni: Penghargaan untuk sutradara terbaik",
+          title:
+            "Dalang Mumpuni: Penghargaan untuk sutradara terbaik.",
+          who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
+        },
+      },
+      {
+        winner: {
+          title: "Lakon Mumpuni: Penghargaan untuk aktor/aktris terbaik.",
           who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
         },
       },
@@ -169,9 +171,9 @@ const gff_archive = [
     link: "/archives/5",
     archiveTitle: "Ganffest 2010",
     key: "GFF 2010",
-    title: "Ganffest 2010: Jendela",
+    title: "Ganffest 2010: Art Futuristic",
     content:
-      "Tema Jendela diangkatan dengan harapan Ganffest 2018 dapat menjalankan fungsinya sebagai sebuah jendela. Jendela dapat digunakan sebagai media untuk melihat dari suatu tempat ke sebuah “cakrawala” lainnya. Bandung diumpamakan sebagai sebuah rumah yang di dalamnya terdapat film-film Bandung dan lingkungan luar Bandung diumpamakan sebagai lingkungan luar tersebut, dan Ganffest 2018 diumpamakan sebagai jendela dari rumah tersebut yang dapat menghubungkan orang-orang dari luar rumah (Bandung) dapat bisa melihat film-film dalam rumah tersebut, dan sebaliknya.",
+      "Untuk kedua kalinya, unit Liga Film Mahasiswa (LFM) ITB menggelar Ganesha film Festival (Ganffest) dengan tema “Art Futuristic”. Sebagai suatu event apresiasi film indie yang mengedepankan bentuk karya dari seni/art yang kreatif. Proses produksi dan distribusi film indie tidak dapat terlepas dari sentuhan teknologi. Teknologi seharusnya dapat selalu memudahkan kehidupan manusia dan dapat diaplikasikan di mana saja, termasuk untuk mendukung pembuatan film indie. Di masa depan, sentuhan teknologi ini diharapkan dapat mendukung perwujudan ide dan visi kreatif dari para filmmaker.",
     fotoUrl: "/img/archives/2010/poster.jpg",
     fotoCarousel: [
       "/img/archives/2010/1.jpg",
@@ -179,10 +181,47 @@ const gff_archive = [
       "/img/archives/2010/3.jpg",
       "/img/archives/2010/4.jpg",
     ],
-    juri: [
-      "Jason Iskandar (Sutradara)",
-      "Makbul Mubarak (Sutradara)",
-      "Yuki Aditya (Pegiat Seni)",
+    pemenang: [
+      {
+        winner: {
+          title:
+            "Penghargaan Gajah Emas: Film Terbaik",
+          who: "Lolonii (Marky Yahya Ali dari To The Moon)",
+        },
+      },
+      
+      {
+        winner: {
+          title: "Penghargaan Sasauran Pangsaena: Film dengan Naskah Terbaik",
+          who: "Anak-anak Lumpur (Perdana Kartawiyudha dari FFTV-IKJ)",
+        },
+      },
+      {
+        winner: {
+          title:
+            "Penghargaan Dalang Mumpuni: Sutradara Terbaik",
+          who: "Lolonii (Marky Yahya Ali dari To The Moon)",
+        },
+      },
+      {
+        winner: {
+          title:
+            "Penghargaan Gading yang Tak Retak: Film dengan teknis Terbaik",
+          who: "The Clown and The Bride (Billy Christian dari FFTV-IKJ)",
+        },
+      },
+      {
+        winner: {
+          title: "Penghargaan Lakon Mumpuni: Penghargaan Aktor Terbaik",
+          who: "Judul : Cinta Cindolo na Tape (Rusmin Nuryadin)",
+        },
+      },
+      {
+        winner: {
+          title: "Penghargaan Spesial dari Juri",
+          who: "Facebooked (Siti Nurul Alizzad dari SMA Negeri 34 Jakarta)",
+        },
+      },
     ],
   },
 ];
