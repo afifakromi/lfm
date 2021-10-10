@@ -64,8 +64,8 @@ const Details = ({ archive }) => {
           <div className="flex flex-row justify-center w-5/6">
             <Image src={archive.fotoUrl} width={344} height={500} alt="Logo" />
             <div className="w-3/6 ml-8">
-              <p className="mb-8 text-5xl">{archive.title}</p>
-              <p>{archive.content}</p>
+              <p className="mb-8 text-5xl text-customCrem">{archive.title}</p>
+              <p className="text-justify">{archive.content}</p>
             </div>
           </div>
           <Program />
