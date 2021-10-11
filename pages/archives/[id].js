@@ -39,26 +39,24 @@ const Details = ({ archive }) => {
     <Layout title={archive.key}>
       <Navbar />
       <div className="flex flex-col">
-        <div className="flex flex-row items-center justify-center w-full bg-red-400">
-          <div className="flex flex-col items-center justify-center w-full">
-            <Carousel
-              autoPlay={true}
-              infiniteLoop={true}
-              interval={2000}
-              dynamicHeight={true}
-              centerMode={true}
-              centerSlidePercentage={100}
-              showThumbs={false}
-            >
-              {archive.fotoCarousel.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <Image src={item} width={2000} height={1200} alt="One" />
-                  </div>
-                );
-              })}
-            </Carousel>
-          </div>
+        <div className="flex flex-col items-center justify-center w-full">
+          <Carousel
+            autoPlay={true}
+            infiniteLoop={true}
+            interval={2000}
+            dynamicHeight={true}
+            centerMode={true}
+            centerSlidePercentage={100}
+            showThumbs={false}
+          >
+            {archive.fotoCarousel.map((item, index) => {
+              return (
+                <div key={index}>
+                  <Image src={item} width={2000} height={1200} alt="One" />
+                </div>
+              );
+            })}
+          </Carousel>
         </div>
         <div className="flex flex-col items-center justify-center py-20 bg-primary">
           <div className="flex flex-row justify-center w-5/6">
