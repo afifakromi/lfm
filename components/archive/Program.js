@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-const Program = () => {
+const Program = ({ data = [] }) => {
   const [hide, setHide] = useState(false);
+
+  useEffect(() => {
+    console.log(data);
+  }, []);
 
   return (
     <div className="flex flex-col justify-between w-4/6 mt-10 rounded-lg bg-customCrem">
@@ -22,29 +26,22 @@ const Program = () => {
 
       {hide ? (
         <div className="w-full px-16 py-8 duration-100 rounded-lg bg-customCremOpacity ">
-          <h1 className="text-2xl text-customArchive">Program Kompetisi</h1>
-
-          <h1 className="text-2xl text-customArchive">Program Non-Kompetisi</h1>
-          <div className="w-full px-8 text-xl ">
-            <p className="text-customArchive">Horizon</p>
-            <p className="text-customArchive">Bandung Nu Aing!</p>
-            <p className="text-customArchive">A Look On: Jestful Society</p>
-            <p className="text-customArchive">
-              A Look On: Distinct Romantic Movies
-            </p>
-            <p className="text-customArchive">A Look On: Behind Closed Doors</p>
-            <p className="text-customArchive">A Look On: Erectus Dysfunction</p>
-            <p className="text-customArchive">A Look On: Becoming Human</p>
-          </div>
-
-          <h1 className="text-2xl text-customArchive">Workshop</h1>
-          <div className="w-full px-8 text-xl ">
-            <p className="text-customArchive">Kelas! With Jason Iskandar</p>
-            <p className="text-customArchive">
-              Kelas Kritik RONTOFU with Bahasinema
-            </p>
-          </div>
-          <h1 className="text-2xl text-customArchive">Sinema Keliling</h1>
+          {data.map((item, index) => {
+            return (
+              <div key={index}>
+                <h1 className="text-2xl text-customArchive">{item.title}</h1>
+                <div className="w-full px-8 text-xl ">
+                  {item.data.map((itemChild, indexChild) => {
+                    return (
+                      <p key={indexChild} className="text-customArchive">
+                        {itemChild}
+                      </p>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
       ) : null}
     </div>

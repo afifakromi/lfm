@@ -36,6 +36,35 @@ const gff_archive = [
         },
       },
     ],
+    program: [
+      {
+        title: "Program Kompetisi",
+        data: [""],
+      },
+      {
+        title: "Program Non Kompetisi",
+        data: [
+          "Horizon",
+          "Bandung Nu Aing!",
+          "A Look On: Jestful Society",
+          "A Look On: Distinct Romantic Movies",
+          "A Look On: Behind Closed Doors",
+          "A Look On: Erectus Dysfunction",
+          "A Look On: Becoming Human",
+        ],
+      },
+      {
+        title: "Workshop",
+        data: [
+          "Kelas! With Jason Iskandar",
+          "Kelas Kritik RONTOFU with Bahasinema",
+        ],
+      },
+      {
+        title: "Sinema Keliling",
+        data: [""],
+      },
+    ],
   },
   {
     id: 2,

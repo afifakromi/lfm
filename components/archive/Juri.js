@@ -6,10 +6,8 @@ const Program = ({ data = [] }) => {
 
   return (
     <div
-      className={
-        "flex flex-col justify-between w-4/6 mt-4 rounded-lg bg-customCrem " +
-        (data == [] ? "hidden" : "block")
-      }
+      className="flex-col justify-between w-4/6 mt-4 rounded-lg bg-customCrem"
+      style={{ display: data == [] ? "none" : "flex" }}
     >
       <div className="flex flex-row justify-between px-16 py-4">
         <h1 className="text-4xl text-customArchive">Juri</h1>

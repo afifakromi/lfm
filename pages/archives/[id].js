@@ -40,7 +40,7 @@ const Details = ({ archive }) => {
       <Navbar />
       <div className="flex flex-col">
         <div className="flex flex-row items-center justify-center w-full bg-red-400">
-          <div className="flex flex-col items-center justify-center w-4/6">
+          <div className="flex flex-col items-center justify-center w-full">
             <Carousel
               autoPlay={true}
               infiniteLoop={true}
@@ -53,7 +53,7 @@ const Details = ({ archive }) => {
               {archive.fotoCarousel.map((item, index) => {
                 return (
                   <div key={index}>
-                    <Image src={item} width={3740} height={2700} alt="One" />
+                    <Image src={item} width={2000} height={1200} alt="One" />
                   </div>
                 );
               })}
@@ -68,7 +68,7 @@ const Details = ({ archive }) => {
               <p className="text-justify">{archive.content}</p>
             </div>
           </div>
-          <Program />
+          <Program data={archive.program} />
           <Pemenang data={archive.pemenang} />
           <Juri data={archive.juri} />
         </div>
