@@ -27,8 +27,8 @@ const Footer = () => {
               </Link>
             </div>
             <div className="w-12">
-              <Link href="/">
-                <a href="https://www.instagram.com/ganffest/">
+              <Link href="https://www.instagram.com/ganffest/">
+                <a>
                   <Image src="/img/ig.svg" width={70} height={70} alt="IG" />
                 </a>
               </Link>
@@ -41,8 +41,8 @@ const Footer = () => {
               </Link>
             </div>
             <div className="w-12">
-              <Link href="/">
-                <a href"https://twitter.com/Ganffest">
+              <Link href="https://twitter.com/Ganffest">
+                <a>
                   <Image
                     src="/img/twitter.svg"
                     width={60}

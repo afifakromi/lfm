@@ -89,7 +89,7 @@ const Login = () => {
       </div>
 
       <div>
-        <form onSubmit={formik.handleSubmit} className="w-full">
+        <form onSubmit={formik.handleSubmit} className="w-full ">
           <InputField
             type="text"
             onChange={formik.handleChange}
@@ -97,6 +97,7 @@ const Login = () => {
             name="email"
             placeholder="Email"
             width="100%"
+            black={true}
           />
           <InputField
             type="password"
@@ -105,6 +106,7 @@ const Login = () => {
             name="password"
             placeholder="Password"
             width="100%"
+            black={true}
           />
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />

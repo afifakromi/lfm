@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Program = ({ data }) => {
+const Program = ({ data = [] }) => {
   const [hide, setHide] = useState(false);
 
   return (
-    <div className="flex flex-col justify-between w-4/6 mt-4 rounded-lg bg-customCrem">
+    <div
+      className={
+        "flex flex-col justify-between w-4/6 mt-4 rounded-lg bg-customCrem " +
+        (data == [] ? "hidden" : "block")
+      }
+    >
       <div className="flex flex-row justify-between px-16 py-4">
         <h1 className="text-4xl text-customArchive">Juri</h1>
         <Image
@@ -22,16 +27,17 @@ const Program = ({ data }) => {
 
       {hide ? (
         <div className="w-full px-16 py-8 duration-100 rounded-lg bg-customCremOpacity ">
-          {data.map((item, index) => {
-            return (
-              <h1
-                key={index}
-                className="text-xl font-montserrat text-customArchive"
-              >
-                {item}
-              </h1>
-            );
-          })}
+          {data != [] &&
+            data.map((item, index) => {
+              return (
+                <h1
+                  key={index}
+                  className="text-xl font-montserrat text-customArchive"
+                >
+                  {item}
+                </h1>
+              );
+            })}
         </div>
       ) : null}
     </div>

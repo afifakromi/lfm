@@ -89,7 +89,7 @@ const gff_archive = [
       "/img/archives/2014/4.jpg",
     ],
     juri: [
-      "Alex Sihar (Akademisi),
+      "Alex Sihar (Akademisi)",
       "Adrian Jonathan (Kritikus)",
       "Edwin (Sutradara)",
     ],
@@ -137,10 +137,11 @@ const gff_archive = [
           who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
         },
       },
-      
+
       {
         winner: {
-          title: "Sasauran Pangsaena: Penghargaan untuk film dengan naskah terbaik",
+          title:
+            "Sasauran Pangsaena: Penghargaan untuk film dengan naskah terbaik",
           who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
         },
       },
@@ -153,8 +154,7 @@ const gff_archive = [
       },
       {
         winner: {
-          title:
-            "Dalang Mumpuni: Penghargaan untuk sutradara terbaik.",
+          title: "Dalang Mumpuni: Penghargaan untuk sutradara terbaik.",
           who: "Teru Teru Bozu (Dimec Tirta Fananta, 2012)",
         },
       },
@@ -184,12 +184,11 @@ const gff_archive = [
     pemenang: [
       {
         winner: {
-          title:
-            "Penghargaan Gajah Emas: Film Terbaik",
+          title: "Penghargaan Gajah Emas: Film Terbaik",
           who: "Lolonii (Marky Yahya Ali dari To The Moon)",
         },
       },
-      
+
       {
         winner: {
           title: "Penghargaan Sasauran Pangsaena: Film dengan Naskah Terbaik",
@@ -198,8 +197,7 @@ const gff_archive = [
       },
       {
         winner: {
-          title:
-            "Penghargaan Dalang Mumpuni: Sutradara Terbaik",
+          title: "Penghargaan Dalang Mumpuni: Sutradara Terbaik",
           who: "Lolonii (Marky Yahya Ali dari To The Moon)",
         },
       },

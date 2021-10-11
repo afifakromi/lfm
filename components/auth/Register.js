@@ -124,6 +124,7 @@ const Register = ({ open = false }) => {
             name="nama"
             placeholder="Nama"
             width="100%"
+            black={true}
           />
           <InputField
             type="text"
@@ -132,6 +133,7 @@ const Register = ({ open = false }) => {
             name="domisili"
             placeholder="Domisili"
             width="100%"
+            black={true}
           />
           <InputField
             type="text"
@@ -140,6 +142,7 @@ const Register = ({ open = false }) => {
             name="username"
             placeholder="Username"
             width="100%"
+            black={true}
           />
           <InputField
             type="text"
@@ -148,6 +151,7 @@ const Register = ({ open = false }) => {
             name="email"
             placeholder="E-mail"
             width="100%"
+            black={true}
           />
           <InputField
             type="password"
@@ -156,6 +160,7 @@ const Register = ({ open = false }) => {
             name="password"
             placeholder="Kata Sandi"
             width="100%"
+            black={true}
           />
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />

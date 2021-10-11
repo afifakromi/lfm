@@ -10,6 +10,7 @@ function InputField({
   width,
   variation,
   label,
+  black,
 }) {
   const [hide, setHide] = useState(false);
 
@@ -31,8 +32,9 @@ function InputField({
         onChange={onChange}
         value={value}
         className={
-          "relative w-full text-black p-2 my-2 border-2 rounded-lg border-customGrey focus:shadow-lg focus:outline-none " +
-          (variation === "submission" ? "bg-nav" : "bg-white")
+          "relative w-full p-2 my-2 border-2 rounded-lg border-customGrey focus:shadow-lg focus:outline-none " +
+          (variation === "submission" ? "bg-nav " : "bg-white ") +
+          (black ? "text-black" : "text-white")
         }
       />
       {name == "password" ? (
