@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Juri = ({ data }) => {
+const Juri = ({ data = [] }) => {
   const [hide, setHide] = useState(false);
 
   return (

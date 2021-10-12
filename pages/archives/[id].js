@@ -52,7 +52,13 @@ const Details = ({ archive }) => {
             {archive.fotoCarousel.map((item, index) => {
               return (
                 <div key={index}>
-                  <Image src={item} width={2000} height={1200} alt="One" />
+                  <Image
+                    src={item}
+                    width={2000}
+                    height={1200}
+                    alt="One"
+                    objectFit="cover"
+                  />
                 </div>
               );
             })}
