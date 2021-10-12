@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-const InputAgreement = ({ text, name, optionsOne, onChange, valueOne }) => {
+const InputAgreement = ({
+  text,
+  name,
+  optionsOne,
+  onChange,
+  valueOne,
+  type = "radio",
+}) => {
   return (
     <div className="flex flex-row items-center justify-center w-full px-2 py-4 mt-4 rounded-lg bg-customArchive">
       <input
-        type="radio"
+        type={type == "checkbox" ? "checkbox" : "radio"}
         name={name}
         id={optionsOne}
         value={valueOne}

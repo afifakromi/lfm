@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import FeedBackMsg from "../commons/FeedBackMsg";
 import BtnSlide from "./BtnSlide";
 import Header from "./Header";
@@ -10,6 +10,7 @@ import {
 } from "../../authentication/state";
 import InputAgreement from "./InputAgreement";
 import { useRecoilValue } from "recoil";
+import { useRouter } from "next/router";
 
 const validate = (values) => {
   const errors = {};
@@ -22,6 +23,7 @@ const validate = (values) => {
 };
 
 const FormFour = () => {
+  const router = useRouter();
   const getFormOneVal = useRecoilValue(getFormOneState);
   const getFormTwoVal = useRecoilValue(getFormTwoState);
   const getFormThreeVal = useRecoilValue(getFormThreeState);
@@ -74,10 +76,10 @@ const FormFour = () => {
                 getFormThreeVal.nama_produser,
                 getFormThreeVal.no_hp_produser,
 
-                values.ott,
-                values.pameran,
-                values.internal,
-                values.kurator,
+                values.ott[0],
+                values.pameran[0],
+                values.internal[0],
+                values.kurator[0],
               ],
             ]),
           }
@@ -87,6 +89,9 @@ const FormFour = () => {
 
         if (res.message === "Successfully Inserted") {
           setSuccess(true);
+          setTimeout(() => {
+            router.push("/");
+          }, 1000);
         }
         console.log(res);
       } catch (err) {
@@ -112,14 +117,16 @@ const FormFour = () => {
             optionsOne="ott"
             onChange={formik.handleChange}
             name="ott"
-            valueOne="OTT"
+            valueOne="v"
+            type="checkbox"
           />
           <InputAgreement
             text="Karya Anda boleh ditayangkan pada acara-acara non-profit seperti pameran, presentasi, diskusi, roadshow dan workshop yang melibatkan Ganesha Film Festival."
             optionsOne="pameran"
             onChange={formik.handleChange}
             name="pameran"
-            valueOne="Pameran"
+            valueOne="v"
+            type="checkbox"
           />
 
           <h1 className="mt-8 text-4xl text-customCrem">Optional</h1>
@@ -128,15 +135,18 @@ const FormFour = () => {
             optionsOne="internal"
             onChange={formik.handleChange}
             name="internal"
-            valueOne="Internal"
+            valueOne="v"
+            type="checkbox"
           />
           <InputAgreement
             text="Karya Anda dapat dipinjam oleh pihak ketiga (kurator, media, mahasiswa, dsb) untuk jangka waktu singkat untuk keperluan preview dan riset. Kami mendata peminjaman ini dan akan memastikan karya tersebut kembali ke Arsip Ganesha Film Festival setelah pemutaran. Setiap peminjam harus mengisi formulir yang menyatakan tidak akan membuat duplikat karya. Catatan: Kami tidak bisa mencegah duplikasi karya terjadi."
             optionsOne="kurator"
             onChange={formik.handleChange}
             name="kurator"
-            valueOne="Kurator"
+            valueOne="v"
+            type="checkbox"
           />
+
           {success ? (
             <FeedBackMsg text="Thanks for Submitting" error={false} />
           ) : null}

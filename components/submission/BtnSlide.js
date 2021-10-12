@@ -5,7 +5,9 @@ const BtnSlide = ({ next, onClick, type }) => {
   return (
     <div
       onClick={onClick}
-      className="flex flex-row items-center justify-center w-32 py-2 text-white rounded-md cursor-pointer hover:opacity-80 bg-customPink"
+      className={
+        "flex-row flex items-center justify-center w-32 py-2 text-white rounded-md cursor-pointer hover:opacity-80 bg-customPink"
+      }
     >
       {type === "submit" ? (
         <p className="text-2xl">SUBMIT</p>
