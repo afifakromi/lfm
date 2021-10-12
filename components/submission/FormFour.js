@@ -154,6 +154,7 @@ const FormFour = () => {
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
           <div className="flex flex-row justify-end w-full mt-6">
+            <BtnSlide type="normal" next={false} onClick={prevSlide} />
             <BtnSlide type="submit" next={true} onClick={formik.handleSubmit} />
           </div>
         </form>
