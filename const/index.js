@@ -82,6 +82,24 @@ const gff_archive = [
       "/img/archives/2016/4.jpg",
       "/img/archives/2016/5.jpg",
     ],
+    program: [
+      {
+        title: "Program Kompetisi",
+        data: [""],
+      },
+      {
+        title: "Program Non Kompetisi",
+        data: [
+          "Opening Ceremony & Program",
+          "Diorama!",
+          "Bandung nu Aing!",
+          "Dalang-dalang Mula",
+          "Shorts Delight",
+          "Horison",
+          "Awarding & Closing Ceremony",
+        ],
+      },
+    ],
     juri: [
       "Mikhael Johani (Kritikus)",
       "Ifa Isfansyah (Pembuat Film)",
@@ -117,6 +135,33 @@ const gff_archive = [
       "/img/archives/2014/3.jpg",
       "/img/archives/2014/4.jpg",
     ],
+    program: [
+      {
+        title: "Kompetisi",
+        data: [""],
+      },
+      {
+        title: "Gimmie 5!; Kompetisi film pendek di bawah 5 menit",
+        data: [""],
+      },
+      {
+        title: "3D Indie Movie Experience",
+        data: [""],
+      },
+      {
+        title: "BisMegaplex",
+        data: [""],
+      },
+      {
+        title: "Screening",
+        data: [
+          "Pemutaran Triologi dan Payung Merah (Edward Gunawan, 2010)",
+          "Euphoria (Pandu Bintoro)",
+          "Bermula dari A (BW Purbanegara, 2011)",
+          "Say Hello to Yellow (BW Purbanegara, 2011)",
+        ],
+      },
+    ],
     juri: [
       "Alex Sihar (Akademisi)",
       "Adrian Jonathan (Kritikus)",
@@ -151,6 +196,20 @@ const gff_archive = [
       "/img/archives/2012/2.jpg",
       "/img/archives/2012/3.jpg",
       "/img/archives/2012/4.jpg",
+    ],
+    program: [
+      {
+        title: "GEP: Drive In",
+        data: [""],
+      },
+      {
+        title: "BisMegaplex",
+        data: [""],
+      },
+      {
+        title: "Film Screening dan Appreciation Night Award",
+        data: [""],
+      },
     ],
     juri: [
       "Seno Gumira Ajidarma (Sastrawan)",
@@ -209,6 +268,24 @@ const gff_archive = [
       "/img/archives/2010/2.jpg",
       "/img/archives/2010/3.jpg",
       "/img/archives/2010/4.jpg",
+    ],
+    program: [
+      {
+        title: "Kompetisi",
+        data: [""],
+      },
+      {
+        title: "Penjurian Inovasi Teknologi Perfilman",
+        data: [""],
+      },
+      {
+        title: "Workshop",
+        data: [""],
+      },
+      {
+        title: "Pameran LFM ITB 50 Tahun",
+        data: [""],
+      },
     ],
     pemenang: [
       {

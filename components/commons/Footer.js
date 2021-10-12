@@ -20,7 +20,7 @@ const Footer = () => {
           <h1 className="text-xl text-secondary">Find Us On Social Media</h1>
           <div className="flex flex-row items-center justify-start">
             <div className="w-12">
-              <Link href="/">
+              <Link href="https://wa.me/082257091669">
                 <a>
                   <Image src="/img/wa.svg" width={60} height={60} alt="IG" />
                 </a>
