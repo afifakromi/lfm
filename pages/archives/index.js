@@ -20,7 +20,7 @@ const Archive = () => {
             {gff_archive.map((item, index) => {
               return (
                 <Link key={index} href={item.link} passHref>
-                  <div className="flex flex-col items-center justify-center px-2 py-4 mt-10 transform border-2 cursor-pointer hover:scale-110 rounded-3xl bg-customArchiveItem">
+                  <div className="flex flex-col items-center justify-center px-2 py-4 mt-10 duration-200 transform border-2 cursor-pointer hover:scale-110 rounded-3xl bg-customArchiveItem">
                     <a className="text-xl text-center bg-gradient-to-r text-gradient from-first via-middle to-last">
                       {item.archiveTitle}
                     </a>
