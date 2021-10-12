@@ -79,6 +79,7 @@ const FormThree = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.no_hp_produksi}
               name="no_hp_produksi"
+              placeholder="'081214840080"
               variation="submission"
               label="Nomor Telepon"
             />
@@ -112,6 +113,7 @@ const FormThree = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.no_hp_produser}
               name="no_hp_produser"
+              placeholder="'081214840080"
               variation="submission"
               label="Nomor Telepon"
             />
