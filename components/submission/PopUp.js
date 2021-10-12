@@ -11,7 +11,7 @@ const PopUp = () => {
       className={
         hide
           ? "hidden"
-          : "bg-white flex absolute z-50 top-96  left-1/2 transform -translate-x-1/2  flex-col items-center justify-center px-12 py-4  rounded-3xl"
+          : "bg-white flex absolute z-50 top-96 shadow-lg  left-1/2 transform -translate-x-1/2  flex-col items-center justify-center px-12 py-4  rounded-3xl"
       }
     >
       <div>

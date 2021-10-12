@@ -15,14 +15,14 @@ import { useRouter } from "next/router";
 const validate = (values) => {
   const errors = {};
 
-  if (!values.ott || !values.pameran) {
-    errors.all = "All fields is required";
+  // if (!values.internal || !values.kurator) {
+  //   errors.all = "All fields is required";
 
-    return errors;
-  }
+  //   return errors;
+  // }
 };
 
-const FormFour = () => {
+const FormFour = ({ prevSlide }) => {
   const router = useRouter();
   const getFormOneVal = useRecoilValue(getFormOneState);
   const getFormTwoVal = useRecoilValue(getFormTwoState);
@@ -32,8 +32,8 @@ const FormFour = () => {
 
   const formik = useFormik({
     initialValues: {
-      ott: "",
-      pameran: "",
+      internal: "",
+      kurator: "",
     },
     validate,
     onSubmit: async (values) => {
@@ -76,8 +76,6 @@ const FormFour = () => {
                 getFormThreeVal.nama_produser,
                 getFormThreeVal.no_hp_produser,
 
-                values.ott[0],
-                values.pameran[0],
                 values.internal[0],
                 values.kurator[0],
               ],
@@ -112,22 +110,18 @@ const FormFour = () => {
       <div className="flex-shrink-0 w-6/12 mt-8">
         <form onSubmit={formik.handleSubmit} className="w-full">
           <h1 className="text-4xl text-customCrem">Mandatory</h1>
-          <InputAgreement
-            text="Karya anda boleh ditayangkan baik melalui OTT maupun secara luring dalam kegiatan pemutaran Ganesha Film Festival."
-            optionsOne="ott"
-            onChange={formik.handleChange}
-            name="ott"
-            valueOne="v"
-            type="checkbox"
-          />
-          <InputAgreement
-            text="Karya Anda boleh ditayangkan pada acara-acara non-profit seperti pameran, presentasi, diskusi, roadshow dan workshop yang melibatkan Ganesha Film Festival."
-            optionsOne="pameran"
-            onChange={formik.handleChange}
-            name="pameran"
-            valueOne="v"
-            type="checkbox"
-          />
+          <div className="flex flex-row items-center justify-center w-full px-2 py-4 mt-4 rounded-lg bg-customArchive">
+            <p className="w-10/12 text-black">
+              Karya anda boleh ditayangkan baik melalui OTT maupun secara luring
+              dalam kegiatan pemutaran Ganesha Film Festival.
+            </p>
+          </div>
+          <div className="flex flex-row items-center justify-center w-full px-2 py-4 mt-4 rounded-lg bg-customArchive">
+            <p className="w-10/12 text-black">
+              Karya anda boleh ditayangkan baik melalui OTT maupun secara luring
+              dalam kegiatan pemutaran Ganesha Film Festival.
+            </p>
+          </div>
 
           <h1 className="mt-8 text-4xl text-customCrem">Optional</h1>
           <InputAgreement
@@ -153,7 +147,8 @@ const FormFour = () => {
           {formik.errors.all ? (
             <FeedBackMsg text={formik.errors.all} error={true} />
           ) : null}
-          <div className="flex flex-row justify-end w-full mt-6">
+          <div className="flex flex-row justify-between w-full mt-6">
+            <BtnSlide type="normal" next={false} onClick={prevSlide} />
             <BtnSlide type="submit" next={true} onClick={formik.handleSubmit} />
           </div>
         </form>
