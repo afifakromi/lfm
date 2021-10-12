@@ -93,6 +93,7 @@ const FormTwo = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.no_hp}
               name="no_hp"
+              placeholder="'081214840080"
               variation="submission"
               label="Nomor Telepon"
             />
