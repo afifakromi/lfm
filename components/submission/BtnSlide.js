@@ -13,14 +13,14 @@ const BtnSlide = ({ next, onClick, type }) => {
         <p className="text-2xl">SUBMIT</p>
       ) : (
         <>
-          <p className="text-2xl">{next ? "NEXT" : null}</p>
+          <p className="mr-2 text-2xl">{next ? "NEXT" : null}</p>
           <Image
             src={next ? "/img/next.svg" : "/img/prev.svg"}
             width={25}
             height={25}
             alt="Slide Btn"
           />
-          <p className="text-2xl">{next ? null : "BACK"}</p>
+          <p className="ml-2 text-2xl">{next ? null : "BACK"}</p>
         </>
       )}
     </div>

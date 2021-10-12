@@ -36,7 +36,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="w-12 ml-4">
-              <Link href="/">
+              <Link href="mailto:mail.ganffest@gmail.com">
                 <a>
                   <Image src="/img/email.svg" width={35} height={35} alt="IG" />
                 </a>
