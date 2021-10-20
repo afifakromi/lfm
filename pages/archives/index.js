@@ -12,15 +12,15 @@ const Archive = () => {
   return (
     <Layout title="Archive">
       <Navbar />
-      <div className="flex flex-row items-center justify-center w-full py-16 bg-nav">
+      <div className="flex flex-row items-center justify-center w-full py-16 bg-nav ">
         <Login />
         <Register />
-        <div className="flex flex-col w-5/6 h-4/5">
-          <div className="grid grid-cols-3 gap-6">
+        <div className="flex flex-col w-5/6 h-4/5 ">
+          <div className="grid grid-cols-3 gap-8">
             {gff_archive.map((item, index) => {
               return (
                 <Link key={index} href={item.link} passHref>
-                  <div className="flex flex-col items-center justify-center px-2 py-4 mt-10 border-2 cursor-pointer rounded-3xl bg-customArchiveItem">
+                  <div className="flex flex-col items-center justify-center px-2 py-4 mt-10 transition duration-500 transform border-2 cursor-pointer hover:scale-110 rounded-3xl bg-customArchiveItem">
                     <a className="text-xl text-center bg-gradient-to-r text-gradient from-first via-middle to-last">
                       {item.archiveTitle}
                     </a>

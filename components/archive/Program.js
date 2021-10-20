@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
-const Program = ({ data = [] }) => {
+const Program = ({ data }) => {
   const [hide, setHide] = useState(false);
-
-  useEffect(() => {
-    console.log(data);
-  }, []);
 
   return (
     <div className="flex flex-col justify-between w-4/6 mt-10 rounded-lg bg-customCrem">

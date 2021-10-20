@@ -79,6 +79,7 @@ const FormThree = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.no_hp_produksi}
               name="no_hp_produksi"
+              placeholder="'081214840080"
               variation="submission"
               label="Nomor Telepon"
             />
@@ -94,7 +95,7 @@ const FormThree = ({ nextSlide, prevSlide }) => {
         </form>
       </div>
       <div className="flex flex-col w-3/5">
-        <Header title="Producer Data" />
+        <Header title="Producer Data" index={3} type="hide" />
       </div>
       <div className="flex-shrink-0 w-6/12 mt-8">
         <form onSubmit={formik.handleSubmit} className="w-full">
@@ -112,6 +113,7 @@ const FormThree = ({ nextSlide, prevSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.no_hp_produser}
               name="no_hp_produser"
+              placeholder="'081214840080"
               variation="submission"
               label="Nomor Telepon"
             />

@@ -126,7 +126,6 @@ const FormOne = ({ nextSlide }) => {
               onChange={formik.handleChange}
               value={formik.values.durasi}
               name="durasi"
-              placeholder="Dalam detik"
               variation="submission"
               label="Durasi Film"
             />

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
-const Program = ({ data }) => {
+const Pemenang = ({ data }) => {
   const [hide, setHide] = useState(false);
 
   return (
@@ -40,4 +40,4 @@ const Program = ({ data }) => {
   );
 };
 
-export default Program;
+export default Pemenang;

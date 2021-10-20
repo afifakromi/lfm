@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Program = ({ data = [] }) => {
+const Juri = ({ data = [] }) => {
   const [hide, setHide] = useState(false);
 
   return (
     <div
-      className="flex-col justify-between w-4/6 mt-4 rounded-lg bg-customCrem"
-      style={{ display: data == [] ? "none" : "flex" }}
+      className={
+        "flex-col justify-between w-4/6 mt-4 rounded-lg bg-customCrem " +
+        (data.length == 0 ? "hidden" : "flex")
+      }
     >
       <div className="flex flex-row justify-between px-16 py-4">
         <h1 className="text-4xl text-customArchive">Juri</h1>
@@ -42,4 +44,4 @@ const Program = ({ data = [] }) => {
   );
 };
 
-export default Program;
+export default Juri;

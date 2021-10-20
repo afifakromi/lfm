@@ -98,6 +98,7 @@ const Register = ({ open = false }) => {
         (toggleRegister && !loggedIn ? "block" : "hidden") +
         " absolute z-50  flex-row w-4/12 mt-28 px-8 py-4 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl top-1/2 left-1/2"
       }
+      style={{ filter: "drop-shadow(5px 5px 2px #000000)" }}
     >
       <div className="flex justify-end mb-2">
         <Image
