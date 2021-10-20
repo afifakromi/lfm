@@ -94,7 +94,7 @@ const FormThree = ({ nextSlide, prevSlide }) => {
         </form>
       </div>
       <div className="flex flex-col w-3/5">
-        <Header title="Producer Data" index={3} />
+        <Header title="Producer Data" />
       </div>
       <div className="flex-shrink-0 w-6/12 mt-8">
         <form onSubmit={formik.handleSubmit} className="w-full">

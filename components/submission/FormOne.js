@@ -141,7 +141,7 @@ const FormOne = ({ nextSlide }) => {
             />
           </div>
           <div className="flex flex-col items-start justify-between mt-2 text-white font-poppins">
-            <label>Sinposis</label>
+            <label>Sinopsis</label>
             <textarea
               name="sinopsis"
               value={formik.values.sinopsis}
