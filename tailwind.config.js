@@ -24,6 +24,9 @@ module.exports = {
         customDropdown: "#F87171",
         customCrem: "#FCAB63",
         customCremOpacity: "#fdc899",
+        customFirst: "#2641A1",
+        customMiddle: "#FF5F7F",
+        customLast: "#FCAB63",
       }),
       textColor: (theme) => theme("colors"),
       textColor: {
@@ -57,8 +60,8 @@ module.exports = {
         white: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
       },
       backgroundImage: {
-        'komunitas': "url('/img/komunitas.png')",
-       }
+        komunitas: "url('/img/komunitas.png')",
+      },
     },
   },
   variants: {
