@@ -2,6 +2,81 @@ const gff_archive = [
   {
     id: 1,
     link: "/archives/1",
+    archiveTitle: "Ganffest 2020",
+    key: "GFF 2020",
+    title: "Ganffest 2020: Germinal",
+    content:
+      "Teknologi, alat yang digunakan untuk memberikan sarana pemermudah hidup, terus bermutasi, berkembang, dan mengakar dalam hidup kita, para manusia. Kemunculannya, terutama bagi para pihak yang selalu menerima saja produk barunya terbilang sangat dadakan namun impactnya masif. Fenomena ini sangatlah menarik untuk ditilik, seberapa besar manusia harus beradaptasi dengan kerusakan tatanan  yang diciptakan oleh barang yang dibuat diri sendiri, menciptakan dinamika baru dalam kehidupannya. Ia berhasil menciptakan pergeseran secara paksa. Pergeseran di sini adalah pergeseran budaya, sosial, hingga politik. Sesimpel pergeseran cara berpacaran, dengan kemunculan smartphone dengan internet, interaksi 24/7 menjadi sesuatu yang tidak mustahil antara dua sejoli, berbeda dengan orang zaman dahulu yang untuk menyampaikan pesan jarak jauh perlu menunggu berhari-hari bahkan berbulan-bulan. Perkembangan ini belum menyeluruh dan mencapai keadaan tunaknya, malah masih tahap awal, bak berkecambah atau dibilang 'germinal'. Kami mencoba melihat bagaimana gagasan tersebut dapat terefleksi dalam medium audio-visual yang disebut film.",
+    fotoUrl: "/img/archives/2020/poster.png",
+    fotoCarousel: [
+      "/img/archives/2020/1.png",
+      "/img/archives/2020/2.png",
+      "/img/archives/2020/3.png",
+      "/img/archives/2020/4.png",
+      "/img/archives/2020/5.png",
+      "/img/archives/2020/6.png",
+    ],
+    juri: [
+      "Riar Rizaldi",
+      "Iwan Pranoto",
+      "Ifan Ismail",
+    ],
+    pemenang: [
+      {
+        winner: {
+          title: "Gajah Emas: Film Terbaik",
+          who: "Lantun Rakyat  (Moch. Dwi Cahya,2019)",
+        },
+      },
+      {
+        winner: {
+          title:
+            "Gajah Pinilih: Film Terbaik berdasarkan perwakilan komunitas Kota Bandung",
+          who: "REPOST (Vera Isnaini,2019)",
+        },
+      },
+    ],
+    program: [
+      {
+        title: "Program Pemutaran Kompetisi",
+        data: [""],
+      },
+      {
+        title: "Program Pemutaran Non Kompetisi",
+        data: [
+          "Dislokasi",
+          "L.O.V.E. 4.0",
+          "Bandung Nu Aing!",
+          "Ganffest X Clermont-Ferrand: Lab Program",
+          "Horizon",
+          "Beyond Screening",
+        ],
+      },
+      {
+        title: "Pameran Beyond Screening",
+        data: [""],
+      },
+      {
+        title: "Ganesha Talk: The Feelings of Reality with Forum Film Dokumenter",
+        data: [""],
+      },
+      {
+        title: "Workshop suara : SUSU MURNI!",
+        data: [""],
+      },
+      {
+        title: "Sinema Keliling",
+        data: [""],
+      },
+      {
+        title: "Malam Komunitas",
+        data: [""],
+      },
+    ],
+  },
+  {
+    id: 2,
+    link: "/archives/2",
     archiveTitle: "Ganffest 2018",
     key: "GFF 2018",
     title: "Ganffest 2018: Jendela",
@@ -67,8 +142,8 @@ const gff_archive = [
     ],
   },
   {
-    id: 2,
-    link: "/archives/2",
+    id: 3,
+    link: "/archives/3",
     archiveTitle: "Ganffest 2016",
     key: "GFF 2016",
     title: "Ganffest 2016: Diri Tak Perlu Dicari",
@@ -121,8 +196,8 @@ const gff_archive = [
     ],
   },
   {
-    id: 3,
-    link: "/archives/3",
+    id: 4,
+    link: "/archives/4",
     archiveTitle: "Ganffest 2014",
     key: "GFF 2014",
     title: "Ganffest 2014: Make It Seen",
@@ -183,8 +258,8 @@ const gff_archive = [
     ],
   },
   {
-    id: 4,
-    link: "/archives/4",
+    id: 5,
+    link: "/archives/5",
     archiveTitle: "Ganffest 2012",
     key: "GFF 2012",
     title: "Ganffest 2012: Mov(i)e On!",
@@ -255,8 +330,8 @@ const gff_archive = [
     ],
   },
   {
-    id: 5,
-    link: "/archives/5",
+    id: 6,
+    link: "/archives/6",
     archiveTitle: "Ganffest 2010",
     key: "GFF 2010",
     title: "Ganffest 2010: Art Futuristic",
