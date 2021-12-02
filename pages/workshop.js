@@ -8,7 +8,7 @@ const workshop = () => {
     <Layout title="Workshop">
       <div className="w-full flex flex-col">
         <Navbar />
-        <div className="w-full h-screen bg-komunitas bg-contain bg-center flex flex-row items-end py-20">
+        <div className="w-full h-screen bg-workshop bg-contain bg-center flex flex-row items-end py-20">
           <div className="flex flex-row w-full items-center justify-between px-20">
             <div>
               <h1 className="font-gilroy" style={{ fontSize: "6rem" }}>

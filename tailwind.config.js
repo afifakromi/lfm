@@ -63,6 +63,7 @@ module.exports = {
       },
       backgroundImage: {
         komunitas: "url('/img/komunitas.png')",
+        workshop: "url('/img/workshop.png')",
       },
     },
   },
