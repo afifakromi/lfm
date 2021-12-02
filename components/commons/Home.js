@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import Countdown from "react-countdown";
+import Link from "next/link";
 
 const Home = () => {
-  const [komunitas, setKomunitas] = useState(true);
+  const [komunitas, setKomunitas] = useState(false);
   const [entry, setEntry] = useState(false);
   const [timeline, setTimeline] = useState(false);
 
@@ -13,14 +14,9 @@ const Home = () => {
 
   const renderer = ({ days, completed }) => {
     if (completed) {
-      // Render a completed state
       return <p>Hello World</p>;
     } else {
-      // Render a countdown
       return (
-        // <span className="text-6xl bg-gradient-to-r text-gradient from-first via-middle to-last">
-        //   {hours}:{minutes}:{seconds}
-        // </span>
         <span className="text-6xl bg-gradient-to-r text-gradient from-first via-middle to-last">
           {days}
         </span>
@@ -54,69 +50,67 @@ const Home = () => {
             <h1 className="text-6xl text-customCrem font-montserrat absolute -left-24 -top-10">
               Timeline
             </h1>
-            {/* <p className="text-3xl mt-16 font-montserrat text-customPink">
-              11 Oktober 2021
-            </p>
-            <p className="text-3xl font-montserrat text-customPink ml-28">-</p>
-            <p className="text-3xl font-montserrat text-customPink">
-              17 Desember 2021
-            </p> */}
             <div className="w-full mt-16 flex flex-row items-center">
-              <div
-                className="w-16 h-16 relative rounded-full bg-customFirst cursor-pointer"
-                onMouseOver={() => setKomunitas(true)}
-                onMouseLeave={() => setKomunitas(false)}
-              >
-                <p className="text-2xl text-customFirst mt-20 -right-40 absolute w-64 ">
-                  Calling Entry
-                </p>
+              <Link href="/submission" passHref>
                 <div
-                  className={
-                    "absolute w-80 h-56 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
-                  }
-                  style={{ display: komunitas ? "flex" : "none" }}
+                  className="w-16 h-16 relative rounded-full bg-customFirst cursor-pointer"
+                  onMouseOver={() => setKomunitas(true)}
+                  onMouseLeave={() => setKomunitas(false)}
                 >
-                  <p className="text-2xl text-customPink">Calling Entry</p>
-                  <p className=" text-customPink font-montserrat">
-                    10 Okt - 13 Des 2021
+                  <p className="text-2xl text-customFirst mt-20 -right-40 absolute w-64 ">
+                    Calling Entry
                   </p>
-                  <p className="text-sm text-black mt-4">
-                    Ayo submisikan karyamu di Ganesha Film Festival 2022! Untuk
-                    melakukan submisi dapat dilakukan di website ini dengan
-                    menekan tombol submisi
-                  </p>
+                  <div
+                    className={
+                      "absolute w-80 h-56 p-4 text-center flex-col bg-white top-20 rounded-xl -left-32"
+                    }
+                    style={{ display: komunitas ? "flex" : "none" }}
+                  >
+                    <p className="text-2xl text-customPink">Calling Entry</p>
+                    <p className=" text-customPink font-montserrat">
+                      10 Okt - 13 Des 2021
+                    </p>
+                    <p className="text-sm text-black mt-4">
+                      Ayo submisikan karyamu di Ganesha Film Festival 2022!
+                      Untuk melakukan submisi dapat dilakukan di website ini
+                      dengan menekan tombol submisi
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
               <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-first to-middle" />
-
-              <div
-                className="w-16 h-16 relative rounded-full bg-customMiddle cursor-pointer"
-                onMouseOver={() => setTimeline(true)}
-                onMouseLeave={() => setTimeline(false)}
-              >
-                <p className="text-2xl text-customPink mt-20 -right-28 absolute w-64">
-                  Keliling Komunitas
-                </p>
+              <Link href="/komunitas" passHref>
                 <div
-                  className={
-                    "absolute w-80  p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
-                  }
-                  style={{ display: timeline ? "flex" : "none" }}
+                  className="w-16 h-16 relative rounded-full bg-customMiddle cursor-pointer"
+                  onMouseOver={() => setTimeline(true)}
+                  onMouseLeave={() => setTimeline(false)}
                 >
-                  <p className="text-2xl text-customPink">Keliling Komunitas</p>
-                  <p className=" text-customPink font-montserrat">
-                    31 Oktober 2021 <br />
-                    4 Desember 2021 <br />
-                    21 Januari 2022 <br />
+                  <p className="text-2xl text-customPink mt-20 -right-28 absolute w-64">
+                    Keliling Komunitas
                   </p>
-                  <p className="text-sm text-black mt-4">
-                    Keliling komunitas adalah kegiatan yang berupa mengunjungi
-                    komunitas-komunitas non perfilman yang bertujuan untuk
-                    memasyarakatkan film alternatif dan juga memperkenalkan GFF
-                    2022.
-                  </p>
+                  <div
+                    className={
+                      "absolute w-80  p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
+                    }
+                    style={{ display: timeline ? "flex" : "none" }}
+                  >
+                    <p className="text-2xl text-customPink">
+                      Keliling Komunitas
+                    </p>
+                    <p className=" text-customPink font-montserrat">
+                      31 Oktober 2021 <br />
+                      4 Desember 2021 <br />
+                      21 Januari 2022 <br />
+                    </p>
+                    <p className="text-sm text-black mt-4">
+                      Keliling komunitas adalah kegiatan yang berupa mengunjungi
+                      komunitas-komunitas non perfilman yang bertujuan untuk
+                      memasyarakatkan film alternatif dan juga memperkenalkan
+                      GFF 2022.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
               <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-middle to-last" />
               <div
