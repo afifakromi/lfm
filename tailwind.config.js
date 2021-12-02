@@ -39,6 +39,8 @@ module.exports = {
         customPink: "#FE6081",
         customCrem: "#fcab63",
         customGrey: "#EBEAEA",
+        customFirst: "#2641A1",
+        customLast: "#FCAB63",
       },
       borderColor: (theme) => ({
         ...theme("colors"),
