@@ -38,35 +38,6 @@ const FormFour = ({ prevSlide }) => {
     validate,
     onSubmit: async (values) => {
       try {
-        // let transporter = nodemailer.createTransport({
-        //   service: "gmail", // true for 465, false for other ports
-        //   auth: {
-        //     user: "m.fadli.gunardi@gmail.com", // generated ethereal user
-        //     pass: "marsutara34", // generated ethereal password
-        //   },
-        // });
-
-        // let mailData = {
-        //   from: '"Fadli" <m.fadli.gunardi@gmail.com>', // sender address
-        //   to: "socakromiafif@gmail.com", // list of receivers
-        //   subject: "New LFM Submission ✔️", // Subject line
-        //   text: "Ada submisi baru cek nodeapi", // plain text body
-        // };
-
-        // transporter.sendMail(mailData, (error, info) => {
-        //   if (error) {
-        //     return console.log(error);
-        //   }
-        //   console.log("Message sent: %s", info.messageId);
-        //   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-
-        //   return res.json({
-        //     status: true,
-        //     msg: "berhasil mengirim submisi ke email",
-        //     mail: info.messageId,
-        //   });
-        // });
-
         const response = await fetch(
           "https://v1.nocodeapi.com/fadli/google_sheets/EbweNerMgiYQXqgq?tabId=LFM_Database",
           {

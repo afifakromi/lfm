@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
+import Countdown from "react-countdown";
 import Link from "next/link";
-import NextCountdown from "./NextCountdown";
 
 const Home = () => {
   const [komunitas, setKomunitas] = useState(false);
   const [entry, setEntry] = useState(false);
   const [timeline, setTimeline] = useState(false);
+
+  useEffect(() => {
+    console.log(komunitas);
+  }, [komunitas]);
+
+  const renderer = ({ days, completed }) => {
+    if (completed) {
+      return <p>Hello World</p>;
+    } else {
+      return (
+        <span className="text-6xl bg-gradient-to-r text-gradient from-first via-middle to-last">
+          {days}
+        </span>
+      );
+    }
+  };
 
   return (
     <div className="relative w-full bg-primary">
@@ -21,8 +37,15 @@ const Home = () => {
         />
         <div className=" bg-nav w-full py-20 pb-80 flex flex-col items-center justify-center">
           <p className="text-6xl mb-4 font-montserrat">COUNTDOWN</p>
-          <NextCountdown />
+          <Countdown
+            className="text-6xl bg-gradient-to-r text-gradient from-first via-middle to-last"
+            date={Date.now() + 86400000 * 69}
+            // date={Date("2022-03-05T01:02:03")}
+            renderer={renderer}
+            daysInHours={true}
+          />
           <p className="mt-8 text-xl">Hari Menuju Main Event Ganffest</p>
+
           <div className="w-1/2 mt-20 flex flex-col justify-center relative">
             <h1 className="text-6xl text-customCrem font-montserrat absolute -left-24 -top-10">
               Timeline
