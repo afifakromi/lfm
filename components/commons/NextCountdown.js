@@ -57,9 +57,6 @@ const NextCountdown = () => {
           <p className="text-6xl bg-gradient-to-r text-gradient from-first via-middle to-last">
             {getDaysRecoil}
           </p>
-          {/* <p className="text-6xl bg-gradient-to-r text-gradient from-first via-middle to-last">
-            {getSecondsRecoil}
-          </p> */}
         </>
       )}
     </div>
