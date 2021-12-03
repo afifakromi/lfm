@@ -18,9 +18,9 @@
     "multer": "^1.4.2",
     "next": "11.0.1",
     "next-connect": "^0.10.2",
+    "nodemailer": "^6.7.2",
     "passport": "^0.4.1",
     "react": "17.0.2",
-    "react-countdown": "^2.3.2",
     "react-dom": "17.0.2",
     "react-dropdown": "^1.9.2",
     "react-dropzone": "^11.3.4",
@@ -31,6 +31,7 @@
     "react-router-dom": "^5.2.0",
     "reactstrap": "^8.9.0",
     "recoil": "^0.4.1",
+    "recoil-persist": "^4.0.0",
     "swr": "^0.5.6"
   },
   "devDependencies": {
