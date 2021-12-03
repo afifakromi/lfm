@@ -11,7 +11,6 @@ import {
 import InputAgreement from "./InputAgreement";
 import { useRecoilValue } from "recoil";
 import { useRouter } from "next/router";
-// import nodemailer from "nodemailer";
 
 const validate = (values) => {
   const errors = {};
