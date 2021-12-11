@@ -12,6 +12,7 @@ import InputAgreement from "./InputAgreement";
 import { useRecoilValue } from "recoil";
 import { useRouter } from "next/router";
 import axios from "axios";
+import { serverURL } from "../../authentication/server-config";
 
 const validate = (values) => {
   const errors = {};
@@ -89,7 +90,7 @@ const FormFour = ({ prevSlide }) => {
         if (res.message === "Successfully Inserted") {
           axios
             .get(
-              "http://127.0.0.1:8000/send-email/" +
+              "https://backend.ganffest2022.xyz/send-email/" +
                 localStorage.getItem("email")
             )
             .then((res) => console.log(res));
