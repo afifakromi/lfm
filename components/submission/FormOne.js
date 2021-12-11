@@ -32,7 +32,9 @@ const validate = (values) => {
 
 const FormOne = ({ nextSlide }) => {
   const [formOnevalue, setFormOneValue] = useRecoilState(formOneState);
-
+  useEffect(() => {
+    console.log(localStorage.getItem("email"));
+  }, []);
   const formik = useFormik({
     initialValues: {
       judul_film: "",

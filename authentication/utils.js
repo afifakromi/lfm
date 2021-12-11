@@ -69,6 +69,8 @@ export const login = async (credentials = {}) => {
     "POST"
   );
 
+  console.log(data);
+
   if (!data.status) {
     console.log(data);
     return data;

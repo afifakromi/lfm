@@ -11,6 +11,7 @@ import {
 import InputAgreement from "./InputAgreement";
 import { useRecoilValue } from "recoil";
 import { useRouter } from "next/router";
+import axios from "axios";
 
 const validate = (values) => {
   const errors = {};
@@ -86,6 +87,12 @@ const FormFour = ({ prevSlide }) => {
         let res = await response.json();
 
         if (res.message === "Successfully Inserted") {
+          axios
+            .get(
+              "http://127.0.0.1:8000/send-email/" +
+                localStorage.getItem("email")
+            )
+            .then((res) => console.log(res));
           setSuccess(true);
           setTimeout(() => {
             router.push("/");
