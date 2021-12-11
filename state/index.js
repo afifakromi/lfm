@@ -3,6 +3,21 @@ import { recoilPersist } from "recoil-persist";
 
 const { persistAtom } = recoilPersist();
 
+export const user = atom({
+  key: "user",
+  default: 0,
+  effects_UNSTABLE: [persistAtom],
+});
+
+export const getUser = selector({
+  key: "getUser",
+  get: ({ get }) => {
+    const values = get(user);
+
+    return values;
+  },
+});
+
 export const daysR = atom({
   key: "daysR",
   default: 0,

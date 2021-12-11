@@ -89,10 +89,7 @@ const FormFour = ({ prevSlide }) => {
 
         if (res.message === "Successfully Inserted") {
           axios
-            .get(
-              "https://backend.ganffest2022.xyz/send-email/" +
-                localStorage.getItem("email")
-            )
+            .get(serverURL + "/send-email/" + localStorage.getItem("email"))
             .then((res) => console.log(res));
           setSuccess(true);
           setTimeout(() => {
