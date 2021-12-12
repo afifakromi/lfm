@@ -123,8 +123,8 @@ const FormFour = ({ prevSlide }) => {
           </div>
           <div className="flex flex-row items-center justify-center w-full px-2 py-4 mt-4 rounded-lg bg-customArchive">
             <p className="w-10/12 text-black">
-              Karya anda boleh ditayangkan baik melalui OTT maupun secara luring
-              dalam kegiatan pemutaran Ganesha Film Festival.
+              Karya Anda boleh ditayangkan pada acara-acara non-profit seperti pameran, 
+              presentasi, diskusi, roadshow dan workshop yang melibatkan Ganesha Film Festival.
             </p>
           </div>
 
