@@ -16,11 +16,7 @@ const gff_archive = [
       "/img/archives/2020/5.png",
       "/img/archives/2020/6.png",
     ],
-    juri: [
-      "Riar Rizaldi",
-      "Iwan Pranoto",
-      "Ifan Ismail",
-    ],
+    juri: ["Riar Rizaldi", "Iwan Pranoto", "Ifan Ismail"],
     pemenang: [
       {
         winner: {
@@ -57,7 +53,8 @@ const gff_archive = [
         data: [""],
       },
       {
-        title: "Ganesha Talk: The Feelings of Reality with Forum Film Dokumenter",
+        title:
+          "Ganesha Talk: The Feelings of Reality with Forum Film Dokumenter",
         data: [""],
       },
       {
@@ -405,4 +402,10 @@ const gff_archive = [
   },
 ];
 
-export { gff_archive };
+const merchConst = [
+  { imgUrl: "/img/bag.svg", name: "Totebag", price: "Rp39.000", href: "#" },
+  { imgUrl: "/img/shirt.svg", name: "T-Shirt", price: "Rp80.000", href: "#" },
+  { imgUrl: "/img/pin.svg", name: "Enamel Pin", price: "Rp9.000", href: "#" },
+];
+
+export { gff_archive, merchConst };
