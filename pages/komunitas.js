@@ -23,9 +23,9 @@ const komunitas = () => {
               </h1>
             </div>
             <div className="bg-white py-2 px-4 rounded-full w-1/5 ">
-              <Link href="youtube.com">
+              <Link href="https://bit.ly/KelilingKomunitas">
                 <a className="flex flex-row items-center justify-between">
-                  <p className="text-black text-3xl">Watch on Youtube</p>
+                  <p className="text-black text-3xl">Register</p>
                   <img
                     className="w-10 h-10"
                     src="/img/right-arrow.png"

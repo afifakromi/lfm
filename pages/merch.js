@@ -15,7 +15,7 @@ const merch = () => {
       <Login />
       <Register />
       <div className="w-full h-screen bg-primary px-64 py-52">
-        <div className="grid grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-3 gap-8">
           {merchConst.map((item, index) => {
             return (
               <Link key={index} passHref href={item.href}>
@@ -27,7 +27,7 @@ const merch = () => {
               </Link>
             );
           })}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </Layout>
