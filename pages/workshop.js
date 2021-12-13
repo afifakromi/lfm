@@ -19,8 +19,8 @@ const workshop = () => {
         </div>
 
         <div className="w-full py-20 px-20 bg-nav">
-          <p className="text-5xl font-gilroy">
-            Workshop adalah kegiatan yang akan diisi oleh .
+          <p className="text-3xl font-gilroy text-justify">
+            Workshop adalah kegiatan yang akan diisi oleh.
             <br /> para pembicara yang akan membawakan topik
             <br /> perfilman
             <br />

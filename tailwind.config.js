@@ -60,6 +60,8 @@ module.exports = {
       }),
       boxShadow: {
         white: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
+        black:
+          "rgba(16, 15, 16, 0.4) -5px 5px, rgba(16, 15, 16, 0.3) -10px 10px, rgba(16, 15, 16, 0.2) -15px 15px, rgba(16, 15, 16, 0.1) -20px 20px, rgba(16, 15, 16, 0.05) -25px 25px;",
       },
       backgroundImage: {
         komunitas: "url('/img/komunitas.png')",
