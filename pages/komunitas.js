@@ -22,9 +22,9 @@ const komunitas = () => {
                 komunitas
               </h1>
             </div>
-            <div className="bg-white py-2 px-4 rounded-full w-1/5 ">
+            <div className="bg-white py-3 px-4 rounded-full w-96 shadow-black">
               <Link href="youtube.com">
-                <a className="flex flex-row items-center justify-between">
+                <a className="flex flex-row items-center justify-between  bg-white">
                   <p className="text-black text-3xl">Watch on Youtube</p>
                   <img
                     className="w-10 h-10"
@@ -38,7 +38,7 @@ const komunitas = () => {
         </div>
 
         <div className="w-full py-20 px-20 bg-nav">
-          <p className="text-5xl font-gilroy">
+          <p className="text-3xl font-gilroy text-justify">
             Keliling komunitas akan diadakan secara
             <br /> online. Keliling komunitas memiliki mata acara
             <br /> yaitu menonton film bersama, diskusi film,
