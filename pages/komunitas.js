@@ -22,7 +22,7 @@ const komunitas = () => {
                 komunitas
               </h1>
             </div>
-            <div className="bg-white py-3 px-4 rounded-full w-96 shadow-black">
+            {/* <div className="bg-white py-3 px-4 rounded-full w-96 shadow-black">
               <Link href="youtube.com">
                 <a className="flex flex-row items-center justify-between  bg-white">
                   <p className="text-black text-3xl">Watch on Youtube</p>
@@ -33,22 +33,22 @@ const komunitas = () => {
                   />
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="w-full py-20 px-20 bg-nav">
-          <p className="text-3xl font-gilroy text-justify">
+          <p className="text-3xl font-gilroy text-justify max-w-xl">
             Keliling komunitas akan diadakan secara
-            <br /> online. Keliling komunitas memiliki mata acara
-            <br /> yaitu menonton film bersama, diskusi film,
-            <br /> pemaparan GFF, dan juga pemaparan dari
-            <br /> komunitas itu sendiri.
+            online. Keliling komunitas memiliki mata acara
+            yaitu menonton film bersama, diskusi film,
+            pemaparan GFF, dan juga pemaparan dari
+            komunitas itu sendiri.
             <br />
             <br />
             Keliling komunitas ini dapat dikunjungi juga
-            <br /> oleh masyarakat umum. Untuk detail acara
-            <br /> akan diumumkan lebih lanjut.
+            oleh masyarakat umum. Untuk detail acara
+            akan diumumkan lebih lanjut.
           </p>
         </div>
         <Footer />

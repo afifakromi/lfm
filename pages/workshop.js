@@ -19,18 +19,17 @@ const workshop = () => {
         </div>
 
         <div className="w-full py-20 px-20 bg-nav">
-          <p className="text-3xl font-gilroy text-justify">
+          <p className="text-3xl font-gilroy text-justify max-w-xl">
             Workshop adalah kegiatan yang akan diisi oleh.
-            <br /> para pembicara yang akan membawakan topik
-            <br /> perfilman
+            para pembicara yang akan membawakan topik
+            perfilman
             <br />
             <br />
-            <br /> Workshop akan dilaksanakan secara online
-            <br /> pada bulan Desember. Workshop ini bertujuan
-            <br /> untuk memberikan ilmu kepada masyarakat
-            <br />
+            Workshop akan dilaksanakan secara online
+            pada bulan Februari. Workshop ini bertujuan
+            untuk memberikan ilmu kepada masyarakat
             umum mengenai topik perfilman. Untuk detail
-            <br /> acara akan diumumkan lebih lanjut.
+            acara akan diumumkan lebih lanjut.
           </p>
         </div>
         <Footer />

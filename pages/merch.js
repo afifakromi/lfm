@@ -14,7 +14,7 @@ const merch = () => {
       <Navbar />
       <Login />
       <Register />
-      <div className="w-full h-screen bg-primary px-64 py-52">
+      <div className="w-full h-screen bg-nav px-64 py-52">
         {/* <div className="grid grid-cols-3 gap-8">
           {merchConst.map((item, index) => {
             return (
@@ -28,6 +28,10 @@ const merch = () => {
             );
           })}
         </div> */}
+        <div className="ml-80 mt-20">
+          <p className="text-3xl text-customCrem">Coming Soon</p>
+        </div>
+          
       </div>
       <Footer />
     </Layout>
