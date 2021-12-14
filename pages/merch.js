@@ -28,7 +28,7 @@ const merch = () => {
             );
           })}
         </div> */}
-        <div className="ml-80 mt-20">
+        <div className="ml-96 mt-20">
           <p className="text-3xl text-customCrem">Coming Soon</p>
         </div>
           

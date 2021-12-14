@@ -45,7 +45,7 @@ const Home = () => {
                   >
                     <p className="text-2xl text-customPink">Calling Entry</p>
                     <p className=" text-customPink font-montserrat">
-                      10 Okt - 13 Des 2021
+                      13 - 21 Desember 2021
                     </p>
                     <p className="text-sm text-black mt-4">
                       Ayo submisikan karyamu di Ganesha Film Festival 2022!
