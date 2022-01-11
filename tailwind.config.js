@@ -26,6 +26,8 @@ module.exports = {
         customCremOpacity: "#fdc899",
         customFirst: "#2641A1",
         customMiddle: "#FF5F7F",
+        customSecond: "#FF5F80",
+        customThird: "#FE8471",
         customLast: "#FCAB63",
       }),
       textColor: (theme) => theme("colors"),
@@ -40,6 +42,8 @@ module.exports = {
         customCrem: "#fcab63",
         customGrey: "#EBEAEA",
         customFirst: "#2641A1",
+        customSecond: "#FF5F80",
+        customThird: "#FE8471",
         customLast: "#FCAB63",
       },
       borderColor: (theme) => ({
@@ -55,7 +59,9 @@ module.exports = {
       gradientColorStops: (theme) => ({
         ...theme("colors"),
         first: "#2641A1",
+        second: "#FF5F80",
         middle: "#FF5F7F",
+        third: "#FE8471",
         last: "#FCAB63",
       }),
       boxShadow: {

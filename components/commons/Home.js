@@ -7,6 +7,7 @@ const Home = () => {
   const [komunitas, setKomunitas] = useState(false);
   const [entry, setEntry] = useState(false);
   const [timeline, setTimeline] = useState(false);
+  const [MainEvent, setMainEvent] = useState(false);
 
   return (
     <div className="relative w-full bg-primary">
@@ -55,19 +56,19 @@ const Home = () => {
                   </div>
                 </div>
               </Link>
-              <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-first to-middle" />
+              <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-first to-second" />
               <Link href="/komunitas" passHref>
                 <div
-                  className="w-16 h-16 relative rounded-full bg-customMiddle cursor-pointer"
+                  className="w-16 h-16 relative rounded-full bg-customSecond cursor-pointer"
                   onMouseOver={() => setTimeline(true)}
                   onMouseLeave={() => setTimeline(false)}
                 >
-                  <p className="text-2xl text-customPink mt-20 -right-28 absolute w-64">
+                  <p className="text-2xl text-customSecond mt-20 -right-28 absolute w-64">
                     Keliling Komunitas
                   </p>
                   <div
                     className={
-                      "absolute w-80  p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
+                      "absolute w-80 h-56 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
                     }
                     style={{ display: timeline ? "flex" : "none" }}
                   >
@@ -77,7 +78,7 @@ const Home = () => {
                     <p className=" text-customPink font-montserrat">
                       31 Oktober 2021 <br />
                       4 Desember 2021 <br />
-                      21 Januari 2022 <br />
+                      12 Februari 2022 <br />
                     </p>
                     <p className="text-sm text-black mt-4">
                       Keliling komunitas adalah kegiatan yang berupa mengunjungi
@@ -89,14 +90,14 @@ const Home = () => {
                 </div>
               </Link>
 
-              <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-middle to-last" />
+              <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-second to-third" />
               <Link href="/workshop" passHref>
                 <div
-                  className="w-16 h-16 relative rounded-full bg-customLast cursor-pointer"
+                  className="w-16 h-16 relative rounded-full bg-customThird cursor-pointer"
                   onMouseOver={() => setEntry(true)}
                   onMouseLeave={() => setEntry(false)}
                 >
-                  <p className="text-2xl text-customLast mt-20 -right-44 absolute w-64">
+                  <p className="text-2xl text-customThird mt-20 -right-44 absolute w-64">
                     Workshop
                   </p>
                   <div
@@ -107,7 +108,7 @@ const Home = () => {
                   >
                     <p className="text-2xl text-customPink">Workshop</p>
                     <p className=" text-customPink font-montserrat">
-                      5 Februari 2021
+                      5 Februari 2022
                     </p>
                     <p className="text-sm text-black mt-4">
                       Workshop adalah kegiatan yang akan diisi oleh para
@@ -116,6 +117,31 @@ const Home = () => {
                   </div>
                 </div>
               </Link>
+              <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-third to-last" />
+              <div
+                  className="w-16 h-16 relative rounded-full bg-customLast cursor-pointer"
+                  onMouseOver={() => setMainEvent(true)}
+                  onMouseLeave={() => setMainEvent(false)}
+                >
+                  <p className="text-2xl text-customLast mt-20 -right-44 absolute w-64">
+                    Main Event
+                  </p>
+                  <div
+                    className={
+                      "absolute w-80 h-56 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
+                    }
+                    style={{ display: MainEvent ? "flex" : "none" }}
+                  >
+                    <p className="text-2xl text-customPink">Main Event</p>
+                    <p className=" text-customPink font-montserrat">
+                      13 - 21 Februari 2022
+                    </p>
+                    <p className="text-sm text-black mt-4">
+                      Main Event merupakan program utama Ganesha Film Festival 2022 yang menentukan
+                      pemenang-pemanang dari setiap kategori film yang tersedia.
+                    </p>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
