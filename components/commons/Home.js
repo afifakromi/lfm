@@ -24,14 +24,14 @@ const Home = () => {
           <p className="text-6xl mb-4 font-montserrat">COUNTDOWN</p>
           <NextCountdown />
           <p className="mt-8 text-xl">Hari Menuju Main Event Ganffest</p>
-          <div className="w-1/2 mt-20 flex flex-col justify-center relative">
+          <div className="w-3/4 mt-20 flex flex-col justify-center relative">
             <h1 className="text-6xl text-customCrem font-montserrat absolute -left-24 -top-10">
               Timeline
             </h1>
             <div className="w-full mt-16 flex flex-row items-center">
               <Link href="/submission" passHref>
                 <div
-                  className="w-16 h-16 relative rounded-full bg-customFirst cursor-pointer"
+                  className="w-16 h-12 relative rounded-full bg-customFirst cursor-pointer"
                   onMouseOver={() => setKomunitas(true)}
                   onMouseLeave={() => setKomunitas(false)}
                 >
@@ -40,7 +40,7 @@ const Home = () => {
                   </p>
                   <div
                     className={
-                      "absolute w-80 h-56 p-4 text-center flex-col bg-white top-20 rounded-xl -left-32"
+                      "absolute w-80  p-4 text-center flex-col bg-white top-20 rounded-xl -left-32"
                     }
                     style={{ display: komunitas ? "flex" : "none" }}
                   >
@@ -59,16 +59,16 @@ const Home = () => {
               <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-first to-second" />
               <Link href="/komunitas" passHref>
                 <div
-                  className="w-16 h-16 relative rounded-full bg-customSecond cursor-pointer"
+                  className="w-16 h-12 relative rounded-full bg-customSecond cursor-pointer"
                   onMouseOver={() => setTimeline(true)}
                   onMouseLeave={() => setTimeline(false)}
                 >
-                  <p className="text-2xl text-customSecond mt-20 -right-28 absolute w-64">
+                  <p className="text-2xl text-customSecond mt-20 -right-36 absolute w-64">
                     Keliling Komunitas
                   </p>
                   <div
                     className={
-                      "absolute w-80 h-56 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
+                      "absolute w-80  p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
                     }
                     style={{ display: timeline ? "flex" : "none" }}
                   >
@@ -93,7 +93,7 @@ const Home = () => {
               <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-second to-third" />
               <Link href="/workshop" passHref>
                 <div
-                  className="w-16 h-16 relative rounded-full bg-customThird cursor-pointer"
+                  className="w-16 h-12 relative rounded-full bg-customThird cursor-pointer"
                   onMouseOver={() => setEntry(true)}
                   onMouseLeave={() => setEntry(false)}
                 >
@@ -102,7 +102,7 @@ const Home = () => {
                   </p>
                   <div
                     className={
-                      "absolute w-80 h-56 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
+                      "absolute w-80 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
                     }
                     style={{ display: entry ? "flex" : "none" }}
                   >
@@ -119,7 +119,7 @@ const Home = () => {
               </Link>
               <hr className="w-5/12 border-0 h-1 bg-gradient-to-r from-third to-last" />
               <div
-                  className="w-16 h-16 relative rounded-full bg-customLast cursor-pointer"
+                  className="w-16 h-12 relative rounded-full bg-customLast cursor-pointer"
                   onMouseOver={() => setMainEvent(true)}
                   onMouseLeave={() => setMainEvent(false)}
                 >
@@ -128,7 +128,7 @@ const Home = () => {
                   </p>
                   <div
                     className={
-                      "absolute w-80 h-56 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
+                      "absolute w-80 p-4 flex text-center flex-col bg-white top-20 rounded-xl -left-32"
                     }
                     style={{ display: MainEvent ? "flex" : "none" }}
                   >
