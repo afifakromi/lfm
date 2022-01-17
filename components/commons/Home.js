@@ -137,8 +137,9 @@ const Home = () => {
                       13 - 21 Februari 2022
                     </p>
                     <p className="text-sm text-black mt-4">
-                      Main Event merupakan program utama Ganesha Film Festival 2022 yang menentukan
-                      pemenang-pemanang dari setiap kategori film yang tersedia.
+                      Acara utama pada Ganesha Film Festival 2022 yang 
+                      memutarkan program-program unggulan Ganffest. Selain itu,
+                       juga terdapat acara pembukaan dan penutupan.
                     </p>
                   </div>
                 </div>
