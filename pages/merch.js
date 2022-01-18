@@ -14,24 +14,20 @@ const merch = () => {
       <Navbar />
       <Login />
       <Register />
-      <div className="w-full h-screen bg-nav px-64 py-52">
-        {/* <div className="grid grid-cols-3 gap-8">
+      <div className="w-full h-full bg-nav px-64 py-7">
+        <div className="grid grid-cols-3 gap-8 mb-7">
           {merchConst.map((item, index) => {
             return (
               <Link key={index} passHref href={item.href}>
-                <div className="flex flex-col space-y-2 justify-center items-center cursor-pointer hover:scale-125 transform duration-100">
+                <div className="flex flex-col space-y-2 justify-center items-center cursor-pointer hover:scale-110 transform duration-500 ">
                   <Image width={500} height={500} src={item.imgUrl} alt="Bag" />
-                  <p className="text-2xl">{item.name}</p>
-                  <p className="text-3xl text-customCrem">{item.price}</p>
+                  {/* <p className="text-2xl">{item.name}</p>
+                  <p className="text-3xl text-customCrem">{item.price}</p> */}
                 </div>
               </Link>
             );
           })}
-        </div> */}
-        <div className="ml-96 mt-20">
-          <p className="text-3xl text-customCrem">Coming Soon</p>
         </div>
-          
       </div>
       <Footer />
     </Layout>
