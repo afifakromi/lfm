@@ -108,7 +108,7 @@ const Home = () => {
                   >
                     <p className="text-2xl text-customPink">Workshop</p>
                     <p className=" text-customPink font-montserrat">
-                      5 Februari 2022
+                      12 Februari 2022
                     </p>
                     <p className="text-sm text-black mt-4">
                       Workshop adalah kegiatan yang akan diisi oleh para
