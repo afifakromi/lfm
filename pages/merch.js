@@ -19,7 +19,7 @@ const merch = () => {
           {merchConst.map((item, index) => {
             return (
               <Link key={index} passHref href={item.href}>
-                <div className="flex flex-col space-y-2 justify-center items-center cursor-pointer hover:scale-110 transform duration-500 ">
+                <div className="flex flex-col space-y-2 justify-center items-center cursor-pointer z-0 hover:scale-150 hover:z-50 transform duration-500 ">
                   <Image width={500} height={500} src={item.imgUrl} alt="Bag" />
                   {/* <p className="text-2xl">{item.name}</p>
                   <p className="text-3xl text-customCrem">{item.price}</p> */}

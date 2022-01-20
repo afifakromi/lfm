@@ -22,7 +22,7 @@ const NextCountdown = () => {
   const [diffRecoil, setDiffRecoil] = useRecoilState(diff);
 
   useEffect(() => {
-    const target = new Date("2/11/2022 23:59:59");
+    const target = new Date("2/14/2022 23:59:59");
 
     console.log(getDiffRecoil);
     console.log(getSecondsRecoil);
