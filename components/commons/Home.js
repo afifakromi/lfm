@@ -134,7 +134,7 @@ const Home = () => {
                   >
                     <p className="text-2xl text-customPink">Main Event</p>
                     <p className=" text-customPink font-montserrat">
-                      13 - 21 Februari 2022
+                      14 - 20 Februari 2022
                     </p>
                     <p className="text-sm text-black mt-4">
                       Acara utama pada Ganesha Film Festival 2022 yang 
