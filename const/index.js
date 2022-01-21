@@ -403,15 +403,15 @@ const gff_archive = [
 ];
 
 const merchConst = [
-  { imgUrl: "/img/totebag.png", name: "Totebag", price: "Rp65.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/kaosPanitia.png", name: "Kaos Panitia", price: "Rp90.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/kaosMerch.png", name: "Kaos", price: "Rp90.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/Enamel.png", name: "Enamel", price: "Rp35.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/stiker.png", name: "Sticker", price: "Rp5.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/badge.png", name: "Badge", price: "Rp15.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/masker.png", name: "Masker", price: "Rp15.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/lanyard.png", name: "Lanyard", price: "Rp30.000", href: "https://www.tokopedia.com/ganffest" },
-  { imgUrl: "/img/phoneCase.png", name: "Phone Case", price: "Rp35.000", href: "https://www.tokopedia.com/ganffest" },
+  { imgUrl: "/img/totebag.png", name: "Totebag", price: "Rp65.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/kaosPanitia.png", name: "Kaos Panitia", price: "Rp90.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/kaosMerch.png", name: "Kaos", price: "Rp90.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/Enamel.png", name: "Enamel", price: "Rp35.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/stiker.png", name: "Sticker", price: "Rp5.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/badge.png", name: "Badge", price: "Rp15.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/masker.png", name: "Masker", price: "Rp15.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/lanyard.png", name: "Lanyard", price: "Rp30.000", href: "https://bit.ly/PO1MerchGFF" },
+  { imgUrl: "/img/phoneCase.png", name: "Phone Case", price: "Rp35.000", href: "https://bit.ly/PO1MerchGFF" },
 ];
 
 export { gff_archive, merchConst };
