@@ -71,6 +71,7 @@ const Navbar = ({ type }) => {
           >
             <p className="text-center">EVENT</p>
             <div
+              style={{ backgroundColor: "#EBEAEA" }}
               className={`bg-white absolute cursor-pointer z-10 ${
                 hide ? "hidden" : "flex"
               } px-4 w-32 h-20 py-2 rounded-lg flex-col divide-y-2 top-8`}
@@ -85,17 +86,18 @@ const Navbar = ({ type }) => {
                 </p>
 
                 <div
+                  style={{ backgroundColor: "#EBEAEA" }}
                   className={`bg-white px-4 h-20 py-2 absolute left-28 -top-2 ${
                     hidePre ? "hidden" : "flex"
                   } flex-col rounded-lg items-start divide-y-2`}
                 >
-                  <Link href="#">
+                  <Link href="/komunitas">
                     <a className="text-black w-40 text-xl hover:text-customSecond">
                       Malam Komunitas
                     </a>
                   </Link>
 
-                  <Link href="#">
+                  <Link href="/workshop">
                     <a className="text-black w-40 text-xl hover:text-customSecond">
                       Workshop
                     </a>
@@ -103,16 +105,17 @@ const Navbar = ({ type }) => {
                 </div>
               </div>
               <div>
-                <p
-                  onMouseOver={() => setHidePre(true)}
-                  className="text-black text-xl hover:text-customSecond"
-                >
-                  Main Event
-                </p>
+                <Link href="/timeline" passHref>
+                  <a
+                    onMouseOver={() => setHidePre(true)}
+                    className="text-black w-40 text-xl hover:text-customSecond"
+                  >
+                    Main Event
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
-          <LFMLink type={type} url="/timeline" text="TIMELINE" />
           <LFMLink type={type} url="/archives" text="ARCHIVE" />
           <LFMLink type={type} url="/merch" text="MERCH" />
           <LFMLink type={type} url="/about" text="ABOUT" />
