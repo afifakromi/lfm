@@ -21,7 +21,6 @@ const Home = () => {
           height="100%"
           muted={true}
         />
-        {/* <Timeline /> */}
         <div className=" bg-nav w-full py-20 pb-80 flex flex-col items-center justify-center">
           <p className="text-6xl mb-4 font-montserrat">COUNTDOWN</p>
           <NextCountdown />

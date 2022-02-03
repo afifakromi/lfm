@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,6 +17,7 @@ import Profile from "../navbar/Profile";
 const Navbar = ({ type }) => {
   const router = useRouter();
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
+  const [hide, setHide] = useState(true);
 
   const setToggleLogin = useSetRecoilState(toggleLoginState);
   const setToggleRegister = useSetRecoilState(toggleRegisterState);
@@ -61,7 +62,27 @@ const Navbar = ({ type }) => {
       >
         <div className="flex flex-row justify-start">
           <LFMLink type={type} url="/" text="HOME" />
-          <LFMLink type={type} url="/submission" text="SUBMISSION" />
+          {/* <LFMLink type={type} url="/submission" text="SUBMISSION" /> */}
+          <div
+            onMouseOver={() => setHide(false)}
+            onMouseLeave={() => setHide(true)}
+            className="w-24 py-1 ml-4 border-2 border-transparent relative"
+          >
+            <p className="text-center">EVENT</p>
+            <div
+              className={`bg-white absolute cursor-pointer ${
+                hide ? "hidden" : "flex"
+              } px-4 w-32 py-2 rounded-lg flex-col divide-y-2 top-10`}
+            >
+              <p className="text-black text-xl hover:text-customSecond">
+                Pre Event
+              </p>
+              <p className="text-black text-xl hover:text-customSecond">
+                Main Event
+              </p>
+            </div>
+          </div>
+          <LFMLink type={type} url="/timeline" text="TIMELINE" />
           <LFMLink type={type} url="/archives" text="ARCHIVE" />
           <LFMLink type={type} url="/merch" text="MERCH" />
           <LFMLink type={type} url="/about" text="ABOUT" />

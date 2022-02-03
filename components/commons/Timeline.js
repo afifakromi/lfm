@@ -3,7 +3,7 @@ import TimelineItem from "./TimelineItem";
 
 const Timeline = () => {
   return (
-    <div className="bg-nav w-full py-20 pb-80 flex flex-col items-center justify-center">
+    <div className="bg-nav w-full py-10 flex flex-col items-center justify-center">
       <p className="text-6xl text-customCrem font-montserrat text-center mb-16">
         Ganffest 2022 <br /> Main Event Timeline
       </p>
