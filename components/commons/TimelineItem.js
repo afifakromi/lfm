@@ -22,7 +22,7 @@ const TimelineItem = ({
       >
         <p className={`text-xl w-24 absolute top-1/2 ${className}`}>{date}</p>
         <div
-          className={` bg-white rounded-xl px-10 py-4 w-96 ${
+          className={` bg-white rounded-xl px-10 py-4 w-96 z-10 ${
             hide ? "absolute" : "hidden"
           } ${className}`}
         >
