@@ -6,7 +6,7 @@ const Archive = () => {
   return (
     <div className="flex flex-row items-center justify-center w-full h-screen bg-customArchive">
       <div className="flex flex-col w-5/6 mt-16 h-4/5">
-        <h1 className="text-6xl text-customArchive">Archive</h1>
+        <h1 className="text-xl text-customArchive">Archive</h1>
         <div className="grid grid-cols-3 gap-6">
           {gff_archive.map((item, index) => {
             return (
