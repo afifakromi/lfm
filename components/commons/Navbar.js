@@ -18,6 +18,7 @@ const Navbar = ({ type }) => {
   const router = useRouter();
   const [loggedIn, setLoggedIn] = useRecoilState(isLoggedIn);
   const [hide, setHide] = useState(true);
+  const [hidePre, setHidePre] = useState(true);
 
   const setToggleLogin = useSetRecoilState(toggleLoginState);
   const setToggleRegister = useSetRecoilState(toggleRegisterState);
@@ -65,21 +66,50 @@ const Navbar = ({ type }) => {
           {/* <LFMLink type={type} url="/submission" text="SUBMISSION" /> */}
           <div
             onMouseOver={() => setHide(false)}
-            onMouseLeave={() => setHide(true)}
+            onMouseOut={() => setHide(true)}
             className="w-24 py-1 ml-4 border-2 border-transparent relative"
           >
             <p className="text-center">EVENT</p>
             <div
-              className={`bg-white absolute cursor-pointer ${
+              className={`bg-white absolute cursor-pointer z-10 ${
                 hide ? "hidden" : "flex"
-              } px-4 w-32 py-2 rounded-lg flex-col divide-y-2 top-10`}
+              } px-4 w-32 h-20 py-2 rounded-lg flex-col divide-y-2 top-8`}
             >
-              <p className="text-black text-xl hover:text-customSecond">
-                Pre Event
-              </p>
-              <p className="text-black text-xl hover:text-customSecond">
-                Main Event
-              </p>
+              <div className="relative">
+                <p
+                  onMouseOver={() => setHidePre(false)}
+                  // onMouseOut={() => setHidePre(true)}
+                  className="text-black text-xl hover:text-customSecond"
+                >
+                  Pre Event
+                </p>
+
+                <div
+                  className={`bg-white px-4 h-20 py-2 absolute left-28 -top-2 ${
+                    hidePre ? "hidden" : "flex"
+                  } flex-col rounded-lg items-start divide-y-2`}
+                >
+                  <Link href="#">
+                    <a className="text-black w-40 text-xl hover:text-customSecond">
+                      Malam Komunitas
+                    </a>
+                  </Link>
+
+                  <Link href="#">
+                    <a className="text-black w-40 text-xl hover:text-customSecond">
+                      Workshop
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <p
+                  onMouseOver={() => setHidePre(true)}
+                  className="text-black text-xl hover:text-customSecond"
+                >
+                  Main Event
+                </p>
+              </div>
             </div>
           </div>
           <LFMLink type={type} url="/timeline" text="TIMELINE" />
