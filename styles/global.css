@@ -18,6 +18,10 @@
     @apply text-sm;
   }
 
+  p {
+    @apply text-black;
+  }
+
   @font-face {
     font-family: "Qanelas";
     src: url("/fonts/Qanelas/Qanelas-Bold.ttf");

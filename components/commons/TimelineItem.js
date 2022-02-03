@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactHtmlParser from "react-html-parser";
 
 const TimelineItem = ({
   date,
@@ -23,11 +24,11 @@ const TimelineItem = ({
       >
         <p className={`text-xl w-24 absolute top-1/2 ${className}`}>{date}</p>
         <div
-          className={` bg-white rounded-xl px-10 py-4 w-96 z-10 ${
+          className={` bg-white rounded-xl px-10 py-4 w-96 z-10 text-black ${
             hide ? "absolute" : "hidden"
           } ${className}`}
         >
-          <p className="text-black">{content}</p>
+          {ReactHtmlParser(content)}
         </div>
       </div>
     </div>
