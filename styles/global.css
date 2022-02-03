@@ -19,7 +19,7 @@
   }
 
   p {
-    @apply text-black;
+    @apply text-gray-500;
   }
 
   @font-face {
