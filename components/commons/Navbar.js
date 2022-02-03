@@ -69,7 +69,7 @@ const Navbar = ({ type }) => {
             onMouseOut={() => setHide(true)}
             className="w-24 py-1 ml-4 border-2 border-transparent relative"
           >
-            <p className="text-center">EVENT</p>
+            <p className="text-center text-white">EVENT</p>
             <div
               style={{ backgroundColor: "#EBEAEA" }}
               className={`bg-white absolute cursor-pointer z-10 ${

@@ -14,7 +14,9 @@ const Timeline = () => {
         bgColor="#2641A1"
         isTop={true}
         rounded="rounded-t-2xl"
-        content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        content="<p className='text-black'>19.00 - 19.10   Open gate</p>
+        <p className='text-black'>19.10 - 19.15   Opening</p>
+        <p className='text-black'>19.15 - 19.20   Sambutan ketum LFM</p>"
       />
       <TimelineItem
         date="15 Januari"
