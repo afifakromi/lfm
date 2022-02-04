@@ -64,7 +64,7 @@ const Navbar = ({ type }) => {
         <div className="flex flex-row justify-start">
           <LFMLink type={type} url="/" text="HOME" />
           {/* <LFMLink type={type} url="/submission" text="SUBMISSION" /> */}
-          <div
+          {/* <div
             onMouseOver={() => setHide(false)}
             onMouseOut={() => setHide(true)}
             className="w-24 py-1 ml-4 border-2 border-transparent relative"
@@ -115,7 +115,7 @@ const Navbar = ({ type }) => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
           <LFMLink type={type} url="/archives" text="ARCHIVE" />
           <LFMLink type={type} url="/merch" text="MERCH" />
           <LFMLink type={type} url="/about" text="ABOUT" />
