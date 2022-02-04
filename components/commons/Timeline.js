@@ -14,9 +14,9 @@ const Timeline = () => {
         bgColor="#2641A1"
         isTop={true}
         rounded="rounded-t-2xl"
-        content="<p className='text-black'>19.00 - 19.10   Open gate</p>
+        content="<p>19.00 - 19.10   Open gate</p>
         <p className='text-black'>19.10 - 19.15   Opening</p>
-        <p className='text-black'>19.15 - 19.20   Sambutan ketum LFM</p>"
+        <p className='text-black'>19.15 - 19.20   Sambutan ketum LFM</p> srxhh"
       />
       <TimelineItem
         date="15 Januari"
