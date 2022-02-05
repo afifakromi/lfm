@@ -22,7 +22,7 @@ const Home = () => {
           muted={true}
         />
         <div className=" bg-nav w-full py-20 pb-80 flex flex-col items-center justify-center">
-          <div className="mb-12 bg-customPink cursor-pointer rounded-lg hover:opacity-95 drop-shadow-lg">
+          <div className="mb-16 bg-customPink cursor-pointer rounded-lg hover:opacity-95 drop-shadow-lg">
             <Link href="https://linktr.ee/ganffest2022">
               <p className="text-4xl mx-7 my-5 text-white">Daftar Ganffest</p>
             </Link>
