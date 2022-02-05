@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Navbar from "../components/commons/Navbar";
 import Footer from "../components/commons/Footer";
 import Layout from "../components/commons/Layout";
@@ -14,6 +15,18 @@ const workshop = () => {
               <h1 className="font-gilroy" style={{ fontSize: "6rem" }}>
                 Workshop
               </h1>
+            </div>
+            <div className="bg-white py-3 px-4 mt-5 rounded-full w-64 shadow-black">
+              <Link href="https://bit.ly/KelilingKomunitas">
+                <a className="flex flex-row items-center justify-between  bg-white">
+                  <p className="text-black text-3xl ml-2">Join Now</p>
+                  <img
+                    className="w-10 h-10 mr-4"
+                    src="/img/right-arrow.png"
+                    alt="youtube"
+                  />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
