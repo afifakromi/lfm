@@ -74,7 +74,7 @@ const Navbar = ({ type }) => {
               style={{ backgroundColor: "#EBEAEA" }}
               className={`bg-white absolute cursor-pointer z-10 ${
                 hide ? "hidden" : "flex"
-              }  w-32  rounded-lg flex-col top-8 divide-y-2`}
+              }  w-32  rounded-lg flex-col top-8 `}
             >
               <div className="relative py-1 px-4 hover:bg-gray-300 rounded-t-lg">
                 <p
@@ -89,7 +89,7 @@ const Navbar = ({ type }) => {
                   style={{ backgroundColor: "#EBEAEA" }}
                   className={`bg-white absolute left-32 -top-0 ${
                     hidePre ? "hidden" : "flex"
-                  } flex-col rounded-lg items-start divide-y-2`}
+                  } flex-col rounded-lg items-start `}
                 >
                   <div className="relative py-1 px-4 hover:bg-gray-300 rounded-t-lg w-48">
                     <Link href="/komunitas">
