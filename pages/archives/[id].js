@@ -69,7 +69,7 @@ const Details = ({ archive }) => {
             <Image src={archive.fotoUrl} width={344} height={500} alt="Logo" />
             <div className="w-3/6 ml-8">
               <p className="mb-8 text-5xl text-customCrem">{archive.title}</p>
-              <p className="text-justify">{archive.content}</p>
+              <p className="text-justify text-customGrey">{archive.content}</p>
             </div>
           </div>
           <Program data={archive.program} />

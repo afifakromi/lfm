@@ -38,7 +38,7 @@ const komunitas = () => {
         </div>
 
         <div className="w-full py-20 px-20 bg-nav">
-          <p className="text-3xl font-gilroy text-justify max-w-xl">
+          <p className="text-3xl font-gilroy text-justify max-w-xl text-customGrey">
             Keliling komunitas akan diadakan secara
             online. Keliling komunitas memiliki mata acara
             yaitu menonton film bersama, diskusi film,

@@ -19,7 +19,7 @@ const workshop = () => {
         </div>
 
         <div className="w-full py-20 px-20 bg-nav">
-          <p className="text-3xl font-gilroy text-justify max-w-xl">
+          <p className="text-3xl font-gilroy text-justify max-w-xl text-customGrey ">
             Workshop adalah kegiatan yang akan diisi oleh.
             para pembicara yang akan membawakan topik
             perfilman
