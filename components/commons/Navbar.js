@@ -64,7 +64,7 @@ const Navbar = ({ type }) => {
         <div className="flex flex-row justify-start">
           <LFMLink type={type} url="/" text="HOME" />
           {/* <LFMLink type={type} url="/submission" text="SUBMISSION" /> */}
-          {/* <div
+          <div
             onMouseOver={() => setHide(false)}
             onMouseOut={() => setHide(true)}
             className="w-24 py-1 ml-4 border-2 border-transparent relative"
@@ -74,48 +74,50 @@ const Navbar = ({ type }) => {
               style={{ backgroundColor: "#EBEAEA" }}
               className={`bg-white absolute cursor-pointer z-10 ${
                 hide ? "hidden" : "flex"
-              } px-4 w-32 h-20 py-2 rounded-lg flex-col divide-y-2 top-8`}
+              }  w-32  rounded-lg flex-col top-8 divide-y-2`}
             >
-              <div className="relative">
+              <div className="relative py-1 px-4 hover:bg-gray-300 rounded-t-lg">
                 <p
                   onMouseOver={() => setHidePre(false)}
                   // onMouseOut={() => setHidePre(true)}
-                  className="text-black text-xl hover:text-customSecond"
+                  className="text-black text-xl "
                 >
                   Pre Event
                 </p>
 
                 <div
                   style={{ backgroundColor: "#EBEAEA" }}
-                  className={`bg-white px-4 h-20 py-2 absolute left-28 -top-2 ${
+                  className={`bg-white absolute left-32 -top-0 ${
                     hidePre ? "hidden" : "flex"
                   } flex-col rounded-lg items-start divide-y-2`}
                 >
-                  <Link href="/komunitas">
-                    <a className="text-black w-40 text-xl hover:text-customSecond">
-                      Malam Komunitas
-                    </a>
-                  </Link>
+                  <div className="relative py-1 px-4 hover:bg-gray-300 rounded-t-lg w-48">
+                    <Link href="/komunitas">
+                      <a className="text-black w-40 text-xl ">
+                        Malam Komunitas
+                      </a>
+                    </Link>
+                  </div>
 
-                  <Link href="/workshop">
-                    <a className="text-black w-40 text-xl hover:text-customSecond">
-                      Workshop
-                    </a>
-                  </Link>
+                  <div className="relative py-1 px-4 hover:bg-gray-300 rounded-b-lg w-48">
+                    <Link href="/workshop">
+                      <a className="text-black w-40 text-xl ">Workshop</a>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div>
+              <div className="px-4 py-1 hover:bg-gray-300 rounded-b-lg">
                 <Link href="/timeline" passHref>
                   <a
                     onMouseOver={() => setHidePre(true)}
-                    className="text-black w-40 text-xl hover:text-customSecond"
+                    className="text-black w-40 text-xl "
                   >
                     Main Event
                   </a>
                 </Link>
               </div>
             </div>
-          </div> */}
+          </div>
           <LFMLink type={type} url="/archives" text="ARCHIVE" />
           <LFMLink type={type} url="/merch" text="MERCH" />
           <LFMLink type={type} url="/about" text="ABOUT" />
