@@ -22,7 +22,7 @@ const TimelineItem = ({
         onMouseOver={() => setHide(true)}
         onMouseLeave={() => setHide(false)}
       >
-        <p className={`text-2xl w-28 absolute top-1/3 text-Montserrat text-customGrey ${className}`}>{date}</p>
+        <p className={`text-2xl w-32 absolute top-1/3 text-Montserrat text-customGrey ${className}`}>{date}</p>
         <div
           className={` bg-white rounded-xl px-10 pt-5 w-auto z-10 ${
             hide ? "absolute" : "hidden"
