@@ -171,6 +171,11 @@ const Home = () => {
                 <Image src="/img/donation.jpg" width={300} height={400} alt="donation" />
             </div>
           </div>
+          <div className="mt-32">
+            <h1 className="text-6xl text-customCrem absolute left-5">
+              Exhibition
+            </h1>
+          </div>
         </div>
       </div>
     </div>

@@ -94,7 +94,7 @@ const Navbar = ({ type }) => {
                   <div className="relative py-1 px-4 hover:bg-gray-300 rounded-t-lg w-48">
                     <Link href="/komunitas">
                       <a className="text-black w-40 text-xl ">
-                        Malam Komunitas
+                        Keliling Komunitas
                       </a>
                     </Link>
                   </div>
