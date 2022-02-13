@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "express-fileupload": "^1.2.1",
+    "firebase": "^8.2.3",
     "formik": "^2.2.9",
     "fs": "0.0.1-security",
     "gapi-script": "^1.2.0",
