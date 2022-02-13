@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { forum_db } from "../../../firebase/forumConfig";
 import ForumComment from "./ForumComment";
 import ForumReply from "./ForumReply";
-import { dislike, like } from "./functions";
 import LikeButton from "../commons/LikeButton";
 import DislikeButton from "../commons/DislikeButton";
+import ForumMedia from "./ForumMedia";
 
 const ForumContentModal = ({
   togglemodal,
@@ -33,8 +33,13 @@ const ForumContentModal = ({
           res.forEach(doc => {
             data.push(doc);
           });
+          if (data.length === 0) {
+            setisEndComment(true);
+          } else {
+            setisEndComment(false);
+            setlastVisible(res.docs[res.docs.length - 1]);
+          }
           setcomments(data);
-          setlastVisible(res.docs[res.docs.length - 1]);
         });
     }
   }, [postdata]);
@@ -69,7 +74,7 @@ const ForumContentModal = ({
   // console.log("a");
 
   const toggleLoadComments = () => {
-    if (comments) {
+    if (comments?.length > 0) {
       return comments.map((doc, idx) => {
         // console.log(doc.data());
         return (
@@ -84,6 +89,9 @@ const ForumContentModal = ({
         );
       });
     } else {
+      if (isEndComment) {
+        return <p className="text-center mb-3">no comment yet</p>;
+      }
       return <p className="text-center mb-3">...</p>;
     }
   };
@@ -138,7 +146,6 @@ const ForumContentModal = ({
           {postdata ? (
             <>
               <div className="flex flex-col mr-9 items-center">
-                {/* {console.log(postdata.data())} */}
                 <LikeButton sourcedata={postdata} liked={liked} />
                 <p className="my-3 text-center">
                   {postdata.data().liked - postdata.data().disliked}
@@ -156,6 +163,7 @@ const ForumContentModal = ({
                 <p className="text-black text-sm font-gilroy my-3">
                   {postdata.data().description}
                 </p>
+                <ForumMedia media={postdata} />
                 <div className="flex flex-col w-full h-full py-4 border-t-2 border-gray-200">
                   <div
                     className="flex flex-col w-full overflow-y-auto"
@@ -177,7 +185,7 @@ const ForumContentModal = ({
                     )}
                   </div>
                   <div className="w-full border-t-2 border-gray-200"></div>
-                  <ForumReply />
+                  <ForumReply postdata={postdata} />
                 </div>
               </div>
             </>

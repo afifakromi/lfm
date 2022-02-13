@@ -1,7 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { forum_db, forum_storage } from "../../../firebase/forumConfig";
 import Image from "../../commons/Image";
+import firebase from "firebase/app";
+import ErrorMessage from "../commons/ErrorMessage";
 
 const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
+  const fileref = useRef(null);
+  const [topic, settopic] = useState("");
+  const [description, setdescription] = useState("");
+  const [error, seterror] = useState();
+  const [isLoading, setisLoading] = useState();
+
   useEffect(() => {
     if (togglecreatetopic) {
       document.body.classList.add("overflow-y-hidden");
@@ -17,6 +26,51 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
       images.push(<Image dark={true} imageList={imageList[i].name} key={i} />);
     }
     return images;
+  };
+
+  const uploadhandler = async data => {
+    let storageref = forum_storage.ref();
+    let upload = await storageref
+      .child(`media/${Date.now()}-${data.name}`)
+      .put(data);
+
+    let url = await upload.ref.getDownloadURL();
+    console.log(url);
+    return url;
+  };
+
+  const submithandle = async e => {
+    e.preventDefault();
+    // console.log("SUBMIT");
+    // console.log(fileref.current.files);
+    if (description.length === 0) {
+      seterror("All fields required");
+      return 0;
+    }
+    setisLoading(true);
+    let linkarray = [];
+    for (let i = 0; i < fileref.current.files.length; i++) {
+      let newurl = await uploadhandler(fileref.current.files[i]);
+      console.log("newurl", newurl);
+      linkarray.push(newurl);
+    }
+    await forum_db
+      .collection("posts")
+      .doc(Date.now().toString())
+      .set({
+        topic: topic,
+        description: description,
+        liked: 0,
+        disliked: 0,
+        comments: 0,
+        username: localStorage.getItem("username"),
+        created_at: firebase.firestore.Timestamp.fromDate(new Date()),
+        media: linkarray,
+      });
+    settopic("");
+    setdescription("");
+    setisLoading(false);
+    setimageList();
   };
 
   return (
@@ -58,6 +112,11 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
               type="text"
               className="border-2 outline-none border-blue-600 rounded-lg font-gilroy py-3 px-4 text-gray-600 mb-1"
               placeholder="Title"
+              value={topic}
+              onChange={e => {
+                e.preventDefault();
+                settopic(e.target.value);
+              }}
             />
             <p className="text-xs mb-6">
               The title must contain a maximum of 32 characters
@@ -69,17 +128,23 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
                   type="text"
                   className="outline-none font-gilroy text-gray-600 resize-none h-48 w-full mr-4"
                   placeholder="Enter Topic Discussion"
+                  value={description}
+                  onChange={e => {
+                    e.preventDefault();
+                    setdescription(e.target.value);
+                  }}
                 />
                 <button
                   onClick={e => {
                     e.preventDefault();
-                    document.getElementById("uploadimage").click();
+                    document.getElementById("uploadimagecreate").click();
                   }}
                 >
                   <input
+                    ref={fileref}
                     type="file"
                     name=""
-                    id="uploadimage"
+                    id="uploadimagecreate"
                     className="hidden"
                     multiple
                     onClick={e => {
@@ -87,8 +152,10 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
                     }}
                     onChange={e => {
                       e.preventDefault();
+                      console.log(e.target.files);
                       setimageList(e.target.files);
                     }}
+                    accept="image/*, video/*"
                   />
                   <img src="/img/attach1.png" alt="" />
                 </button>
@@ -97,9 +164,19 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
                 {imageList ? toggleImage(imageList) : ""}
               </div>
             </div>
-            <button className="py-4 bg-customBlueForum rounded-lg">
-              Create Topic
-            </button>
+            <ErrorMessage message={error} />
+            {isLoading ? (
+              <div className="py-4 bg-customBlueForum rounded-lg mt-2 text-white text-center font-semibold">
+                Loading...
+              </div>
+            ) : (
+              <button
+                onClick={submithandle}
+                className="py-4 bg-customBlueForum rounded-lg mt-2"
+              >
+                Create Topic
+              </button>
+            )}
           </div>
         </div>
       </div>

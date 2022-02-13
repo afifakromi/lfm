@@ -5,11 +5,11 @@ const Image = ({ imageList, dark }) => {
     <div
       className={
         (dark ? "bg-gray-100 " : "bg-white ") +
-        "flex items-center text-xs w-max py-1 px-2 rounded-lg mr-2"
+        "flex items-center text-xs w-max py-1 px-2 rounded-lg mr-2 mb-1"
       }
     >
-      <img src="/img/image.png" alt="" className="h-5 max-h-5" />
-      <p className="ml-2">{imageList}</p>
+      {/* <img src="/img/image.png" alt="" className="h-5 max-h-5" /> */}
+      <p className="">{imageList}</p>
     </div>
   );
 };

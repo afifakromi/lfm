@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { createdAt } from "../../../helper/time";
 import DislikeButton from "../commons/DislikeButton";
 import LikeButton from "../commons/LikeButton";
-import { dislike, like } from "./functions";
+import { images, regexExtension, videos } from "../constant/constant";
+import ForumMedia from "./ForumMedia";
 
 const ForumComment = ({ postdata, commentdata, commentInteracted }) => {
   // console.log(commentdata);
@@ -44,6 +45,7 @@ const ForumComment = ({ postdata, commentdata, commentInteracted }) => {
             <p className="font-gilroy text-sm mt-2 text-black">
               {commentdata.data().description}
             </p>
+            <ForumMedia media={commentdata} />
           </div>
         </>
       ) : (

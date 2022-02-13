@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/firebase-storage";
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
@@ -16,3 +17,4 @@ if (!firebase.apps.length) {
 }
 
 export const forum_db = firebase.firestore();
+export const forum_storage = firebase.storage();
