@@ -3,13 +3,20 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      // width: {
+      //   side: "25rem",
+      // },
+      minWidth: {
+        96: "24rem",
+        80: "20rem",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         qanelas: ["Qanelas", "sans-serif"],
         gilroy: ["Gilroy", "sans-serif"],
       },
-      backgroundColor: (theme) => ({
+      backgroundColor: theme => ({
         ...theme("colors"),
         nav: "#0F0023",
         hover: "#EC744F",
@@ -29,8 +36,10 @@ module.exports = {
         customSecond: "#FF5F80",
         customThird: "#FE8471",
         customLast: "#FCAB63",
+        customBlueForum: "#3884FD",
+        customGreyForum: "#F8F8F8",
       }),
-      textColor: (theme) => theme("colors"),
+      textColor: theme => theme("colors"),
       textColor: {
         // hover: "#EC744F",
         // primary: "#2E4553",
@@ -46,8 +55,9 @@ module.exports = {
         customSecond: "#FF5F80",
         customThird: "#FE8471",
         customLast: "#FCAB63",
+        customBlueForum: "#3884FD",
       },
-      borderColor: (theme) => ({
+      borderColor: theme => ({
         ...theme("colors"),
         DEFAULT: theme("colors.gray.300", "currentColor"),
         primary: "#20639B",
@@ -57,7 +67,7 @@ module.exports = {
       boxShadow: {
         lg: "0 0 4px 2px #20639b",
       },
-      gradientColorStops: (theme) => ({
+      gradientColorStops: theme => ({
         ...theme("colors"),
         first: "#2641A1",
         second: "#FF5F80",
