@@ -9,7 +9,7 @@ const Timeline = () => {
       </p>
 
       <TimelineItem
-        date="14 Januari"
+        date="14 Februari"
         className="right-20"
         bgColor="#2641A1"
         isTop={false}
@@ -21,7 +21,7 @@ const Timeline = () => {
         20.00 - 20.40   Pemutaran <br/> </pre>"
       />
       <TimelineItem
-        date="15 Januari"
+        date="15 Februari"
         className="left-20"
         bgColor="#48449A"
         content="
@@ -29,46 +29,46 @@ const Timeline = () => {
         10.00 - 11.30   Program Anatomy of Feelings <br/>
         13.00 - 14.30   Program Disfigured Hearts <br/>
         16.00 - 17.30   Program Collab <br/>
-        19.00 - 20.30   Program Yogi <br/>
-        20.30 - 21.00   Diskusi Yogi <br/> </pre>"
+        19.00 - 20.30   Program From Another Sight <br/>
+        20.30 - 21.00   Diskusi From Another Sight <br/> </pre>"
       />
       <TimelineItem
-        date="16 Januari"
+        date="16 Februari"
         className="right-20"
         bgColor="#6A4995"
         content="
         <pre>
         10.00 - 11.30   Program Disfigured Hearts <br/>
         13.00 - 14.30   Program Collab <br/>
-        16.00 - 17.30   Program Yogi <br/>
+        16.00 - 17.30   Program From Another Sight <br/>
         19.00 - 20.30   Program Anatomy of Feelings <br/>
-        20.30 - 21.00   Diskusi Allaam <br/> </pre>"
+        20.30 - 21.00   Diskusi Anatomy of Feelings <br/> </pre>"
       />
       <TimelineItem
-        date="17 Januari"
+        date="17 Februari"
         className="left-20"
         bgColor="#8E4F90"
         content="
         <pre>
         10.00 - 11.30   Program Collab <br/>
-        13.00 - 14.30   Program Yogi <br/>
+        13.00 - 14.30   Program From Another Sight <br/>
         16.00 - 17.30   Program Anatomy of Feelings <br/>
         19.00 - 20.30   Program Disfigured Hearts <br/>
-        20.30 - 21.00   Diskusi Thya <br/> </pre>"
+        20.30 - 21.00   Diskusi Disfigured Hearts <br/> </pre>"
       />
       <TimelineItem
-        date="18 Januari"
+        date="18 Februari"
         className="right-20"
         bgColor="#B3548A"
         content="
         <pre>
-        10.00 - 11.30   Program Yogi <br/>
+        10.00 - 11.30   Program From Another Sight <br/>
         13.00 - 14.30   Program Anatomy of Feelings <br/>
         16.00 - 17.30   Program Disfigured Hearts <br/>
         19.00 - 20.30   Program Collab <br/> </pre>"
       />
       <TimelineItem
-        date="19 Januari"
+        date="19 Februari"
         className="left-20"
         bgColor="#E15A82"
         content="
@@ -78,7 +78,7 @@ const Timeline = () => {
         15.35 - 17.40   Program Kompetisi <br/> </pre>"
       />
       <TimelineItem
-        date="20 Januari"
+        date="20 Februari"
         className="right-20"
         bgColor="#FE6C79"
         isBottom={true}

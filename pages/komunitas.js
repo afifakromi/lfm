@@ -22,23 +22,23 @@ const komunitas = () => {
                 komunitas
               </h1>
             </div>
-            {/* <div className="bg-white py-3 px-4 rounded-full w-96 shadow-black">
-              <Link href="youtube.com">
+            <div className="bg-white py-3 px-4 mt-5 rounded-full w-64 shadow-black">
+              <Link href="https://bit.ly/KelilingKomunitas">
                 <a className="flex flex-row items-center justify-between  bg-white">
-                  <p className="text-black text-3xl">Watch on Youtube</p>
+                  <p className="text-black text-3xl ml-2">Join Now</p>
                   <img
-                    className="w-10 h-10"
+                    className="w-10 h-10 mr-4"
                     src="/img/right-arrow.png"
                     alt="youtube"
                   />
                 </a>
               </Link>
-            </div> */}
+            </div>
           </div>
         </div>
 
         <div className="w-full py-20 px-20 bg-nav">
-          <p className="text-3xl font-gilroy text-justify max-w-xl">
+          <p className="text-3xl font-gilroy text-justify max-w-xl text-customGrey">
             Keliling komunitas akan diadakan secara
             online. Keliling komunitas memiliki mata acara
             yaitu menonton film bersama, diskusi film,

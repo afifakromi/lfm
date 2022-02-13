@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import Link from "next/link";
 import NextCountdown from "./NextCountdown";
+import Image from "next/image";
 import Timeline from "./Timeline";
 
 const Home = () => {
@@ -21,8 +22,8 @@ const Home = () => {
           height="100%"
           muted={true}
         />
-        <div className=" bg-nav w-full py-20 pb-80 flex flex-col items-center justify-center">
-          <div className="mb-16 bg-customPink cursor-pointer rounded-lg hover:opacity-95 drop-shadow-lg">
+        <div className="w-full py-20 pb-80 flex flex-col items-center justify-center">
+          <div className="mb-16 bg-customPink cursor-pointer rounded-lg hover:opacity-95 shadow-black">
             <Link href="https://linktr.ee/ganffest2022">
               <p className="text-4xl mx-7 my-5 text-white">Daftar Ganffest</p>
             </Link>
@@ -150,6 +151,24 @@ const Home = () => {
                   </p>
                 </div>
               </div>
+            </div>
+            {/* <h1 className="text-6xl text-customCrem absolute -left-24 -bottom-56">
+              Exhibition
+            </h1> */}
+            {/* <div className="w-12">
+              <Link href="https://wa.me/082257091669">
+                <a>
+                  <Image src="/img/wa.svg" width={60} height={60} alt="IG" />
+                </a>
+              </Link>
+            </div> */}
+          </div>
+          <div className="mt-52">
+            <h1 className="text-6xl text-customCrem ml-6">
+              Donation
+            </h1>
+            <div className="mt-5">
+                <Image src="/img/donation.jpg" width={300} height={400} alt="donation" />
             </div>
           </div>
         </div>
