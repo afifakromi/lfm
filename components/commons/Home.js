@@ -163,7 +163,7 @@ const Home = () => {
               </Link>
             </div> */}
           </div>
-          <div className="mt-52">
+          {/* <div className="mt-52">
             <h1 className="text-6xl text-customCrem ml-6">
               Donation
             </h1>
@@ -175,7 +175,7 @@ const Home = () => {
             <h1 className="text-6xl text-customCrem absolute left-5">
               Exhibition
             </h1>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

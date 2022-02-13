@@ -17,7 +17,7 @@ const Timeline = () => {
         content="
         <pre>
         19.00 - 19.10   Open gate <br/>
-        19.10 - 20.00   Opening ganffest 2022 <br/>
+        19.10 - 20.00   Opening ganffest 2022<br/>
         20.00 - 20.40   Pemutaran <br/> </pre>"
       />
       <TimelineItem
