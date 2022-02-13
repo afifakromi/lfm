@@ -1,4 +1,4 @@
-export const serverURL = "https://www.ganffest.com/api";
+export const serverURL = "https://www.be.ganffest.com/api";
 
 export const routes = {
   register: "/register",
