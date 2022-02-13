@@ -19,7 +19,8 @@ const ForumRightBar = () => {
         togglecreatetopic={togglecreatetopic}
         settogglecreatetopic={settogglecreatetopic}
       />
-      <div className="flex flex-col bg-white shadow-md py-6 px-5 w-full font-gilroy">
+
+      {/* <div className="flex flex-col bg-white shadow-md py-6 px-5 w-full font-gilroy">
         <p className="pl-3 mb-2">Top Users</p>
         <div className="flex mt-5 items-center">
           <img src="/img/pp.png" alt="" className="mr-2" />
@@ -39,7 +40,7 @@ const ForumRightBar = () => {
           <p className="mr-1">7</p>
           <img src="/img/uparrowblue.png" alt="" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

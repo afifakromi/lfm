@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { forum_db } from "../../firebase/forumConfig";
 import ForumContentCard from "./content/ForumContentCard";
-import ForumContentModal from "./content/ForumContentModal";
 import ForumContentPagination from "./content/ForumContentPagination";
 
 const ForumContent = () => {
   const [interacted, setinteracted] = useState([]);
   const [posts, setposts] = useState();
+  const [page, setpage] = useState(1);
+  const [maxPage, setmaxPage] = useState();
+
   useEffect(() => {
     const query = forum_db
       .collection("posts")
       .orderBy("created_at", "desc")
-      .limit(3)
       .onSnapshot(res => {
-        setposts(res);
+        var data = [];
+        res.forEach(doc => {
+          data.push(doc);
+        });
+        setposts(data);
+        setmaxPage(Math.ceil(res.docs.length / 3));
       });
     return query;
   }, []);
@@ -37,7 +43,9 @@ const ForumContent = () => {
   const generateContent = () => {
     if (!posts) return;
     var data = [];
-    posts.forEach(val => {
+    const start = (page - 1) * 3;
+    const end = page * 3;
+    posts.slice(start, end).forEach(val => {
       data.push(
         <ForumContentCard
           postdata={val}
@@ -52,7 +60,7 @@ const ForumContent = () => {
   return (
     <div className="flex flex-col h-full px-12 w-full max-w-4xl ml-auto break-words">
       {generateContent()}
-      <ForumContentPagination />
+      <ForumContentPagination page={page} maxPage={maxPage} setpage={setpage} />
     </div>
   );
 };
