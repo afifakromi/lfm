@@ -29,10 +29,6 @@ const Layout = ({ title, auth, children }) => {
           <Head>
             <title>{title}</title>
           </Head>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
         </>
       )}
     </div>

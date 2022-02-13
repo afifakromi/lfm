@@ -25,13 +25,13 @@ const Navbar = ({ type }) => {
 
   const authLoginClick = () => {
     console.log("Login Clicked");
-    setToggleLogin(prevToggle => !prevToggle);
+    setToggleLogin((prevToggle) => !prevToggle);
     setToggleRegister(false);
   };
 
   const authRegisterClick = () => {
     console.log("Register Clicked");
-    setToggleRegister(prevToggle => !prevToggle);
+    setToggleRegister((prevToggle) => !prevToggle);
     setToggleLogin(false);
   };
 
@@ -120,7 +120,6 @@ const Navbar = ({ type }) => {
           </div>
           <LFMLink type={type} url="/archives" text="ARCHIVE" />
           <LFMLink type={type} url="/merch" text="MERCH" />
-          <LFMLink type={type} url="/forum" text="FORUM" />
           <LFMLink type={type} url="/about" text="ABOUT" />
         </div>
         <div className="flex flex-row items-center justify-end w-3/12">

@@ -91,7 +91,7 @@ export const login = async (credentials = {}) => {
   }
 };
 
-export const profile = async email => {
+export const profile = async (email) => {
   const data = await getRequest(
     serverConfig.serverURL + serverConfig.routes.profile + "/" + email
   );
@@ -112,9 +112,6 @@ export const register = async (credentials = {}) => {
   if (!data.status) {
     return data;
   } else {
-    createLocalstorageItem("email", data.email);
-    createLocalstorageItem("nama", data.nama);
-    createLocalstorageItem("username", data.username);
     createLocalstorageItem(
       "token",
       JSON.stringify({
