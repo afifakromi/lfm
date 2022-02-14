@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { logout } from "../../authentication/utils";
+import { logout, getUsername } from "../../authentication/utils";
 
 const Profile = ({ loggedIn, setLoggedIn }) => {
   const [click, setClick] = useState(false);
@@ -35,7 +35,7 @@ const Profile = ({ loggedIn, setLoggedIn }) => {
           (click ? "flex" : "hidden")
         }
       >
-        <p className="text-xs text-black cursor-pointer">My Profile</p>
+        <p className="text-xs text-black cursor-pointer">{getUsername()}</p>
         <div
           className="px-2 py-1 mt-2 rounded-md cursor-pointer bg-customPink hover:opacity-80"
           onClick={() => {

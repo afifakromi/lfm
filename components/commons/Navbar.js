@@ -62,14 +62,14 @@ const Navbar = ({ type }) => {
         }
       >
         <div className="flex flex-row justify-start">
-          <LFMLink type={type} url="/" text="HOME" />
+          <LFMLink type={type} url="/" text="Home" />
           {/* <LFMLink type={type} url="/submission" text="SUBMISSION" /> */}
           <div
             onMouseOver={() => setHide(false)}
             onMouseOut={() => setHide(true)}
             className="w-24 py-1 ml-4 border-2 border-transparent relative"
           >
-            <p className="text-center text-white">EVENT</p>
+            <p className="text-center text-white ">Event</p>
             <div
               style={{ backgroundColor: "#EBEAEA" }}
               className={`bg-white absolute cursor-pointer z-10 ${
@@ -91,17 +91,17 @@ const Navbar = ({ type }) => {
                     hidePre ? "hidden" : "flex"
                   } flex-col rounded-r-lg items-start divide-y-2`}
                 >
-                  <div className="relative py-1 px-4 hover:bg-gray-300 rounded-t-lg w-48">
+                  <div className="relative py-1 px-4 hover:bg-gray-300 rounded-t-lg w-52">
                     <Link href="/komunitas">
-                      <a className="text-black w-40 text-xl ">
+                      <a className="text-black text-xl ">
                         Keliling Komunitas
                       </a>
                     </Link>
                   </div>
 
-                  <div className="relative py-1 px-4 hover:bg-gray-300 rounded-b-lg w-48">
+                  <div className="relative py-1 px-4 hover:bg-gray-300 rounded-b-lg w-52">
                     <Link href="/workshop">
-                      <a className="text-black w-40 text-xl ">Workshop</a>
+                      <a className="text-black text-xl ">Workshop</a>
                     </Link>
                   </div>
                 </div>
@@ -118,10 +118,10 @@ const Navbar = ({ type }) => {
               </div>
             </div>
           </div>
-          <LFMLink type={type} url="/archives" text="ARCHIVE" />
-          <LFMLink type={type} url="/merch" text="MERCH" />
-          <LFMLink type={type} url="/forum" text="FORUM" />
-          <LFMLink type={type} url="/about" text="ABOUT" />
+          <LFMLink type={type} url="/archives" text="Archive" />
+          <LFMLink type={type} url="/merch" text="Merch" className="text-Montserrat"/>
+          <LFMLink type={type} url="/forum" text="Forum" />
+          <LFMLink type={type} url="/about" text="About" />
         </div>
         <div className="flex flex-row items-center justify-end w-3/12">
           {!loggedIn ? (

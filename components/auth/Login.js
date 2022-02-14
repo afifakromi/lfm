@@ -56,7 +56,7 @@ const Login = () => {
             setErrorMsg("Username & Password Invalid");
           } else {
             setLoggedIn(true);
-            router.push("/submission");
+            router.push("/");
           }
         })
         .catch((err) => {

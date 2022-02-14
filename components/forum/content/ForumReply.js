@@ -83,7 +83,7 @@ const ForumReply = ({ postdata }) => {
           <textarea
             type="text"
             className="bg-transparent outline-none font-gilroy py-3 text-black resize-none h-16 text-sm"
-            placeholder="Enter Topic Discussion"
+            placeholder="Enter Comment"
             onChange={e => {
               setdescription(e.target.value);
             }}
@@ -126,7 +126,7 @@ const ForumReply = ({ postdata }) => {
           className="py-1 rounded bg-customBlueForum mt-5"
           onClick={submithandle}
         >
-          SUBMIT
+          Submit
         </button>
       ) : (
         <div className="py-1 rounded bg-customBlueForum mt-5 w-full text-white text-center font-semibold">
