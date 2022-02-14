@@ -1,5 +1,6 @@
 // Server config
 import { useRecoilState } from "recoil";
+import { forum_db } from "../firebase/forumConfig";
 import * as serverConfig from "./server-config";
 
 async function makeRequest(
@@ -112,8 +113,9 @@ export const register = async (credentials = {}) => {
   if (!data.status) {
     return data;
   } else {
-    createLocalstorageItem("email", data.email);
-    createLocalstorageItem("nama", data.nama);
+    forum_db.collection("users").doc(data.username).set({
+      liked: 0,
+    });
     createLocalstorageItem("username", data.username);
     createLocalstorageItem(
       "token",

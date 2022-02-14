@@ -6,7 +6,7 @@ const ForumMedia = ({ media }) => {
     return "";
   }
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-col">
       {media.data().media.map((val, idx) => {
         return (
           <div key={idx} className={"my-2"}>

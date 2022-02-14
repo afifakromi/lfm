@@ -8,7 +8,7 @@ const Forum = () => {
   // document.body.style.minHeight = "100vh";
   return (
     <div
-      className="flex justify-between bg-customGreyForum bg-no-repeat py-20 px-10 relative h-full bg-center"
+      className="flex justify-between bg-customGreyForum bg-no-repeat py-20 px-10 relative h-full bg-center min-h-screen"
       style={{
         backgroundImage: "url('/img/illustration.png')",
         backgroundSize: "70rem",

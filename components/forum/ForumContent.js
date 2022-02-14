@@ -15,8 +15,10 @@ const ForumContent = () => {
       .orderBy("created_at", "desc")
       .onSnapshot(res => {
         var data = [];
+        console.log(res);
         res.forEach(doc => {
           data.push(doc);
+          console.log(doc);
         });
         setposts(data);
         setmaxPage(Math.ceil(res.docs.length / 3));
@@ -54,6 +56,13 @@ const ForumContent = () => {
         />
       );
     });
+    if (data.length === 0) {
+      return (
+        <p className="bg-white w-full py-2 text-black font-semibold shadow text-center rounded">
+          no post yet
+        </p>
+      );
+    }
     return data;
   };
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ForumContentPagination = ({ page, maxPage, setpage }) => {
+const ForumContentPagination = ({ page, maxPage, setpage, isNull }) => {
   const [isEndSection, setisEndSection] = useState(false);
   useEffect(() => {
     if (!maxPage) return;
@@ -14,6 +14,7 @@ const ForumContentPagination = ({ page, maxPage, setpage }) => {
   const loadButtonPage = () => {
     var data = [];
     var section = Math.floor((page - 1) / 3);
+    if (!maxPage || maxPage === 1) return;
     for (let i = section * 3; i < (section + 1) * 3; i++) {
       if (i === page - 1)
         data.push(
@@ -25,17 +26,19 @@ const ForumContentPagination = ({ page, maxPage, setpage }) => {
           </p>
         );
       else {
-        data.push(
-          <button
-            className="text-black rounded-lg w-8 py-1 mr-2 hover:bg-customBlueForum hover:text-white"
-            key={i}
-            onClick={e => {
-              setpage(i + 1);
-            }}
-          >
-            {i + 1}
-          </button>
-        );
+        if (i + 1 <= maxPage) {
+          data.push(
+            <button
+              className="text-black rounded-lg w-8 py-1 mr-2 hover:bg-customBlueForum hover:text-white"
+              key={i}
+              onClick={e => {
+                setpage(i + 1);
+              }}
+            >
+              {i + 1}
+            </button>
+          );
+        }
       }
     }
     return data;
@@ -56,7 +59,7 @@ const ForumContentPagination = ({ page, maxPage, setpage }) => {
       )}
       {loadButtonPage()}
       {isEndSection ? "" : <p className="mr-2 text-black w-8 py-1">...</p>}
-      {maxPage && page === maxPage ? (
+      {page >= maxPage ? (
         ""
       ) : (
         <button

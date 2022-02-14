@@ -71,6 +71,7 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
     setdescription("");
     setisLoading(false);
     setimageList();
+    settogglecreatetopic(false);
   };
 
   return (

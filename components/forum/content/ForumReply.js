@@ -53,11 +53,19 @@ const ForumReply = ({ postdata }) => {
         description: description,
         liked: 0,
         disliked: 0,
-        comments: 0,
         username: localStorage.getItem("username"),
         created_at: firebase.firestore.Timestamp.fromDate(new Date()),
         media: linkarray,
       });
+    await forum_db
+      .collection("posts")
+      .doc(postdata.id)
+      .set(
+        {
+          comments: postdata.data().comments + 1,
+        },
+        { merge: true }
+      );
     setdescription("");
     setimageList();
     setisLoading(false);
@@ -70,7 +78,9 @@ const ForumReply = ({ postdata }) => {
           <img src="/img/pp.png" alt="" />
         </div>
         <div className="flex flex-col ml-4 mt-2 w-full">
-          <p className=" text-customBlueForum font-gilroy ">Iqbal</p>
+          <p className=" text-customBlueForum font-gilroy ">
+            {postdata.data().username}
+          </p>
           <textarea
             type="text"
             className="bg-transparent outline-none font-gilroy py-3 text-black resize-none h-16 text-sm"

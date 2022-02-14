@@ -34,7 +34,7 @@ const ForumContentCard = ({ postdata, interacted }) => {
         </p>
         <ForumMedia media={postdata} />
 
-        <div className="flex pt-2 border-t-2 border-gray-200 items-center text-sm">
+        <div className="flex pt-2 border-t-2 border-gray-200 items-center text-sm mt-3">
           <img src="/img/pp.png" alt="" />
           <p className="font-gilroy ml-2">Posted by</p>
           <p className="font-gilroy ml-4 text-customBlueForum">
