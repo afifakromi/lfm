@@ -27,7 +27,7 @@ const ForumContentModal = ({
         .collection("posts")
         .doc(postdata.id)
         .collection("comments")
-        .orderBy("created_at", "desc")
+        .orderBy("created_at", "asc")
         .limit(3)
         .onSnapshot(res => {
           var data = [];
@@ -102,7 +102,7 @@ const ForumContentModal = ({
       .collection("posts")
       .doc(postdata.id)
       .collection("comments")
-      .orderBy("created_at", "desc")
+      .orderBy("created_at", "asc")
       .startAfter(lastVisible)
       .limit(3)
       .onSnapshot(res => {

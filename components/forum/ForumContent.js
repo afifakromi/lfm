@@ -13,6 +13,7 @@ const ForumContent = () => {
   useEffect(() => {
     const query = forum_db
       .collection("posts")
+      .orderBy("liked", "desc")
       .orderBy("created_at", "desc")
       .onSnapshot(res => {
         var data = [];
