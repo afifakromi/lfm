@@ -84,7 +84,7 @@ const ForumReply = ({ postdata }) => {
           <textarea
             type="text"
             className="bg-transparent outline-none font-gilroy py-3 text-black resize-none h-16 text-sm"
-            placeholder="Tambahkan Komentar"
+            placeholder="Enter Topic Discussion"
             onChange={e => {
               setdescription(e.target.value);
             }}
