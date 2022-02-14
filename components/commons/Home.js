@@ -12,8 +12,8 @@ const Home = () => {
   const [MainEvent, setMainEvent] = useState(false);
 
   return (
-    <div className="relative w-full bg-primary">
-      <div className="w-full">
+    <div className=" bg-primary">
+      <div className="">
         <ReactPlayer
           url="/video-landing.mp4"
           playing={true}
@@ -22,21 +22,21 @@ const Home = () => {
           height="100%"
           muted={true}
         />
-        <div className="w-full py-20 flex flex-col items-center justify-center">
+        <div className=" py-20 flex flex-col items-center justify-center">
           <div className="mb-16 bg-customPink cursor-pointer rounded-lg hover:opacity-95 shadow-black">
             <Link href="https://linktr.ee/ganffest2022">
               <p className="text-4xl mx-7 my-5 text-white">Daftar Ganffest</p>
             </Link>
             
           </div>
-          <p className="text-6xl mb-4 font-montserrat text-customGrey">COUNTDOWN</p>
+          {/* <p className="text-6xl mb-4 font-montserrat text-customGrey">COUNTDOWN</p>
           <NextCountdown />
-          <p className="mt-8 text-2xl text-customGrey">Hari Menuju Main Event Ganffest</p>
+          <p className="mt-8 text-2xl text-customGrey">Hari Menuju Main Event Ganffest</p> */}
           <div className="w-3/4 mt-20 flex flex-col justify-center relative">
             <h1 className="text-6xl text-customCrem font-montserrat absolute -left-24 -top-10">
               Timeline
             </h1>
-            <div className="w-full mt-16 flex flex-row items-center">
+            <div className=" mt-16 flex flex-row items-center">
               <Link href="/submission" passHref>
                 <div
                   className="w-16 h-12 relative rounded-full bg-customFirst cursor-pointer"
