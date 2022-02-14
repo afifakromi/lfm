@@ -14,7 +14,7 @@ const ForumContentPagination = ({ page, maxPage, setpage, isNull }) => {
   const loadButtonPage = () => {
     var data = [];
     var section = Math.floor((page - 1) / 3);
-    if (!maxPage || maxPage === 1) return;
+    if (!maxPage) return;
     for (let i = section * 3; i < (section + 1) * 3; i++) {
       if (i === page - 1)
         data.push(
@@ -46,7 +46,9 @@ const ForumContentPagination = ({ page, maxPage, setpage, isNull }) => {
   return (
     <div className="flex items-center justify-center mt-20">
       {page === 1 ? (
-        ""
+        <div className="w-24 text-center py-1 border-blue-500 border-2 rounded-xl text-customBlueForum font-qanelas text-sm mr-3 cursor-default opacity-0 ">
+          PREVIOUS
+        </div>
       ) : (
         <button
           className="w-24 py-1 border-blue-500 border-2 rounded-xl text-customBlueForum font-qanelas text-sm mr-3 hover:bg-customBlueForum hover:text-white"
@@ -60,7 +62,9 @@ const ForumContentPagination = ({ page, maxPage, setpage, isNull }) => {
       {loadButtonPage()}
       {isEndSection ? "" : <p className="mr-2 text-black w-8 py-1">...</p>}
       {page >= maxPage ? (
-        ""
+        <div className="w-24 py-1 text-center border-blue-500 border-2 rounded-xl text-customBlueForum font-qanelas text-sm opacity-0 cursor-default">
+          NEXT
+        </div>
       ) : (
         <button
           className="w-24 py-1 border-blue-500 border-2 rounded-xl text-customBlueForum font-qanelas text-sm hover:bg-customBlueForum hover:text-white"
