@@ -22,7 +22,7 @@ const Home = () => {
           height="100%"
           muted={true}
         />
-        <div className="w-full py-20 pb-80 flex flex-col items-center justify-center">
+        <div className="w-full py-20 flex flex-col items-center justify-center">
           <div className="mb-16 bg-customPink cursor-pointer rounded-lg hover:opacity-95 shadow-black">
             <Link href="https://linktr.ee/ganffest2022">
               <p className="text-4xl mx-7 my-5 text-white">Daftar Ganffest</p>
@@ -152,30 +152,15 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* <h1 className="text-6xl text-customCrem absolute -left-24 -bottom-56">
-              Exhibition
-            </h1> */}
-            {/* <div className="w-12">
-              <Link href="https://wa.me/082257091669">
-                <a>
-                  <Image src="/img/wa.svg" width={60} height={60} alt="IG" />
-                </a>
-              </Link>
-            </div> */}
           </div>
-          {/* <div className="mt-52">
+          <div className="mt-52">
             <h1 className="text-6xl text-customCrem ml-6">
-              Donation
+              Sponsor & Media Partner
             </h1>
-            <div className="mt-5">
-                <Image src="/img/donation.jpg" width={300} height={400} alt="donation" />
+            <div className="mt-7">
+                <Image src="/img/sponsorMedpar.png" width={700} height={300} alt="sponsormedpar" />
             </div>
           </div>
-          <div className="mt-32">
-            <h1 className="text-6xl text-customCrem absolute left-5">
-              Exhibition
-            </h1>
-          </div> */}
         </div>
       </div>
     </div>
