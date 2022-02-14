@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getUsername } from "../../authentication/utils";
 import { forum_db } from "../../firebase/forumConfig";
 import ForumContentCard from "./content/ForumContentCard";
 import ForumContentPagination from "./content/ForumContentPagination";
@@ -15,10 +16,8 @@ const ForumContent = () => {
       .orderBy("created_at", "desc")
       .onSnapshot(res => {
         var data = [];
-        console.log(res);
         res.forEach(doc => {
           data.push(doc);
-          console.log(doc);
         });
         setposts(data);
         setmaxPage(Math.ceil(res.docs.length / 3));
@@ -29,7 +28,7 @@ const ForumContent = () => {
     if (!posts) return;
     forum_db
       .collection("users")
-      .doc("bintang")
+      .doc(getUsername())
       .collection("post_interacted")
       .onSnapshot(res => {
         if (res.docs.length > 0) {

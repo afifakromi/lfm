@@ -3,6 +3,7 @@ import { forum_db, forum_storage } from "../../../firebase/forumConfig";
 import Image from "../../commons/Image";
 import firebase from "firebase/app";
 import ErrorMessage from "../commons/ErrorMessage";
+import { getUsername } from "../../../authentication/utils";
 
 const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
   const fileref = useRef(null);
@@ -35,7 +36,7 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
       .put(data);
 
     let url = await upload.ref.getDownloadURL();
-    console.log(url);
+
     return url;
   };
 
@@ -51,7 +52,7 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
     let linkarray = [];
     for (let i = 0; i < fileref.current.files.length; i++) {
       let newurl = await uploadhandler(fileref.current.files[i]);
-      console.log("newurl", newurl);
+
       linkarray.push(newurl);
     }
     await forum_db
@@ -63,7 +64,7 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
         liked: 0,
         disliked: 0,
         comments: 0,
-        username: localStorage.getItem("username"),
+        username: getUsername(),
         created_at: firebase.firestore.Timestamp.fromDate(new Date()),
         media: linkarray,
       });
@@ -153,7 +154,7 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
                     }}
                     onChange={e => {
                       e.preventDefault();
-                      console.log(e.target.files);
+
                       setimageList(e.target.files);
                     }}
                     accept="image/*, video/*"

@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { getUsername } from "../../../authentication/utils";
 import { forum_db } from "../../../firebase/forumConfig";
 
 const DislikeButton = ({ sourcedata, liked, commentdata }) => {
-  //   const dislikecomplicatedcondition = () => {
-  //     if (liked) {
-  //       setliked(false);
-  //     } else {
-  //       if (liked === false) {
-  //         setliked();
-  //       } else {
-  //         setliked(false);
-  //       }
-  //     }
-  //   };
   const [active, setactive] = useState();
   useEffect(() => {
     if (liked === -1) {
@@ -21,10 +11,8 @@ const DislikeButton = ({ sourcedata, liked, commentdata }) => {
       setactive(false);
     }
   }, [liked]);
-  //   if (sourcedata.id === "1") console.log(active, liked);
   const dislike = (postdata, liked) => {
     if (!postdata) return;
-    // console.log(liked);
     if (!commentdata) {
       forum_db
         .collection("posts")
@@ -39,7 +27,7 @@ const DislikeButton = ({ sourcedata, liked, commentdata }) => {
         });
       forum_db
         .collection("users")
-        .doc("bintang")
+        .doc(getUsername())
         .collection("post_interacted")
         .doc(postdata.id)
         .set({
@@ -61,7 +49,7 @@ const DislikeButton = ({ sourcedata, liked, commentdata }) => {
         });
       forum_db
         .collection("users")
-        .doc("bintang")
+        .doc(getUsername())
         .collection("post_interacted")
         .doc(postdata.id)
         .collection("comment_interacted")

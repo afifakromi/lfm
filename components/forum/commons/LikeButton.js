@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getUsername } from "../../../authentication/utils";
 import { forum_db } from "../../../firebase/forumConfig";
 // import { dislike, like } from "./functions";
 
@@ -13,7 +14,6 @@ const LikeButton = ({ sourcedata, liked, commentdata }) => {
   }, [liked]);
   const like = (postdata, liked, commentdata) => {
     if (!postdata) return;
-    // console.log(liked);
     if (!commentdata) {
       forum_db
         .collection("posts")
@@ -28,7 +28,7 @@ const LikeButton = ({ sourcedata, liked, commentdata }) => {
         });
       forum_db
         .collection("users")
-        .doc("bintang")
+        .doc(getUsername())
         .collection("post_interacted")
         .doc(postdata.id)
         .set({
@@ -50,7 +50,7 @@ const LikeButton = ({ sourcedata, liked, commentdata }) => {
         });
       forum_db
         .collection("users")
-        .doc("bintang")
+        .doc(getUsername())
         .collection("post_interacted")
         .doc(postdata.id)
         .collection("comment_interacted")

@@ -5,6 +5,7 @@ import ForumReply from "./ForumReply";
 import LikeButton from "../commons/LikeButton";
 import DislikeButton from "../commons/DislikeButton";
 import ForumMedia from "./ForumMedia";
+import { getUsername } from "../../../authentication/utils";
 
 const ForumContentModal = ({
   togglemodal,
@@ -48,7 +49,7 @@ const ForumContentModal = ({
     if (!postdata) return;
     forum_db
       .collection("users")
-      .doc("bintang")
+      .doc(getUsername())
       .collection("post_interacted")
       .doc(postdata.id)
       .collection("comment_interacted")
@@ -97,7 +98,6 @@ const ForumContentModal = ({
   };
   const loadMoreComments = lastVisible => {
     if (!lastVisible) return;
-    console.log(lastVisible);
     forum_db
       .collection("posts")
       .doc(postdata.id)
@@ -111,7 +111,6 @@ const ForumContentModal = ({
         } else {
           var data = [];
           res.forEach(doc => {
-            console.log(doc.data(), doc.id);
             data.push(doc);
           });
           // console.log(data);

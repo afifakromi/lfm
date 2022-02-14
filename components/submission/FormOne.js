@@ -8,7 +8,7 @@ import { formOneState } from "../../authentication/state";
 import { useFormik } from "formik";
 import { useRecoilState } from "recoil";
 
-const validate = (values) => {
+const validate = values => {
   const errors = {};
 
   if (
@@ -50,7 +50,7 @@ const FormOne = ({ nextSlide }) => {
       suara: "",
     },
     validate,
-    onSubmit: async (values) => {
+    onSubmit: async values => {
       if (!formik.errors.all) {
         nextSlide();
         setFormOneValue(values);

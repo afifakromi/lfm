@@ -6,13 +6,12 @@ import { images, regexExtension, videos } from "../constant/constant";
 import ForumMedia from "./ForumMedia";
 
 const ForumComment = ({ postdata, commentdata, commentInteracted }) => {
-  // console.log(commentdata);
   const [commentLiked, setcommentLiked] = useState();
   useEffect(() => {
     if (!commentInteracted) return;
     setcommentLiked(commentInteracted.data().state);
   }, [commentInteracted]);
-  // if (postdata.id === "1" && commentdata.id === "2") console.log(commentLiked);
+
   return (
     <div className="flex bg-gray-100 w-full px-5 py-4 mb-5">
       {commentdata ? (

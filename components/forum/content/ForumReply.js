@@ -3,6 +3,7 @@ import { forum_db, forum_storage } from "../../../firebase/forumConfig";
 import Image from "../../commons/Image";
 import firebase from "firebase/app";
 import ErrorMessage from "../commons/ErrorMessage";
+import { getUsername } from "../../../authentication/utils";
 
 const ForumReply = ({ postdata }) => {
   const fileref = useRef(null);
@@ -25,7 +26,7 @@ const ForumReply = ({ postdata }) => {
       .put(data);
 
     let url = await upload.ref.getDownloadURL();
-    console.log(url);
+    // console.log(url);
     return url;
   };
 
@@ -36,12 +37,12 @@ const ForumReply = ({ postdata }) => {
       return 0;
     }
     setisLoading(true);
-    console.log("SUBMIT");
+    // console.log("SUBMIT");
     // console.log(fileref.current.files);
     let linkarray = [];
     for (let i = 0; i < fileref.current.files.length; i++) {
       let newurl = await uploadhandler(fileref.current.files[i]);
-      console.log("newurl", newurl);
+      // console.log("newurl", newurl);
       linkarray.push(newurl);
     }
     await forum_db
@@ -53,7 +54,7 @@ const ForumReply = ({ postdata }) => {
         description: description,
         liked: 0,
         disliked: 0,
-        username: localStorage.getItem("username"),
+        username: getUsername(),
         created_at: firebase.firestore.Timestamp.fromDate(new Date()),
         media: linkarray,
       });
@@ -78,9 +79,7 @@ const ForumReply = ({ postdata }) => {
           <img src="/img/pp.png" alt="" />
         </div>
         <div className="flex flex-col ml-4 mt-2 w-full">
-          <p className=" text-customBlueForum font-gilroy ">
-            {postdata.data().username}
-          </p>
+          <p className=" text-customBlueForum font-gilroy ">{getUsername()}</p>
           <textarea
             type="text"
             className="bg-transparent outline-none font-gilroy py-3 text-black resize-none h-16 text-sm"
