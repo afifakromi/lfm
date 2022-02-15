@@ -26,11 +26,11 @@ const Timeline = () => {
         bgColor="#48449A"
         content="
         <pre>
-        10.00 - 11.30   Program Anatomy of Feelings <br/>
-        13.00 - 14.30   Program Disfigured Hearts <br/>
-        16.00 - 17.30   Program GFF x Mini Film Festival <br/>
+        16.00 - 17.30   Program Anatomy of Feelings <br/>
+        &nbsp               Program Disfigured Hearts <br/>
+        &nbsp               Program GFF x Mini Film Festival <br/>
         19.00 - 20.30   Program From Another Sight <br/>
-        20.30 - 21.00   Diskusi From Another Sight <br/> </pre>"
+        20.30 - 21.00   Diskusi Program From Another Sight <br/> </pre>"
       />
       <TimelineItem
         date="16 Februari"
@@ -38,11 +38,11 @@ const Timeline = () => {
         bgColor="#6A4995"
         content="
         <pre>
-        10.00 - 11.30   Program Disfigured Hearts <br/>
-        13.00 - 14.30   Program GFF x Mini Film Festival <br/>
-        16.00 - 17.30   Program From Another Sight <br/>
+        16.00 - 17.30   Program Disfigured Hearts <br/>
+        &nbsp               Program GFF x Mini Film Festival <br/>
+        &nbsp               Program From Another Sight <br/>
         19.00 - 20.30   Program Anatomy of Feelings <br/>
-        20.30 - 21.00   Diskusi Anatomy of Feelings <br/> </pre>"
+        20.30 - 21.00   Diskusi Program Anatomy of Feelings <br/> </pre>"
       />
       <TimelineItem
         date="17 Februari"
@@ -50,11 +50,11 @@ const Timeline = () => {
         bgColor="#8E4F90"
         content="
         <pre>
-        10.00 - 11.30   Program GFF x Mini Film Festival <br/>
-        13.00 - 14.30   Program From Another Sight <br/>
-        16.00 - 17.30   Program Anatomy of Feelings <br/>
+        16.00 - 17.30   Program GFF x Mini Film Festival <br/>
+        &nbsp               Program From Another Sight <br/>
+        &nbsp               Program Anatomy of Feelings <br/>
         19.00 - 20.30   Program Disfigured Hearts <br/>
-        20.30 - 21.00   Diskusi Disfigured Hearts <br/> </pre>"
+        20.30 - 21.00   Diskusi Program Disfigured Hearts <br/> </pre>"
       />
       <TimelineItem
         date="18 Februari"
@@ -62,10 +62,10 @@ const Timeline = () => {
         bgColor="#B3548A"
         content="
         <pre>
-        10.00 - 11.30   Program From Another Sight <br/>
-        13.00 - 14.30   Program Anatomy of Feelings <br/>
-        16.00 - 17.30   Program Disfigured Hearts <br/>
-        19.00 - 20.30   Program GFF x Mini Film Festival <br/> </pre>"
+        16.00 - 17.30   Program From Another Sight <br/>
+        &nbsp               Program Anatomy of Feelings <br/>
+        &nbsp               Program Disfigured Hearts <br/>
+        &nbsp               Program GFF x Mini Film Festival <br/> </pre>"
       />
       <TimelineItem
         date="19 Februari"
@@ -73,9 +73,10 @@ const Timeline = () => {
         bgColor="#E15A82"
         content="
         <pre>
-        12.45 - 13.15   Open gate <br/>
-        13.25 - 15.05   Program Bandung Nu Aing <br/>
-        15.35 - 17.40   Program Kompetisi <br/> </pre>"
+        13.25 - 14.30   Program Bandung Nu Aing <br/>
+        14.35 - 15.05   Diskusi Program Bandung Nu Aing <br/>
+        15.20 - 16.50   Program Kompetisi <br/>
+        16.55 - 17.25   Diskusi Program Kompetisi <br/> </pre>"
       />
       <TimelineItem
         date="20 Februari"
@@ -85,10 +86,9 @@ const Timeline = () => {
         rounded="rounded-b-2xl"
         content="
         <pre>
-        11.55 - 12.10   Open gate <br/>
-        12.20 - 13.50   Program Horizon <br/>
-        16.00 - 17.30   Program GFF x Mini Film Festival <br/>
-        17.35 - 17.50   Awarding Night <br/> </pre>"
+        15.55 - 17.40   Program Horizon <br/>
+        17.45 - 18.15   Diskusi Program Horizon <br/>
+        18.45 - 19.00   Awarding Night <br/> </pre>"
       />
     </div>
   );
