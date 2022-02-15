@@ -118,6 +118,7 @@ const Navbar = ({ type }) => {
               </div>
             </div>
           </div>
+          <LFMLink type={type} url="https://www.oracularganffest.com/" text="Exhibition" />
           <LFMLink type={type} url="/archives" text="Archive" />
           <LFMLink type={type} url="/merch" text="Merch" className="text-Montserrat"/>
           <LFMLink type={type} url="/forum" text="Forum" />
