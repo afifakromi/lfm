@@ -14,7 +14,7 @@ const ForumContentPagination = ({ page, maxPage, setpage, isNull }) => {
   const loadButtonPage = () => {
     var data = [];
     var section = Math.floor((page - 1) / 3);
-    if (!maxPage) return;
+    if (!maxPage || maxPage === 1) return;
     for (let i = section * 3; i < (section + 1) * 3; i++) {
       if (i === page - 1)
         data.push(
