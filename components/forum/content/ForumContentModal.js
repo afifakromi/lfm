@@ -16,8 +16,9 @@ const ForumContentModal = ({
   // setpostdata,
 }) => {
   const [comments, setcomments] = useState();
+  const [commentsViewed, setcommentsViewed] = useState(3);
   const [isEndComment, setisEndComment] = useState(false);
-  const [lastVisible, setlastVisible] = useState();
+  // const [lastVisible, setlastVisible] = useState();
   const [commentInteracted, setcommentInteracted] = useState([]);
 
   useEffect(() => {
@@ -28,17 +29,16 @@ const ForumContentModal = ({
         .doc(postdata.id)
         .collection("comments")
         .orderBy("created_at", "asc")
-        .limit(3)
         .onSnapshot(res => {
           var data = [];
           res.forEach(doc => {
             data.push(doc);
           });
-          if (data.length === 0) {
+          if (isEndComment) {
+            setcommentsViewed(data.length);
+          }
+          if (data.length <= 3) {
             setisEndComment(true);
-          } else {
-            setisEndComment(false);
-            setlastVisible(res.docs[res.docs.length - 1]);
           }
           setcomments(data);
         });
@@ -74,9 +74,9 @@ const ForumContentModal = ({
   }, [togglemodal]);
   // console.log("a");
 
-  const toggleLoadComments = () => {
+  const toggleLoadComments = n_comment => {
     if (comments?.length > 0) {
-      return comments.map((doc, idx) => {
+      return comments.slice(0, n_comment).map((doc, idx) => {
         // console.log(doc.data());
         return (
           <ForumComment
@@ -96,28 +96,34 @@ const ForumContentModal = ({
       return <p className="text-center mb-3">...</p>;
     }
   };
-  const loadMoreComments = lastVisible => {
-    if (!lastVisible) return;
-    forum_db
-      .collection("posts")
-      .doc(postdata.id)
-      .collection("comments")
-      .orderBy("created_at", "asc")
-      .startAfter(lastVisible)
-      .limit(3)
-      .onSnapshot(res => {
-        if (res.docs.length == 0) {
-          setisEndComment(true);
-        } else {
-          var data = [];
-          res.forEach(doc => {
-            data.push(doc);
-          });
-          // console.log(data);
-          setcomments(prevComments => [...prevComments, ...data]);
-          setlastVisible(res.docs[res.docs.length - 1]);
-        }
-      });
+  const loadMoreComments = () => {
+    if (commentsViewed < comments?.length) {
+      if (commentsViewed + 3 >= comments.length) {
+        setisEndComment(true);
+      }
+      setcommentsViewed(commentsViewed + 3);
+    }
+    // if (!lastVisible) return;
+    // forum_db
+    //   .collection("posts")
+    //   .doc(postdata.id)
+    //   .collection("comments")
+    //   .orderBy("created_at", "asc")
+    //   .startAfter(lastVisible)
+    //   .limit(3)
+    //   .onSnapshot(res => {
+    //     if (res.docs.length == 0) {
+    //       setisEndComment(true);
+    //     } else {
+    //       var data = [];
+    //       res.forEach(doc => {
+    //         data.push(doc);
+    //       });
+    //       // console.log(data);
+    //       setcomments(prevComments => [...prevComments, ...data]);
+    //       setlastVisible(res.docs[res.docs.length - 1]);
+    //     }
+    //   });
   };
 
   return (
@@ -126,7 +132,7 @@ const ForumContentModal = ({
         style={{ backgroundColor: "rgba(209, 213, 219, .75 )" }}
         className={
           (togglemodal ? "visible " : "hidden ") +
-          "fixed w-full h-full top-0 left-0 py-20 overflow-y-auto"
+          "fixed w-full h-full top-0 left-0 py-20 overflow-y-auto z-50"
         }
         data-modal
         onClick={e => {
@@ -168,7 +174,9 @@ const ForumContentModal = ({
                     className="flex flex-col w-full overflow-y-auto"
                     // style={{ maxHeight: "38rem" }}
                   >
-                    {toggleLoadComments()}
+                    {comments && commentsViewed === 0
+                      ? toggleLoadComments(3)
+                      : toggleLoadComments(commentsViewed)}
                     {isEndComment ? (
                       ""
                     ) : (
@@ -176,7 +184,7 @@ const ForumContentModal = ({
                         className=" text-customBlueForum mb-2"
                         onClick={e => {
                           e.preventDefault();
-                          loadMoreComments(lastVisible);
+                          loadMoreComments();
                         }}
                       >
                         load more...

@@ -81,7 +81,7 @@ const CreateTopicModal = ({ togglecreatetopic, settogglecreatetopic }) => {
         style={{ backgroundColor: "rgba(209, 213, 219, .75 )" }}
         className={
           (togglecreatetopic ? "visible " : "hidden ") +
-          "fixed w-full h-full top-0 left-0 overflow-y-auto py-8"
+          "fixed w-full h-full top-0 left-0 overflow-y-auto py-8 z-50"
         }
         data-modal
         onClick={e => {
