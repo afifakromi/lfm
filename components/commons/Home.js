@@ -12,7 +12,7 @@ const Home = () => {
   const [MainEvent, setMainEvent] = useState(false);
 
   return (
-    <div className="bg-primary">
+    <div className="bg-nav">
       <div className="">
         <ReactPlayer
           url="/video-landing.mp4"
@@ -28,20 +28,28 @@ const Home = () => {
               <p className="text-4xl mx-7 my-5 text-white">Tonton Ganffest</p>
             </Link>
           </div>
-          <h1 className="text-6xl text-customCrem font-montserrat absolute left-14 top-52">
-            Exhibition
-          </h1>
-          <div className="mt-28 flex flex-col items-center cursor-pointer w-2/4">
-            <Link href="https://www.oracularganffest.com/">
-              <ReactPlayer
-                url="/videoPameran.mp4"
-                playing={true}
-                loop={true}
-                width="100%"
-                height="100%"
-                muted={true}
-              />
+          <div className=" flex flex-col items-center cursor-pointer w-1/3">
+            <Link href="https://drive.google.com/file/d/1FKPB-HaX98_lEqxYP4avXpX7NBO3YFKM/view">
+              <Image src="/img/coverKatalog.png" width={500} height={500} alt="sponsormedpar" />
             </Link>
+          </div>
+          <div className="mt-4 flex flex-col items-center w-2/4">
+              <h1 className="text-6xl mt-20 mb-5 text-white font-montserrat">
+                Exhibition
+              </h1>
+              <div className="cursor-pointer w-full">
+                <Link href="https://www.oracularganffest.com/">
+                  <ReactPlayer
+                    url="/videoPameran.mp4"
+                    playing={true}
+                    loop={true}
+                    width="100%"
+                    height="100%"
+                    muted={true}
+                  />
+                </Link>
+              </div>
+              
           </div>
           {/* <p className="text-6xl mb-4 text-customCrem">Exhibition</p> */}
           {/* <NextCountdown />

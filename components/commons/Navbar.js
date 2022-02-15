@@ -121,7 +121,7 @@ const Navbar = ({ type }) => {
           <LFMLink type={type} url="https://www.oracularganffest.com/" text="Exhibition" />
           <LFMLink type={type} url="/archives" text="Archive" />
           <LFMLink type={type} url="/merch" text="Merch" className="text-Montserrat"/>
-          <LFMLink type={type} url="/forum" text="Forum" />
+          <LFMLink type={type} url="/forum" text="Pojok GFF" />
           <LFMLink type={type} url="/about" text="About" />
         </div>
         <div className="flex flex-row items-center justify-end w-3/12">
