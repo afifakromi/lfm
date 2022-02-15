@@ -12,7 +12,7 @@ const Home = () => {
   const [MainEvent, setMainEvent] = useState(false);
 
   return (
-    <div className=" bg-primary">
+    <div className="bg-primary">
       <div className="">
         <ReactPlayer
           url="/video-landing.mp4"
@@ -22,21 +22,36 @@ const Home = () => {
           height="100%"
           muted={true}
         />
-        <div className=" py-20 flex flex-col items-center justify-center">
+        <div className=" py-20 flex flex-col items-center justify-center relative">
           <div className="mb-16 bg-customPink cursor-pointer rounded-lg hover:opacity-95 shadow-black">
-            <Link href="https://linktr.ee/ganffest2022">
-              <p className="text-4xl mx-7 my-5 text-white">Daftar Ganffest</p>
+            <Link href="https://genflix.co.id/live">
+              <p className="text-4xl mx-7 my-5 text-white">Tonton Ganffest</p>
             </Link>
-            
           </div>
-          {/* <p className="text-6xl mb-4 font-montserrat text-customGrey">COUNTDOWN</p>
-          <NextCountdown />
+          <h1 className="text-6xl text-customCrem font-montserrat absolute left-14 top-52">
+            Exhibition
+          </h1>
+          <div className="mt-28 flex flex-col items-center cursor-pointer w-2/4">
+            <Link href="https://www.oracularganffest.com/">
+              <ReactPlayer
+                url="/videoPameran.mp4"
+                playing={true}
+                loop={true}
+                width="100%"
+                height="100%"
+                muted={true}
+              />
+            </Link>
+          </div>
+          {/* <p className="text-6xl mb-4 text-customCrem">Exhibition</p> */}
+          {/* <NextCountdown />
           <p className="mt-8 text-2xl text-customGrey">Hari Menuju Main Event Ganffest</p> */}
+
           <div className="w-3/4 mt-20 flex flex-col justify-center relative">
-            <h1 className="text-6xl text-customCrem font-montserrat absolute -left-24 -top-10">
+            <h1 className="text-6xl text-customCrem font-montserrat absolute -left-24 top-8">
               Timeline
             </h1>
-            <div className=" mt-16 flex flex-row items-center">
+            <div className="mt-32 flex flex-row items-center">
               <Link href="/submission" passHref>
                 <div
                   className="w-16 h-12 relative rounded-full bg-customFirst cursor-pointer"
