@@ -16,6 +16,7 @@ const Footer = () => {
             40132
           </p>
         </div>
+        
         <div className="flex flex-col items-start justify-between">
           <h1 className="text-xl text-customArchive">
             Find Us On Social Media

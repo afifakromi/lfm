@@ -180,7 +180,7 @@ const Home = () => {
             <h1 className="text-6xl text-customCrem ml-6">
               Sponsor & Media Partner
             </h1>
-            <div className="mt-7">
+            <div className="mt-7 bg-customPink py-5 px-5 rounded-lg">
                 <Image src="/img/sponsorMedpar.png" width={700} height={300} alt="sponsormedpar" />
             </div>
           </div>

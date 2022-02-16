@@ -15,7 +15,7 @@ const merch = () => {
       <Login />
       <Register />
       <div className="w-full h-full bg-nav px-64 py-7">
-        <div className="grid grid-cols-3 gap-8 mb-7">
+        <div className="grid grid-cols-3 gap-8">
           {merchConst.map((item, index) => {
             return (
               <Link key={index} passHref href={item.href}>
@@ -28,7 +28,14 @@ const merch = () => {
             );
           })}
         </div>
+        <div className="flex flex-col items-center cursor-pointer my-10">
+          <h1 className="text-6xl mb-5 text-customCrem font-montserrat">
+            Pay Now
+          </h1>
+          <Image src="/img/donation.jpg" width={300} height={400} alt="sponsormedpar" />
       </div>
+      </div>
+      
       <Footer />
     </Layout>
   );

@@ -38,11 +38,11 @@ const Timeline = () => {
         bgColor="#6A4995"
         content="
         <pre>
-        16.00 - 17.30   Program Disfigured Hearts <br/>
-        &nbsp               Program GFF x Mini Film Festival <br/>
-        &nbsp               Program From Another Sight <br/>
-        19.00 - 20.30   Program Anatomy of Feelings <br/>
-        20.30 - 21.00   Diskusi Program Anatomy of Feelings <br/> </pre>"
+        16.00 - 17.30   <a href='https://bit.ly/DisfiguredHeartDay3' style='color:black; font-family:verdana;'>Program Disfigured Hearts </a><br/>
+        &nbsp               <a href='https://bit.ly/KolaborasiGFFxMFFDay3' style='color:black; font-family:verdana;'>Program GFF x Mini Film Festival </a><br/>
+        &nbsp               <a href='https://bit.ly/FromAnotherSightDay3' style='color:black; font-family:verdana;'>Program From Another Sight </a><br/>
+        19.00 - 20.30   <a href='https://bit.ly/AnatomyOfFeelingsDay3' style='color:black; font-family:verdana;'>Program Anatomy of Feelings </a><br/>
+        20.30 - 21.00   <a href='https://bit.ly/DiskusiPemutaranGFF2022' style='color:black; font-family:verdana;'>Diskusi Program Anatomy of Feelings </a><br/><br/></pre>"
       />
       <TimelineItem
         date="17 Februari"
@@ -50,11 +50,11 @@ const Timeline = () => {
         bgColor="#8E4F90"
         content="
         <pre>
-        16.00 - 17.30   Program GFF x Mini Film Festival <br/>
-        &nbsp               Program From Another Sight <br/>
-        &nbsp               Program Anatomy of Feelings <br/>
-        19.00 - 20.30   Program Disfigured Hearts <br/>
-        20.30 - 21.00   Diskusi Program Disfigured Hearts <br/> </pre>"
+        16.00 - 17.30   <a href='https://bit.ly/KolaborasiGFFxMFFDay4' style='color:black; font-family:verdana;'>Program GFF x Mini Film Festival </a><br/>
+        &nbsp               <a href='https://bit.ly/bit.ly/FromAnotherSightDay4' style='color:black; font-family:verdana;'>Program From Another Sight </a><br/>
+        &nbsp               <a href='https://bit.ly/AnatomyOfFeelingsDay4' style='color:black; font-family:verdana;'>Program Anatomy of Feelings </a><br/>
+        19.00 - 20.30   <a href='https://bit.ly/DisfiguredHeartDay4' style='color:black; font-family:verdana;'>Program Disfigured Hearts </a><br/>
+        20.30 - 21.00   <a href='https://bit.ly/DisfiguredHeartDay4' style='color:black; font-family:verdana;'>Diskusi Program Disfigured Hearts </a><br/><br/></pre>"
       />
       <TimelineItem
         date="18 Februari"
@@ -62,10 +62,10 @@ const Timeline = () => {
         bgColor="#B3548A"
         content="
         <pre>
-        16.00 - 17.30   Program From Another Sight <br/>
-        &nbsp               Program Anatomy of Feelings <br/>
-        &nbsp               Program Disfigured Hearts <br/>
-        &nbsp               Program GFF x Mini Film Festival <br/> </pre>"
+        16.00 - 17.30   <a href='https://bit.ly/FromAnotherSightDay5' style='color:black; font-family:verdana;'>Program From Another Sight </a><br/>
+        &nbsp               <a href='https://bit.ly/AnatomyOfFeelingsDay5' style='color:black; font-family:verdana;'>Program Anatomy of Feelings </a><br/>
+        &nbsp               <a href='https://bit.ly/DisfiguredHeartDay5' style='color:black; font-family:verdana;'>Program Disfigured Hearts </a><br/>
+        &nbsp               <a href='https://bit.ly/KolaborasiGFFxMFFDay5' style='color:black; font-family:verdana;'>Program GFF x Mini Film Festival </a><br/><br/></pre>"
       />
       <TimelineItem
         date="19 Februari"
@@ -73,10 +73,10 @@ const Timeline = () => {
         bgColor="#E15A82"
         content="
         <pre>
-        13.25 - 14.30   Program Bandung Nu Aing <br/>
-        14.35 - 15.05   Diskusi Program Bandung Nu Aing <br/>
-        15.20 - 16.50   Program Kompetisi <br/>
-        16.55 - 17.25   Diskusi Program Kompetisi <br/> </pre>"
+        13.25 - 14.30   <a href='https://bit.ly/BandungNuAing' style='color:black; font-family:verdana;'>Program Bandung Nu Aing </a><br/>
+        14.35 - 15.05   <a href='https://bit.ly/DiskusiPemutaranGFF2022' style='color:black; font-family:verdana;'>Diskusi Program Bandung Nu Aing </a><br/>
+        15.20 - 16.50   <a href='https://bit.ly/KompetisiGFF' style='color:black; font-family:verdana;'>Program Kompetisi </a><br/>
+        16.55 - 17.25   <a href='https://bit.ly/DiskusiPemutaranGFF2022' style='color:black; font-family:verdana;'>Diskusi Program Kompetisi </a><br/><br/></pre>"
       />
       <TimelineItem
         date="20 Februari"
@@ -86,9 +86,9 @@ const Timeline = () => {
         rounded="rounded-b-2xl"
         content="
         <pre>
-        15.55 - 17.40   Program Horizon <br/>
-        17.45 - 18.15   Diskusi Program Horizon <br/>
-        18.45 - 19.00   Awarding Night <br/> </pre>"
+        15.55 - 17.40   <a href='https://bit.ly/HorizonGFF' style='color:black; font-family:verdana;'>Program Horizon </a><br/>
+        17.45 - 18.15   <a href='https://bit.ly/DiskusiPemutaranGFF2022' style='color:black; font-family:verdana;'>Diskusi Program Horizon </a><br/>
+        18.45 - 19.00   <a href='https://bit.ly/ClosingGFF2022' style='color:black; font-family:verdana;'>Awarding Night </a><br/><br/></pre>"
       />
     </div>
   );
