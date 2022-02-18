@@ -54,7 +54,7 @@ const Timeline = () => {
         &nbsp               <a href='https://bit.ly/bit.ly/FromAnotherSightDay4' style='color:black; font-family:verdana;'>Program From Another Sight </a><br/>
         &nbsp               <a href='https://bit.ly/AnatomyOfFeelingsDay4' style='color:black; font-family:verdana;'>Program Anatomy of Feelings </a><br/>
         19.00 - 20.30   <a href='https://bit.ly/DisfiguredHeartDay4' style='color:black; font-family:verdana;'>Program Disfigured Hearts </a><br/>
-        20.30 - 21.00   <a href='https://bit.ly/DisfiguredHeartDay4' style='color:black; font-family:verdana;'>Diskusi Program Disfigured Hearts </a><br/><br/></pre>"
+        20.30 - 21.00   <a href='https://bit.ly/DiskusiPemutaranGFF2022' style='color:black; font-family:verdana;'>Diskusi Program Disfigured Hearts </a><br/><br/></pre>"
       />
       <TimelineItem
         date="18 Februari"
@@ -65,7 +65,8 @@ const Timeline = () => {
         16.00 - 17.30   <a href='https://bit.ly/FromAnotherSightDay5' style='color:black; font-family:verdana;'>Program From Another Sight </a><br/>
         &nbsp               <a href='https://bit.ly/AnatomyOfFeelingsDay5' style='color:black; font-family:verdana;'>Program Anatomy of Feelings </a><br/>
         &nbsp               <a href='https://bit.ly/DisfiguredHeartDay5' style='color:black; font-family:verdana;'>Program Disfigured Hearts </a><br/>
-        &nbsp               <a href='https://bit.ly/KolaborasiGFFxMFFDay5' style='color:black; font-family:verdana;'>Program GFF x Mini Film Festival </a><br/><br/></pre>"
+        &nbsp               <a href='https://bit.ly/KolaborasiGFFxMFFDay5' style='color:black; font-family:verdana;'>Program GFF x Mini Film Festival </a><br/>
+        19.30 - 22.30   <a href='https://bit.ly/MalamKomunitasGanffest2022' style='color:black; font-family:verdana;'>Malam Komunitas </a><br/><br/></pre>"
       />
       <TimelineItem
         date="19 Februari"
